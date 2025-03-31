@@ -8,20 +8,20 @@
 # ###############################
 
 site_name: Process Engine API
-site_url: https://bpm-crafters.dev/process-engine-api/
+site_url: https://bpm-crafters.dev/process-engine-api-docs/
 site_author: BPM Crafters
 site_description: >-
  Process Engine API is an open-source framework for building process applications with
  following BPM Manifest. It provides an engine-agnostic API to de-couple the business
  and application logic from technology of the process engine implementation.
 
-copyright: Copyright &copy; 2024 - 2024, BPM Crafters
+copyright: Copyright &copy; 2024 - 2025, BPM Crafters
 
 use_directory_urls: false
 
 # Repository
 repo_name: bpm-crafters/process-engine-api
-repo_url: https://github.com/bpm-crafters/process-engine-api/
+repo_url: https://github.com/bpm-crafters/process-engine-api-docs/
 edit_uri: edit/develop/docs/
 
 markdown_extensions:
