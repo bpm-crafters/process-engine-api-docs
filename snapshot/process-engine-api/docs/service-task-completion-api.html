@@ -12,28 +12,28 @@
         <meta name="author" content="BPM Crafters">
       
       
-        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/signal-api.html">
+        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/service-task-completion-api.html">
       
       
-        <link rel="prev" href="correlation-api.html">
+        <link rel="prev" href="task-subscription-api.html">
       
       
-        <link rel="next" href="task-subscription-api.html">
+        <link rel="next" href="user-task-completion-api.html">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
-        <title>Signal API - Process Engine API</title>
+        <title>Service Task Completion API - Process Engine API</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -95,9 +95,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Process Engine API" class="md-header__button md-logo" aria-label="Process Engine API" data-md-component="logo">
+    <a href="../../index.html" title="Process Engine API" class="md-header__button md-logo" aria-label="Process Engine API" data-md-component="logo">
       
-  <img src="../assets/img/logo.png" alt="logo">
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Signal API
+              Service Task Completion API
             
           </span>
         </div>
@@ -219,7 +219,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -240,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../introduction/index.html" class="md-tabs__link">
+        <a href="../../introduction/index.html" class="md-tabs__link">
           
   
   
@@ -257,17 +257,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../getting-started/index.html" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/index.html" class="md-tabs__link">
+          
+  
   
   Quick Start
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -281,7 +282,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+        <a href="../../reference-guide/index.html" class="md-tabs__link">
           
   
   
@@ -301,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../developer-guide/contribution.html" class="md-tabs__link">
+        <a href="../../developer-guide/contribution.html" class="md-tabs__link">
           
   
   
@@ -343,9 +344,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Process Engine API" class="md-nav__button md-logo" aria-label="Process Engine API" data-md-component="logo">
+    <a href="../../index.html" title="Process Engine API" class="md-nav__button md-logo" aria-label="Process Engine API" data-md-component="logo">
       
-  <img src="../assets/img/logo.png" alt="logo">
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     Process Engine API
@@ -372,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -437,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/index.html" class="md-nav__link">
+      <a href="../../introduction/index.html" class="md-nav__link">
         
   
   
@@ -460,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/clean-architecture.html" class="md-nav__link">
+      <a href="../../introduction/clean-architecture.html" class="md-nav__link">
         
   
   
@@ -489,9 +490,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../getting-started/index.html" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -500,7 +517,111 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Quick Start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Setup
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camunda 7 Embedded
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-7/docs/quickstart-c7-remote.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camunda 7 Remote
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-8/docs/quickstart-c8-saas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camunda 8 SaaS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -560,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../../reference-guide/index.html" class="md-nav__link">
         
   
   
@@ -649,17 +770,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="signal-api.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="signal-api.html" class="md-nav__link">
         
   
   
@@ -670,7 +784,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -703,10 +816,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="service-task-completion-api.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="service-task-completion-api.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -717,6 +837,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -775,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-worker.html" class="md-nav__link">
+      <a href="../../process-engine-worker/docs/process-engine-worker.html" class="md-nav__link">
         
   
   
@@ -848,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../developer-guide/contribution.html" class="md-nav__link">
+      <a href="../../developer-guide/contribution.html" class="md-nav__link">
         
   
   
@@ -871,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../developer-guide/project-setup.html" class="md-nav__link">
+      <a href="../../developer-guide/project-setup.html" class="md-nav__link">
         
   
   
@@ -913,27 +1034,42 @@
   
 
 
-  <h1>Signal API</h1>
+  <h1>Service Task Completion API</h1>
 
-<p>The Signal API provides functionality to send signals to running process instances.
-It is intended to be used in outbound adapters of the port/adapter architecture, in order
-to control the process engine from your application.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">SignalUseCase</span><span class="w"> </span><span class="p">{</span>
+<p>The Service Task API provides functionality to deal with service tasks. The task handlers can be registered
+and get invoked when tasks appear in the process engine. Since the Task Subscription API allows asynchronous processing,
+we provide a special API to complete tasks.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Component</span>
+<span class="nd">@RequiredArgsConstructor</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PerformServiceTaskUseCase</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">SignalApi</span><span class="w"> </span><span class="n">signalApi</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">ServiceTaskCompletionApi</span><span class="w"> </span><span class="n">taskCompletionApi</span><span class="p">;</span>
 
-<span class="w">  </span><span class="cm">/**</span>
-<span class="cm">   * Send `signal1`signal to the process. </span>
-<span class="cm">   * @param payloadValue value to set as process variable on successful correlation.</span>
-<span class="cm">   */</span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">senSignal1</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">payloadValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">signalApi</span><span class="p">.</span><span class="na">sendSignal</span><span class="p">(</span>
-<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">SendSignalCmd</span><span class="p">(</span>
-<span class="w">        </span><span class="s">&quot;signal1&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
-<span class="w">          </span><span class="s">&quot;signal-delivered-value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">payloadValue</span>
-<span class="w">        </span><span class="p">),</span>
-<span class="w">        </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">()</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">complete</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">taskId</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">taskCompletionApi</span><span class="p">.</span><span class="na">completeTask</span><span class="p">(</span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">CompleteTaskCmd</span><span class="p">(</span>
+<span class="w">        </span><span class="n">taskId</span><span class="p">,</span>
+<span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;some-user-value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">completeWithError</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">taskId</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">taskCompletionApi</span><span class="p">.</span><span class="na">completeTaskByError</span><span class="p">(</span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">CompleteTaskByErrorCmd</span><span class="p">(</span>
+<span class="w">        </span><span class="n">taskId</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;user_error&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;some error&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;some-user-value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fail</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">taskId</span><span class="p">,</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">taskCompletionApi</span><span class="p">.</span><span class="na">failTask</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FailTaskCmd</span><span class="p">(</span>
+<span class="w">        </span><span class="n">taskId</span><span class="p">,</span>
+<span class="w">        </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">(),</span>
+<span class="w">        </span><span class="kc">null</span>
 <span class="w">      </span><span class="p">)</span>
 <span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
 <span class="w">  </span><span class="p">}</span>
@@ -959,7 +1095,7 @@ to control the process engine from your application.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 31, 2025 10:30:19">March 31, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 1, 2025 23:08:21">April 1, 2025</span>
   </span>
 
     
@@ -1030,10 +1166,10 @@ to control the process engine from your application.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>

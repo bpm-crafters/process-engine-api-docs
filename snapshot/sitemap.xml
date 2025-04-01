@@ -29,39 +29,51 @@
          <lastmod>2025-04-01</lastmod>
     </url>
     <url>
-         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/correlation-api.html</loc>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/correlation-api.html</loc>
          <lastmod>2025-04-01</lastmod>
     </url>
     <url>
-         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/deployment-api.html</loc>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/deployment-api.html</loc>
          <lastmod>2025-04-01</lastmod>
     </url>
     <url>
-         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/process-api.html</loc>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/process-api.html</loc>
          <lastmod>2025-04-01</lastmod>
     </url>
     <url>
-         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/process-engine-worker.html</loc>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/service-task-completion-api.html</loc>
          <lastmod>2025-04-01</lastmod>
     </url>
     <url>
-         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/service-task-completion-api.html</loc>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/signal-api.html</loc>
          <lastmod>2025-04-01</lastmod>
     </url>
     <url>
-         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/signal-api.html</loc>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/task-subscription-api.html</loc>
          <lastmod>2025-04-01</lastmod>
     </url>
     <url>
-         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/task-subscription-api.html</loc>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/user-task-completion-api.html</loc>
          <lastmod>2025-04-01</lastmod>
     </url>
     <url>
-         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/user-task-completion-api.html</loc>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/user-task-support.html</loc>
          <lastmod>2025-04-01</lastmod>
     </url>
     <url>
-         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/user-task-support.html</loc>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-worker/docs/process-engine-worker.html</loc>
+         <lastmod>2025-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.html</loc>
+         <lastmod>2025-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-camunda-7/docs/quickstart-c7-remote.html</loc>
+         <lastmod>2025-04-01</lastmod>
+    </url>
+    <url>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-camunda-8/docs/quickstart-c8-saas.html</loc>
          <lastmod>2025-04-01</lastmod>
     </url>
 </urlset>

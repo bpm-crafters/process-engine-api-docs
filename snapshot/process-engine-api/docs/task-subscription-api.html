@@ -12,28 +12,28 @@
         <meta name="author" content="BPM Crafters">
       
       
-        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/process-engine-worker.html">
+        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/task-subscription-api.html">
       
       
-        <link rel="prev" href="user-task-support.html">
+        <link rel="prev" href="signal-api.html">
       
       
-        <link rel="next" href="../developer-guide/contribution.html">
+        <link rel="next" href="service-task-completion-api.html">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
-        <title>Process Engine Worker - Process Engine API</title>
+        <title>Task Subscription API - Process Engine API</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -79,11 +79,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#method-parameter-resolution" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -100,9 +95,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Process Engine API" class="md-header__button md-logo" aria-label="Process Engine API" data-md-component="logo">
+    <a href="../../index.html" title="Process Engine API" class="md-header__button md-logo" aria-label="Process Engine API" data-md-component="logo">
       
-  <img src="../assets/img/logo.png" alt="logo">
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Process Engine Worker
+              Task Subscription API
             
           </span>
         </div>
@@ -224,7 +219,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -245,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../introduction/index.html" class="md-tabs__link">
+        <a href="../../introduction/index.html" class="md-tabs__link">
           
   
   
@@ -262,17 +257,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../getting-started/index.html" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/index.html" class="md-tabs__link">
+          
+  
   
   Quick Start
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -286,7 +282,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+        <a href="../../reference-guide/index.html" class="md-tabs__link">
           
   
   
@@ -306,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../developer-guide/contribution.html" class="md-tabs__link">
+        <a href="../../developer-guide/contribution.html" class="md-tabs__link">
           
   
   
@@ -348,9 +344,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Process Engine API" class="md-nav__button md-logo" aria-label="Process Engine API" data-md-component="logo">
+    <a href="../../index.html" title="Process Engine API" class="md-nav__button md-logo" aria-label="Process Engine API" data-md-component="logo">
       
-  <img src="../assets/img/logo.png" alt="logo">
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     Process Engine API
@@ -377,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -442,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/index.html" class="md-nav__link">
+      <a href="../../introduction/index.html" class="md-nav__link">
         
   
   
@@ -465,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/clean-architecture.html" class="md-nav__link">
+      <a href="../../introduction/clean-architecture.html" class="md-nav__link">
         
   
   
@@ -494,9 +490,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../getting-started/index.html" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -505,7 +517,111 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Quick Start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Setup
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camunda 7 Embedded
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-7/docs/quickstart-c7-remote.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camunda 7 Remote
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-8/docs/quickstart-c8-saas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camunda 8 SaaS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -565,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../../reference-guide/index.html" class="md-nav__link">
         
   
   
@@ -677,10 +793,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="task-subscription-api.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="task-subscription-api.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -691,6 +814,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -769,30 +893,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Process Engine Worker
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="process-engine-worker.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../process-engine-worker/docs/process-engine-worker.html" class="md-nav__link">
         
   
   
@@ -803,60 +907,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#method-parameter-resolution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method parameter resolution
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-return-type" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method return type
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#throwing-a-bpmn-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      Throwing a BPMN Error
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transactional-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transactional support
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -919,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../developer-guide/contribution.html" class="md-nav__link">
+      <a href="../../developer-guide/contribution.html" class="md-nav__link">
         
   
   
@@ -942,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../developer-guide/project-setup.html" class="md-nav__link">
+      <a href="../../developer-guide/project-setup.html" class="md-nav__link">
         
   
   
@@ -984,87 +1034,42 @@
   
 
 
-  <h1>Process Engine Worker</h1>
+  <h1>Task Subscription API</h1>
 
-<p>Process Engine Worker is an independent component built on top of Process Engine API in order to accelerate the development of agnostic workers
-for any process engine supported by Process Engine API in Spring Boot ecosystem. By doing so, it abstracts from specific worker clients and 
-API and allows to build universal workers.</p>
-<p>First of all add the Process Engine Worker dependency to you project classpath. In Maven add the following to you <code>pom.xml</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
-<span class="w">  </span><span class="nt">&lt;groupId&gt;</span>dev.bpm-crafters.process-engine-worker<span class="nt">&lt;/groupId&gt;</span>
-<span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>process-engine-worker-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
-<span class="w">  </span><span class="nt">&lt;version&gt;</span>${process-engine-worker.version}<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div>
-<p>Now create a simple Spring component and annotate a method with a special annotation <code>@ProcessEngineWorker</code>:</p>
+<p>The Task Subscription API allows for subscribing for different tasks. The process-engine-api adapter implementation
+then takes care of the delivery of the tasks matching the intended subscription.</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@Component</span>
+<span class="nd">@Slf4J</span>
 <span class="nd">@RequiredArgsConstructor</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MySmartWorker</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TuskSubscriber</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">FetchGoodsInPort</span><span class="w"> </span><span class="n">fetchGoodsInPort</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">TaskSubscriptionApi</span><span class="w"> </span><span class="n">taskSubscriptionApi</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">TaskInformation</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="o">?&gt;&gt;</span><span class="w"> </span><span class="n">userTasks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConcurrentHashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 
-<span class="w">  </span><span class="nd">@ProcessEngineWorker</span><span class="p">(</span><span class="n">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;fetchGoods&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">fetchGoods</span><span class="p">(</span>
-<span class="w">    </span><span class="nd">@Variable</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;order&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">Order</span><span class="w"> </span><span class="n">order</span>
-<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// execute some business code</span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">fetched</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fetchGoodsInPort</span><span class="p">.</span><span class="na">fetchGoods</span><span class="p">(</span><span class="n">order</span><span class="p">);</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;shipped&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fetched</span><span class="p">);</span>
+<span class="w">  </span><span class="nd">@SneakyThrows</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">subscribe</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">taskSubscriptionApi</span><span class="p">.</span><span class="na">subscribeForTask</span><span class="p">(</span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">SubscribeForTaskCmd</span><span class="p">(</span>
+<span class="w">        </span><span class="n">CommonRestrictions</span><span class="p">.</span><span class="na">builder</span><span class="p">().</span><span class="na">build</span><span class="p">(),</span>
+<span class="w">        </span><span class="n">TaskType</span><span class="p">.</span><span class="na">USER</span><span class="p">,</span><span class="w"> </span><span class="c1">// user tasks only</span>
+<span class="w">        </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="c1">// all of them</span>
+<span class="w">        </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="c1">// all variables</span>
+<span class="w">        </span><span class="p">(</span><span class="n">taskInfo</span><span class="p">,</span><span class="w"> </span><span class="n">variables</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">userTasks</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">taskInfo</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// don&#39;t replace existing tasks</span>
+<span class="w">            </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;[TASK LIST]: Received user task {} with meta {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">taskInfo</span><span class="p">.</span><span class="na">getTaskId</span><span class="p">(),</span><span class="w"> </span><span class="n">taskInfo</span><span class="p">.</span><span class="na">getMeta</span><span class="p">());</span>
+<span class="w">            </span><span class="n">userTasks</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">taskInfo</span><span class="p">,</span><span class="w"> </span><span class="n">variables</span><span class="p">);</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">(</span><span class="n">taskId</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;[TASK LIST]: Removing task {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">taskId</span><span class="p">);</span>
+<span class="w">          </span><span class="n">userTasks</span><span class="p">.</span><span class="na">keySet</span><span class="p">().</span><span class="na">stream</span><span class="p">().</span><span class="na">filter</span><span class="p">(</span><span class="n">info</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="na">getTaskId</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">taskId</span><span class="p">)).</span><span class="na">findFirst</span><span class="p">().</span><span class="na">ifPresent</span><span class="p">(</span><span class="n">userTasks</span><span class="p">::</span><span class="n">remove</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="p">}</span><span class="w"> </span>
 </code></pre></div>
-<h2 id="method-parameter-resolution">Method parameter resolution<a class="headerlink" href="#method-parameter-resolution" title="Permanent link">#</a></h2>
-<p>Parameter resolution of the method annotated with <code>ProcessEngineWorker</code> is based on a set of strategies
-registered by the <code>ParameterResolver</code> bean. Currently, the following parameters are resolved:</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TaskInformation</td>
-<td>Helper abstracting all information about the external task.</td>
-</tr>
-<tr>
-<td>ExternTaskCompletionApi</td>
-<td>API for completing the external task manually</td>
-</tr>
-<tr>
-<td>VariableConverter</td>
-<td>Special utility to read the process variable map and deliver typed value</td>
-</tr>
-<tr>
-<td>Map<String, Object></td>
-<td>Payload object containing all variables.</td>
-</tr>
-<tr>
-<td>Type annotated with @Variable("name")</td>
-<td>Marker for a process variable.</td>
-</tr>
-</tbody>
-</table>
-<p>Usually, the requested variable is mandatory and the parameter resolver reports an error, if the requested variable is not
-available in the process payload. If you want to inject the variable only if it exists in the payload you have two options.
-Either you set the parameter <code>@Variable(name = "...", mandatory = false)</code> or you use <code>Optional&lt;T&gt;</code> instead of <code>T</code> as a variable
-type. If you are using Kotlin and don't like <code>Optional</code>, make sure to declare variable type as nullable (<code>T?</code> instead of <code>T</code>) and
-set the mandatory flag to <code>false</code>. </p>
-<h2 id="method-return-type">Method return type<a class="headerlink" href="#method-return-type" title="Permanent link">#</a></h2>
-<p>If the return type of the method is of type <code>Map&lt;String, Object&gt;</code> or compatible and the <code>autoComplete</code> flag is turned
-on the annotation (defaults to <code>true</code>), the library will try to automatically complete the External Task
-using the returned map as completion variables. If <code>autoComplete</code> is <code>true</code>, but no return value is provided, the task
-will be completed without empty payload. This functionality is provided by the <code>ResultResolver</code> based on registered strategies.</p>
-<h2 id="throwing-a-bpmn-error">Throwing a BPMN Error<a class="headerlink" href="#throwing-a-bpmn-error" title="Permanent link">#</a></h2>
-<p>If you want to throw a BPMN error, please throw an instance of a <code>BPMNErrorOccured</code> exception from the method body. The exception
-is a checked exception, in order to comply with Spring behavior of not rolling back transaction on checked exceptions.</p>
-<h2 id="transactional-support">Transactional support<a class="headerlink" href="#transactional-support" title="Permanent link">#</a></h2>
-<p>The worker method can be marked transactional by adding Spring or Jakarta EE transactional annotations to the method or to the worker class.
-If the annotation <code>@org.springframework.transaction.annotation.Transactional</code> with propagation <code>REQUIRES</code>, <code>REQUIRES_NEW</code>, <code>SUPPORTS</code> and <code>MANDATORY</code>
-is used, the library will execute the worker method and the completion of the external task via API in the same transaction. This will lead to 
-a transaction rollback, if the external task can't be completed (e.g. due to a network error).</p>
 
 
 
@@ -1085,7 +1090,7 @@ a transaction rollback, if the external task can't be completed (e.g. due to a n
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 1, 2025 20:26:50">April 1, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 1, 2025 23:08:21">April 1, 2025</span>
   </span>
 
     
@@ -1156,10 +1161,10 @@ a transaction rollback, if the external task can't be completed (e.g. due to a n
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>

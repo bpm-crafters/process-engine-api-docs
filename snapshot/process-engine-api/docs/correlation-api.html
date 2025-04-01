@@ -12,28 +12,28 @@
         <meta name="author" content="BPM Crafters">
       
       
-        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/user-task-support.html">
+        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/correlation-api.html">
       
       
-        <link rel="prev" href="user-task-completion-api.html">
+        <link rel="prev" href="process-api.html">
       
       
-        <link rel="next" href="process-engine-worker.html">
+        <link rel="next" href="signal-api.html">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
-        <title>User Task Support - Process Engine API</title>
+        <title>Correlation API - Process Engine API</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -79,11 +79,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#configuration" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -100,9 +95,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Process Engine API" class="md-header__button md-logo" aria-label="Process Engine API" data-md-component="logo">
+    <a href="../../index.html" title="Process Engine API" class="md-header__button md-logo" aria-label="Process Engine API" data-md-component="logo">
       
-  <img src="../assets/img/logo.png" alt="logo">
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              User Task Support
+              Correlation API
             
           </span>
         </div>
@@ -224,7 +219,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -245,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../introduction/index.html" class="md-tabs__link">
+        <a href="../../introduction/index.html" class="md-tabs__link">
           
   
   
@@ -262,17 +257,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../getting-started/index.html" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/index.html" class="md-tabs__link">
+          
+  
   
   Quick Start
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -286,7 +282,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+        <a href="../../reference-guide/index.html" class="md-tabs__link">
           
   
   
@@ -306,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../developer-guide/contribution.html" class="md-tabs__link">
+        <a href="../../developer-guide/contribution.html" class="md-tabs__link">
           
   
   
@@ -348,9 +344,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Process Engine API" class="md-nav__button md-logo" aria-label="Process Engine API" data-md-component="logo">
+    <a href="../../index.html" title="Process Engine API" class="md-nav__button md-logo" aria-label="Process Engine API" data-md-component="logo">
       
-  <img src="../assets/img/logo.png" alt="logo">
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     Process Engine API
@@ -377,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -442,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/index.html" class="md-nav__link">
+      <a href="../../introduction/index.html" class="md-nav__link">
         
   
   
@@ -465,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/clean-architecture.html" class="md-nav__link">
+      <a href="../../introduction/clean-architecture.html" class="md-nav__link">
         
   
   
@@ -494,9 +490,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../getting-started/index.html" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -505,7 +517,111 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Quick Start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Setup
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camunda 7 Embedded
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-7/docs/quickstart-c7-remote.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camunda 7 Remote
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-8/docs/quickstart-c8-saas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Camunda 8 SaaS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -565,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../../reference-guide/index.html" class="md-nav__link">
         
   
   
@@ -631,10 +747,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="correlation-api.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="correlation-api.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -645,6 +768,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -746,30 +870,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    User Task Support
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="user-task-support.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="user-task-support.html" class="md-nav__link">
         
   
   
@@ -780,42 +884,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#typical-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Typical usage
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -828,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-worker.html" class="md-nav__link">
+      <a href="../../process-engine-worker/docs/process-engine-worker.html" class="md-nav__link">
         
   
   
@@ -901,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../developer-guide/contribution.html" class="md-nav__link">
+      <a href="../../developer-guide/contribution.html" class="md-nav__link">
         
   
   
@@ -924,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../developer-guide/project-setup.html" class="md-nav__link">
+      <a href="../../developer-guide/project-setup.html" class="md-nav__link">
         
   
   
@@ -966,60 +1034,47 @@
   
 
 
-  <h1>User Task Support</h1>
+  <h1>Correlation API</h1>
 
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
-<p>The <a href="user-task-support.html">User Task Support</a> is a small component simplifying use cases related to user tasks. It can be hooked up into Task Subscription API
-and receive and store the received user tasks. If later you want to access a task delivered in the past, its <code>TaskInformation</code> and payload are available in the
-User Task Support component.</p>
-<p>User Task Support is a passive component and needs to be instantiated and registered to the subscription API. This behaviour is implemented in order to allow 
-the user of it, to customize the subscription restrictions (e.g. subscribing only for a certain process definition key, or certain tenant). </p>
-<p>To configure and register <code>User Task Support</code> use the following code:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">dev.bpmcrafters.processengineapi.task.support.UserTaskSupport</span><span class="p">;</span>
+<p>The Correlation API provides functionality to correlate messages with running process instances.
+It is intended to be used in outbound adapters of the port/adapter architecture, in order to control
+the process engine from your application.</p>
+<p>Message correlation denotes the ability of a process engine to continue the process execution of a process instance, waiting in a catch message event,
+if a message with a given name is delivered to the process engine. In doing so, it requires a way to target a single process execution (otherwise the
+correlation fails regarding BPMN specification).</p>
+<p>Different engines provide different notions for targeting a single process execution. We believe that the best way to do so, is not to rely on individual
+engine features, but rather should be based on an approach which can be applied in any BPMN engine, either message correlation based on a correlation value,
+or supporting scoped variable mapping. In both cases, it is useful to use a value of a process variable as a correlation value.</p>
+<p>In case the engine supports correlation value, you just need to define it in your BPMN. Here is an example of doing it in Camunda 8:</p>
+<p><img alt="Correlation with Correlation Key in C8" src="assets/img/correlation-correlation-key.png" width="300" /></p>
+<p>In case the correlation value is not supported directly, but scoped variable mappings are supported, you need to define a (local) variable
+in the scope of the message catch event and provide the correlation value to point to a process variable. Here is an example of doing it in Camunda Platform 7:</p>
+<p><img alt="Correlation Variable Mapping in C7" src="assets/img/correlation-variable-mapping.png" width="300" /></p>
+<p>For this reason, the Message Correlation API supports the targeting based on a <code>Supplier&lt;Correlation&gt;</code>.</p>
+<p>As a user of the <code>CorrelationAPI</code> you have to invoke the <code>CorrelateMessageCmd</code> and provide the <code>Correlation</code> via supplier function.</p>
+<p>And here is the example code to correlate message:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">CorrelationUseCase</span><span class="w"> </span><span class="p">{</span>
 
-<span class="nd">@Configuration</span>
-<span class="nd">@RequiredArgsConstructor</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserTaskSupportConfiguration</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">CorrelationApi</span><span class="w"> </span><span class="n">correlationApi</span><span class="p">;</span>
 
-<span class="w">  </span><span class="nd">@Bean</span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">UserTaskSupport</span><span class="w"> </span><span class="nf">createAndRegisterUserTaskSupport</span><span class="p">(</span><span class="n">TaskSubscriptionApi</span><span class="w"> </span><span class="n">taskSubscriptionApi</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">UserTaskSupport</span><span class="w"> </span><span class="n">support</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UserTaskSupport</span><span class="p">();</span>
-<span class="w">    </span><span class="n">support</span><span class="p">.</span><span class="na">subscribe</span><span class="p">(</span>
-<span class="w">      </span><span class="n">taskSubscriptionApi</span><span class="p">,</span><span class="w"> </span>
-<span class="w">      </span><span class="n">CommonRestrictions</span><span class="p">.</span><span class="na">builder</span><span class="p">().</span><span class="na">build</span><span class="p">(),</span><span class="w"> </span>
-<span class="w">      </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="c1">// String parameter to limit the taskDescriptionKey, see SubscribeForTaskCmd </span>
-<span class="w">      </span><span class="kc">null</span><span class="w"> </span><span class="c1">// no restriction of the payload, see SubscribeForTaskCmd</span>
-<span class="w">    </span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">support</span><span class="p">;</span>
+<span class="w">  </span><span class="cm">/**</span>
+<span class="cm">   * Correlates `message1` using supplied value as correlation key. </span>
+<span class="cm">   * @param correlationValue correlation value.</span>
+<span class="cm">   * @param payloadValue value to set as process variable on successful correlation.</span>
+<span class="cm">   */</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">correlateMessage1</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">correlationValue</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">payloadValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">correlationApi</span><span class="p">.</span><span class="na">correlateMessage</span><span class="p">(</span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">CorrelateMessageCmd</span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;message1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<span class="w">          </span><span class="s">&quot;message-delivered-value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">payloadValue</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Correlation</span><span class="p">.</span><span class="na">withKey</span><span class="p">(</span><span class="n">correlationValue</span><span class="p">)</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
 <span class="w">  </span><span class="p">}</span>
-
 <span class="p">}</span>
 </code></pre></div>
-<p>User Task Support provides API for the following User-Task-related use cases. For retrieving information and payload about the task by given 
-task id (task existence is enforced) or information of all tasks:</p>
-<ul>
-<li><code>getTaskInformation(taskId: String): TaskInformation</code> </li>
-<li><code>getPayload(taskId: String): Map&lt;String, Any&gt;</code></li>
-<li><code>getAllTasks(): List&lt;TaskInformation&gt;</code></li>
-</ul>
-<p>Checking or enforce task existence:</p>
-<ul>
-<li><code>exists(taskId: String, activityId: String?): Boolean</code></li>
-<li><code>requireTask(taskId: String, activityId: String?)</code></li>
-</ul>
-<p>In addition to the API for task retrieval offered by the <code>User Task Support</code> component, it allows to register additional <code>TaskHandler</code> and <code>TaskTerminationHandler</code>
-directly and acts as a composite handler, invoking both on corresponding task lifecycle events. This is in particular helpful, if you implement any kind
-of forwarding or notification logic for the user tasks:</p>
-<ul>
-<li><code>addTaskHandler(handler: TaskHandler)</code></li>
-<li><code>addTaskTerminationHandler(handler: TaskTerminationHandler)</code></li>
-</ul>
-<h2 id="typical-usage">Typical usage<a class="headerlink" href="#typical-usage" title="Permanent link">#</a></h2>
-<p>Typically, implementation of task-related use cases require access via inbound adapters to your use case based on some reference to the user task. Often, systems for 
-delivery of user tasks or user tasks notification will use the task id as the only reference to the task. The use case implementation needs to resolve the reference, 
-load some information, which is shown to user on a user task form and finally receive a task command executing one of the common task operations (complete, etc...)</p>
-<p>For the implementation of those, you would need to outbound adapters: <code>UserTaskSupport</code> for resolving task reference and <code>UserTaskCompletionAPI</code> for sending out commands.
-See our provided examples for more details.</p>
 
 
 
@@ -1040,7 +1095,7 @@ See our provided examples for more details.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 31, 2025 10:30:19">March 31, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 1, 2025 23:08:21">April 1, 2025</span>
   </span>
 
     
@@ -1111,10 +1166,10 @@ See our provided examples for more details.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
