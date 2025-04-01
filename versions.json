@@ -1,22 +1,7 @@
 [
   {
-    "version": "stable",
-    "title": "stable",
-    "aliases": []
-  },
-  {
     "version": "snapshot",
     "title": "snapshot",
-    "aliases": []
-  },
-  {
-    "version": "1.0-2025.04.1",
-    "title": "1.0-2025.04.1",
-    "aliases": []
-  },
-  {
-    "version": "1.0",
-    "title": "1.0",
     "aliases": []
   },
   {
