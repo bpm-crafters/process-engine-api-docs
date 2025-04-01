@@ -11,6 +11,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Pre-fetch the gh-pages branch
+        run: git fetch --depth=1 --all
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
@@ -37,9 +40,6 @@ jobs:
           git config --global user.name "${GH_USERNAME}"
         env:
           GH_USERNAME: ${{ github.actor }}
-
-      - name: Pre-fetch the gh-pages branch
-        run: git fetch --depth=0
 
       - name: Build docs with MkDocs
         run: mkdocs build
