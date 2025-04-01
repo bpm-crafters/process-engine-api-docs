@@ -103,6 +103,7 @@ nav:
     - Service Task Completion API: reference-guide/service-task-completion-api.md
     - User Task Completion API: reference-guide/user-task-completion-api.md
     - User Task Support: reference-guide/user-task-support.md
+    - Process Engine Worker: reference-guide/process-engine-worker.md
   - Developers:
     - Contribution: developer-guide/contribution.md
     - Project Setup: developer-guide/project-setup.md

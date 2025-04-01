@@ -55,8 +55,8 @@ First of all, add the corresponding adapter to your project's classpath:
 
 ```xml 
   <dependency>
-    <groupId>dev.bpm-crafters.process-engine-api</groupId>
-    <artifactId>process-engine-api-adapter-camunda-platform-c7-embedded-spring-boot-starter</artifactId>
+    <groupId>dev.bpm-crafters.process-engine-adapters</groupId>
+    <artifactId>process-engine-adapter-camunda-platform-c7-embedded-spring-boot-starter</artifactId>
     <version>${process-engine-api.version}</version>
   </dependency>
 ```
@@ -96,27 +96,17 @@ you will also need to add some additional libraries. Here is the result:
 <dependendcies>
   <!-- the correct adapter -->
   <dependency>
-    <groupId>dev.bpm-crafters.process-engine-api</groupId>
-    <artifactId>process-engine-api-adapter-camunda-platform-c7-remote-spring-boot-starter</artifactId>
+    <groupId>dev.bpm-crafters.process-engine-adapters</groupId>
+    <artifactId>process-engine-adapter-camunda-platform-c7-remote-spring-boot-starter</artifactId>
     <version>${process-engine-api.version}</version>
   </dependency>
-  <!-- rest client library --> 
+  <!-- rest client library -->
   <dependency>
     <groupId>org.camunda.community.rest</groupId>
     <artifactId>camunda-platform-7-rest-client-spring-boot-starter</artifactId>
-    <version>7.22.0</version>
-  </dependency>
-  <!-- open feign client -->
-  <dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-openfeign</artifactId>
-  </dependency>
-  <dependency>
-    <groupId>io.github.openfeign</groupId>
-    <artifactId>feign-httpclient</artifactId>
+    <version>7.22.3</version>
   </dependency>
 </dependendcies>
-
 ```
 
 And finally, add the following configuration to your configuration properties. Here is a version for `application.yaml`:
@@ -155,20 +145,20 @@ First add the corresponding adapter to your project's classpath:
 ```xml 
 <dependencies>
     <dependency>
-      <groupId>dev.bpm-crafters.process-engine-api</groupId>
-      <artifactId>process-engine-api-adapter-camunda-platform-c8-spring-boot-starter</artifactId>
+      <groupId>dev.bpm-crafters.process-engine-adapters</groupId>
+      <artifactId>process-engine-adapter-camunda-platform-c8-spring-boot-starter</artifactId>
     </dependency>
 
     <!-- We need the camunda client too -->
     <dependency>
       <groupId>io.camunda</groupId>
       <artifactId>spring-boot-starter-camunda-sdk</artifactId>
-      <version>8.6.3</version>
+      <version>8.6.12</version>
     </dependency>
     <dependency>
       <groupId>io.camunda</groupId>
       <artifactId>camunda-tasklist-client-java</artifactId>
-      <version>8.6.0</version>
+      <version>8.6.12</version>
       <exclusions>
         <exclusion>
           <groupId>io.camunda</groupId>

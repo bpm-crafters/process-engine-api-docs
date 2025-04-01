@@ -55,4 +55,9 @@ The [User Task Support](user-task-support.md) is a small component simplifying u
 and receive and store the received user tasks. If later you want to access a task delivered in the past, its `TaskInformation` and payload are available in the
 User Task Support component.
 
+## Process Engine Worker
+
+[Process Engine Worker](process-engine-worker.md) is a small convenience component for fast annotation-based implementation of external task workers registered via Process Engine API. Currently,
+only a version for Spring Boot exists. Check how to use in.
+
 
