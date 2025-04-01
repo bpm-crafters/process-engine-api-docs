@@ -86,24 +86,44 @@ plugins:
   - git-revision-date-localized:
       type: date
       fallback_to_build_date: true
+  - multirepo:
+      cleanup: false
+      keep_docs_dir: false
+      nav_repos:
+        - name: process-engine-api
+          import_url: https://github.com/bpm-crafters/process-engine-api?edit_uri=/blob/develop/&branch=develop
+          imports: [ docs/**/*.md, docs/assets/img/* ]
+        - name: process-engine-worker
+          import_url: https://github.com/bpm-crafters/process-engine-worker?edit_uri=/blob/develop/&branch=develop
+          imports: [ docs/**/*.md ]
+        - name: process-engine-adapters-camunda-7
+          import_url: https://github.com/bpm-crafters/process-engine-adapters-camunda-7?edit_uri=/blob/develop/&branch=develop
+          imports: [ docs/**/*.md ]
+        - name: process-engine-adapters-camunda-8
+          import_url: https://github.com/bpm-crafters/process-engine-adapters-camunda-8?edit_uri=/blob/develop/&branch=develop
+          imports: [ docs/**/*.md ]
 
 nav:
   - Home: index.md
   - Introduction:
     - Motivation and Goal: introduction/index.md
     - Clean Architecture: introduction/clean-architecture.md
-  - Quick Start: getting-started/index.md
+  - Quick Start:
+    - Basic Setup: getting-started/index.md
+    - Camunda 7 Embedded: process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.md
+    - Camunda 7 Remote: process-engine-adapters-camunda-7/docs/quickstart-c7-remote.md
+    - Camunda 8 SaaS: process-engine-adapters-camunda-8/docs/quickstart-c8-saas.md
   - Reference:
     - Overview: reference-guide/index.md
-    - Deployment API: reference-guide/deployment-api.md
-    - Process API: reference-guide/process-api.md
-    - Correlation API: reference-guide/correlation-api.md
-    - Signal API: reference-guide/signal-api.md
-    - Task Subscription API: reference-guide/task-subscription-api.md
-    - Service Task Completion API: reference-guide/service-task-completion-api.md
-    - User Task Completion API: reference-guide/user-task-completion-api.md
-    - User Task Support: reference-guide/user-task-support.md
-    - Process Engine Worker: reference-guide/process-engine-worker.md
+    - Deployment API: process-engine-api/docs/deployment-api.md
+    - Process API: process-engine-api/docs/process-api.md
+    - Correlation API: process-engine-api/docs/correlation-api.md
+    - Signal API: process-engine-api/docs/signal-api.md
+    - Task Subscription API: process-engine-api/docs/task-subscription-api.md
+    - Service Task Completion API: process-engine-api/docs/service-task-completion-api.md
+    - User Task Completion API: process-engine-api/docs/user-task-completion-api.md
+    - User Task Support: process-engine-api/docs/user-task-support.md
+    - Process Engine Worker: process-engine-worker/docs/process-engine-worker.md
   - Developers:
     - Contribution: developer-guide/contribution.md
     - Project Setup: developer-guide/project-setup.md

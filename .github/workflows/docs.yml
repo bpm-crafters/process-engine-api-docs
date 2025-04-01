@@ -40,6 +40,8 @@ jobs:
 
       - name: Build docs with MkDocs
         run: mkdocs build
+        env:
+          GithubAccessToken: ${{ secrets.GITHUB_TOKEN }} # needed for multirepo plugin 
 
       - name: Read the tag name
         id: get_tag_name
