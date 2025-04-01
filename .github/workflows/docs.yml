@@ -47,7 +47,7 @@ jobs:
       - name: Read the tag name
         id: get_tag_name
         if: startsWith(github.ref, 'refs/tags/')
-        run: echo "TAG_NAME=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_STATE
+        run: echo "{TAG_NAME}=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_STATE
 
       # This is for a tagged version
       - name: Create a new version of documentation and push to GH pages.
