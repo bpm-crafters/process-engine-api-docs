@@ -38,8 +38,8 @@ jobs:
         env:
           GH_USERNAME: ${{ github.actor }}
 
-      - name: Pre-fetch the gh-pages branch
-        run: git fetch --depth=1
+#      - name: Pre-fetch the gh-pages branch
+#        run: git fetch --depth=1
 
       - name: Build docs with MkDocs
         run: mkdocs build
