@@ -12,13 +12,13 @@
         <meta name="author" content="BPM Crafters">
       
       
-        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/introduction/clean-architecture.html">
+        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/process-engine-worker.html">
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="user-task-support.html">
       
       
-        <link rel="next" href="../getting-started/index.html">
+        <link rel="next" href="../developer-guide/contribution.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Clean Architecture - Process Engine API</title>
+        <title>Process Engine Worker - Process Engine API</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#method-parameter-resolution" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -114,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Clean Architecture
+              Process Engine Worker
             
           </span>
         </div>
@@ -236,13 +241,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="index.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../introduction/index.html" class="md-tabs__link">
           
   
   
@@ -277,11 +280,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../reference-guide/index.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
           
   
   
@@ -391,31 +396,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -428,7 +428,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Introduction
@@ -442,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../introduction/index.html" class="md-nav__link">
         
   
   
@@ -462,17 +462,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="clean-architecture.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../introduction/clean-architecture.html" class="md-nav__link">
         
   
   
@@ -483,7 +476,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -522,26 +514,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -554,7 +551,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Reference
@@ -568,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-guide/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -591,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-guide/deployment-api.html" class="md-nav__link">
+      <a href="deployment-api.html" class="md-nav__link">
         
   
   
@@ -614,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-guide/process-api.html" class="md-nav__link">
+      <a href="process-api.html" class="md-nav__link">
         
   
   
@@ -637,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-guide/correlation-api.html" class="md-nav__link">
+      <a href="correlation-api.html" class="md-nav__link">
         
   
   
@@ -660,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-guide/signal-api.html" class="md-nav__link">
+      <a href="signal-api.html" class="md-nav__link">
         
   
   
@@ -683,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-guide/task-subscription-api.html" class="md-nav__link">
+      <a href="task-subscription-api.html" class="md-nav__link">
         
   
   
@@ -706,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-guide/service-task-completion-api.html" class="md-nav__link">
+      <a href="service-task-completion-api.html" class="md-nav__link">
         
   
   
@@ -729,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-guide/user-task-completion-api.html" class="md-nav__link">
+      <a href="user-task-completion-api.html" class="md-nav__link">
         
   
   
@@ -752,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-guide/user-task-support.html" class="md-nav__link">
+      <a href="user-task-support.html" class="md-nav__link">
         
   
   
@@ -772,10 +769,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../reference-guide/process-engine-worker.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Process Engine Worker
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="process-engine-worker.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -786,6 +803,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#method-parameter-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method parameter resolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-return-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method return type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throwing-a-bpmn-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throwing a BPMN Error
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transactional-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transactional support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -913,31 +984,87 @@
   
 
 
-  <h1>Clean Architecture</h1>
+  <h1>Process Engine Worker</h1>
 
-<p>Clean Architecture is a set of principles defined by <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Uncle Bob's post back in 2012</a>,
-and focuses on several rules applied during system design. This principles are originally published in different architectural approaches
-and are used combined to achieve some software quality values like:</p>
-<ul>
-<li>Portability (aka independent of frameworks)</li>
-<li>Good Testability</li>
-<li>Independence of external systems</li>
-</ul>
-<p>Our experience of building Process Applications showed that the application of Clean Architecture delivers those values to process applications as well.
-Considering application of Clean Architecture principle, the architectural blueprint would result in something similar to the following:</p>
-<p><img alt="Clean Architecture" src="../assets/img/clean-architecture.png" /></p>
-<p>There are, in general, multiple inbound adapters for the application, responsible for initialization of the control flow. A common one is a REST adapter offering
-some endpoint for HTTP access of some frontend. There might be many other, like message consumers, but the interesting one, in the context of process 
-applications, is the Workflow Adapter. Every time, the process orchestration needs to invoke some business functionality of our application, it would
-use this to access its implementation of a particular use case. Usually, process engines have some measures and API to register callbacks for this.</p>
-<p>On the outbound adapter side, the application relies on different third-party technologies integrated via outbound ports. Following the dependency rule, 
-the application code is not allowed to reference any adapters directly. A common practice is to use Dependency Inversion, to write the adapter implementing
-the outbound port, so the use case implementation only has a reference to the outbound port, and the IoC container provides the adapter implementation 
-at runtime. Again, the part specific to process applications is the integration of the Workflow Adapter, responsible for forwarding all calls to the 
-process engine. Usually, this adapter translates the process-related operations, like starting of new process instances or completion of user or service
-tasks to a vendor-specific process engine API.</p>
-<p>The <code>Process Engine API</code> provides vendor-agnostic abstract API for the <code>Workflow Adapter</code> and uses a set of adapter modules, translating its invocation
-into the vendor-specific API calls. By doing so, your application code remains technology-independent and portable.</p>
+<p>Process Engine Worker is an independent component built on top of Process Engine API in order to accelerate the development of agnostic workers
+for any process engine supported by Process Engine API in Spring Boot ecosystem. By doing so, it abstracts from specific worker clients and 
+API and allows to build universal workers.</p>
+<p>First of all add the Process Engine Worker dependency to you project classpath. In Maven add the following to you <code>pom.xml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;groupId&gt;</span>dev.bpm-crafters.process-engine-worker<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>process-engine-worker-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;version&gt;</span>${process-engine-worker.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+<p>Now create a simple Spring component and annotate a method with a special annotation <code>@ProcessEngineWorker</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Component</span>
+<span class="nd">@RequiredArgsConstructor</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MySmartWorker</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">FetchGoodsInPort</span><span class="w"> </span><span class="n">fetchGoodsInPort</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nd">@ProcessEngineWorker</span><span class="p">(</span><span class="n">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;fetchGoods&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">fetchGoods</span><span class="p">(</span>
+<span class="w">    </span><span class="nd">@Variable</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;order&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">Order</span><span class="w"> </span><span class="n">order</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// execute some business code</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">fetched</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fetchGoodsInPort</span><span class="p">.</span><span class="na">fetchGoods</span><span class="p">(</span><span class="n">order</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;shipped&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fetched</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="method-parameter-resolution">Method parameter resolution<a class="headerlink" href="#method-parameter-resolution" title="Permanent link">#</a></h2>
+<p>Parameter resolution of the method annotated with <code>ProcessEngineWorker</code> is based on a set of strategies
+registered by the <code>ParameterResolver</code> bean. Currently, the following parameters are resolved:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TaskInformation</td>
+<td>Helper abstracting all information about the external task.</td>
+</tr>
+<tr>
+<td>ExternTaskCompletionApi</td>
+<td>API for completing the external task manually</td>
+</tr>
+<tr>
+<td>VariableConverter</td>
+<td>Special utility to read the process variable map and deliver typed value</td>
+</tr>
+<tr>
+<td>Map<String, Object></td>
+<td>Payload object containing all variables.</td>
+</tr>
+<tr>
+<td>Type annotated with @Variable("name")</td>
+<td>Marker for a process variable.</td>
+</tr>
+</tbody>
+</table>
+<p>Usually, the requested variable is mandatory and the parameter resolver reports an error, if the requested variable is not
+available in the process payload. If you want to inject the variable only if it exists in the payload you have two options.
+Either you set the parameter <code>@Variable(name = "...", mandatory = false)</code> or you use <code>Optional&lt;T&gt;</code> instead of <code>T</code> as a variable
+type. If you are using Kotlin and don't like <code>Optional</code>, make sure to declare variable type as nullable (<code>T?</code> instead of <code>T</code>) and
+set the mandatory flag to <code>false</code>. </p>
+<h2 id="method-return-type">Method return type<a class="headerlink" href="#method-return-type" title="Permanent link">#</a></h2>
+<p>If the return type of the method is of type <code>Map&lt;String, Object&gt;</code> or compatible and the <code>autoComplete</code> flag is turned
+on the annotation (defaults to <code>true</code>), the library will try to automatically complete the External Task
+using the returned map as completion variables. If <code>autoComplete</code> is <code>true</code>, but no return value is provided, the task
+will be completed without empty payload. This functionality is provided by the <code>ResultResolver</code> based on registered strategies.</p>
+<h2 id="throwing-a-bpmn-error">Throwing a BPMN Error<a class="headerlink" href="#throwing-a-bpmn-error" title="Permanent link">#</a></h2>
+<p>If you want to throw a BPMN error, please throw an instance of a <code>BPMNErrorOccured</code> exception from the method body. The exception
+is a checked exception, in order to comply with Spring behavior of not rolling back transaction on checked exceptions.</p>
+<h2 id="transactional-support">Transactional support<a class="headerlink" href="#transactional-support" title="Permanent link">#</a></h2>
+<p>The worker method can be marked transactional by adding Spring or Jakarta EE transactional annotations to the method or to the worker class.
+If the annotation <code>@org.springframework.transaction.annotation.Transactional</code> with propagation <code>REQUIRES</code>, <code>REQUIRES_NEW</code>, <code>SUPPORTS</code> and <code>MANDATORY</code>
+is used, the library will execute the worker method and the completion of the external task via API in the same transaction. This will lead to 
+a transaction rollback, if the external task can't be completed (e.g. due to a network error).</p>
 
 
 
