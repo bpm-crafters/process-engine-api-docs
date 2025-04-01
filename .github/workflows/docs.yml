@@ -38,9 +38,6 @@ jobs:
         env:
           GH_USERNAME: ${{ github.actor }}
 
-#      - name: Pre-fetch the gh-pages branch
-#        run: git fetch --depth=1
-
       - name: Build docs with MkDocs
         run: mkdocs build
 
@@ -49,8 +46,12 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         run: echo "TAG_NAME=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
 
+      # Prefetch gh-pages for mike to get correct versions
+      - name: Pre-fetch the gh-pages branch
+        run: git fetch origin gh-pages --depth=1
+
       # This is for a tagged version
-      - name: Create a new version ${{ steps.get_tag_name.outputs.TAG_NAME }} of documentation and push to GH pages.
+      - name: Create a new version of documentation and push to GH pages.
         if: startsWith(github.ref, 'refs/tags/')
         run: mike deploy ${{ steps.get_tag_name.outputs.TAG_NAME }} stable --push --update-aliases
 
