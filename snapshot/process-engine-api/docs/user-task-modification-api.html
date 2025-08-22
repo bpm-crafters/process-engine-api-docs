@@ -12,26 +12,24 @@
         <meta name="author" content="BPM Crafters">
       
       
-        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/index.html">
+        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/user-task-modification-api.html">
       
       
       
-        <link rel="next" href="introduction/index.html">
       
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>Process Engine API</title>
+        <title>User Task Completion API - Process Engine API</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#why-should-i-use-this" class="md-skip">
+        <a href="#changing-payload" class="md-skip">
           Skip to content
         </a>
       
@@ -98,9 +96,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Process Engine API" class="md-header__button md-logo" aria-label="Process Engine API" data-md-component="logo">
+    <a href="../../index.html" title="Process Engine API" class="md-header__button md-logo" aria-label="Process Engine API" data-md-component="logo">
       
-  <img src="assets/img/logo.png" alt="logo">
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -117,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              User Task Completion API
             
           </span>
         </div>
@@ -220,11 +218,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="index.html" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
         
   
   
@@ -245,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="introduction/index.html" class="md-tabs__link">
+        <a href="../../introduction/index.html" class="md-tabs__link">
           
   
   
@@ -265,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="getting-started/index.html" class="md-tabs__link">
+        <a href="../../getting-started/index.html" class="md-tabs__link">
           
   
   
@@ -285,7 +281,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="reference-guide/index.html" class="md-tabs__link">
+        <a href="../../reference-guide/index.html" class="md-tabs__link">
           
   
   
@@ -305,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="developer-guide/contribution.html" class="md-tabs__link">
+        <a href="../../developer-guide/contribution.html" class="md-tabs__link">
           
   
   
@@ -347,9 +343,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Process Engine API" class="md-nav__button md-logo" aria-label="Process Engine API" data-md-component="logo">
+    <a href="../../index.html" title="Process Engine API" class="md-nav__button md-logo" aria-label="Process Engine API" data-md-component="logo">
       
-  <img src="assets/img/logo.png" alt="logo">
+  <img src="../../assets/img/logo.png" alt="logo">
 
     </a>
     Process Engine API
@@ -373,30 +369,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
         
   
   
@@ -407,51 +383,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-should-i-use-this" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why should I use this?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to start?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-in-touch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get in touch
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -506,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="introduction/index.html" class="md-nav__link">
+      <a href="../../introduction/index.html" class="md-nav__link">
         
   
   
@@ -529,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="introduction/clean-architecture.html" class="md-nav__link">
+      <a href="../../introduction/clean-architecture.html" class="md-nav__link">
         
   
   
@@ -602,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting-started/index.html" class="md-nav__link">
+      <a href="../../getting-started/index.html" class="md-nav__link">
         
   
   
@@ -625,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.html" class="md-nav__link">
+      <a href="../../process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.html" class="md-nav__link">
         
   
   
@@ -648,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-adapters-camunda-7/docs/quickstart-c7-remote.html" class="md-nav__link">
+      <a href="../../process-engine-adapters-camunda-7/docs/quickstart-c7-remote.html" class="md-nav__link">
         
   
   
@@ -671,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-adapters-camunda-8/docs/quickstart-c8-saas.html" class="md-nav__link">
+      <a href="../../process-engine-adapters-camunda-8/docs/quickstart-c8-saas.html" class="md-nav__link">
         
   
   
@@ -744,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference-guide/index.html" class="md-nav__link">
+      <a href="../../reference-guide/index.html" class="md-nav__link">
         
   
   
@@ -767,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-api/docs/deployment-api.html" class="md-nav__link">
+      <a href="deployment-api.html" class="md-nav__link">
         
   
   
@@ -790,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-api/docs/process-api.html" class="md-nav__link">
+      <a href="process-api.html" class="md-nav__link">
         
   
   
@@ -813,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-api/docs/correlation-api.html" class="md-nav__link">
+      <a href="correlation-api.html" class="md-nav__link">
         
   
   
@@ -836,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-api/docs/signal-api.html" class="md-nav__link">
+      <a href="signal-api.html" class="md-nav__link">
         
   
   
@@ -859,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-api/docs/task-subscription-api.html" class="md-nav__link">
+      <a href="task-subscription-api.html" class="md-nav__link">
         
   
   
@@ -882,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-api/docs/service-task-completion-api.html" class="md-nav__link">
+      <a href="service-task-completion-api.html" class="md-nav__link">
         
   
   
@@ -905,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-api/docs/user-task-completion-api.html" class="md-nav__link">
+      <a href="user-task-completion-api.html" class="md-nav__link">
         
   
   
@@ -928,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-api/docs/user-task-support.html" class="md-nav__link">
+      <a href="user-task-support.html" class="md-nav__link">
         
   
   
@@ -951,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-engine-worker/docs/process-engine-worker.html" class="md-nav__link">
+      <a href="../../process-engine-worker/docs/process-engine-worker.html" class="md-nav__link">
         
   
   
@@ -1024,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="developer-guide/contribution.html" class="md-nav__link">
+      <a href="../../developer-guide/contribution.html" class="md-nav__link">
         
   
   
@@ -1047,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="developer-guide/project-setup.html" class="md-nav__link">
+      <a href="../../developer-guide/project-setup.html" class="md-nav__link">
         
   
   
@@ -1089,40 +1020,153 @@
   
 
 
-  <h1>Home</h1>
+  <h1>User Task Completion API</h1>
 
-<h2 id="why-should-i-use-this">Why should I use this?<a class="headerlink" href="#why-should-i-use-this" title="Permanent link">#</a></h2>
-<p>Our experience with different process engines led us to an idea to create a vendor-independent API abstracting main capabilities of a process engine.
-In doing so, we followed several ideas:</p>
-<ul>
-<li>The API must be asynchronous.</li>
-<li>The user should not make assumptions about the implementations of the API to stay portable if those are exchanged.</li>
-<li>The API offers the minimal set of capabilities instead of support all possible vendor specific product features, which have nothing to do with process orchestration.</li>
-<li>Different aspects of process engine integration are solved using different independent APIs.</li>
-<li>The API is command based (you pass immutable commands indicating your intent).</li>
-<li>For interaction with your software, the API uses subscriptions.</li>
-<li>The vendor-adapters implementing APIs are drop-ins to your application classpath and your application should not depend on it (rather you can configure those independently)</li>
-</ul>
-<p>Having all this in mind, we created a Process Engine API with several adapters which are ready to use in your next process application. In particular, 
-you can use Process Engine API in your application and configure the adapter to use it with the following process engines / operation modes:</p>
-<ul>
-<li>Camunda Platform 7 Embedded (Spring Boot)</li>
-<li>Camunda Platform 7 Remote (connected via REST)</li>
-<li>Camunda Platform 8 Self Managed</li>
-<li>Camunda Platform 8 SaaS / Cloud</li>
-</ul>
-<p>In doing so, you might start your application using one engine / mode and easily migrate to the other later on, by changing a dependency and providing some 
-additional configuration.</p>
-<p>Sounds interesting for you? Try it out, and provide us some feedback...</p>
-<h2 id="how-to-start">How to start?<a class="headerlink" href="#how-to-start" title="Permanent link">#</a></h2>
-<p>We provide documentation for different people and different tasks. A good starting point is the
-<a href="introduction/index.html">Introduction</a>. You might want to look at <a href="reference-guide/index.html">Reference Guide</a>.</p>
-<h2 id="get-in-touch">Get in touch<a class="headerlink" href="#get-in-touch" title="Permanent link">#</a></h2>
-<p>If you are missing a feature, have a question regarding usage or deployment, you should definitely get in touch
-with us. Here is a link to the open issues of the project:</p>
-<p><a href="https://github.com/bpm-crafters/process-engine-api/issues"><img alt="Github Issues" src="https://img.shields.io/github/issues/bpm-crafters/process-engine-api" /></a></p>
-<p>You might want to help with their implementation or file some new or just contribute your opinion in the discussions. At any rate, any 
-participation or feedback is highly welcome.</p>
+<p>The User Task Completion API provides functionality to modify existing user tasks. Since the Task Subscription API allows asynchronous processing,
+we provide a special API to modify existing tasks. </p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Component</span>
+<span class="nd">@RequiredArgsConstructor</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ModifyUserTaskUseCase</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">UserTaskMdificationApi</span><span class="w"> </span><span class="n">taskModificationApi</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">taskId</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">taskModificationApi</span><span class="p">.</span><span class="na">update</span><span class="p">(</span>
+<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">AssignTaskCmd</span><span class="p">(</span>
+<span class="w">        </span><span class="n">taskId</span><span class="p">,</span>
+<span class="w">        </span><span class="n">value</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The following modifications are available:</p>
+<h2 id="changing-payload">Changing payload<a class="headerlink" href="#changing-payload" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Intent</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Update payload</td>
+<td><code>UpdatePayloadTaskCmd</code></td>
+</tr>
+<tr>
+<td>Clear payload</td>
+<td><code>ClearPayloadTaskCmd</code></td>
+</tr>
+<tr>
+<td>Delete part of the payload</td>
+<td><code>DeletePayloadTaskCmd</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="changing-assignment">Changing assignment<a class="headerlink" href="#changing-assignment" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Intent</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set assignee</td>
+<td><code>AssignTaskCmd</code></td>
+</tr>
+<tr>
+<td>Clear assignee</td>
+<td><code>UnassignTaskCmd</code></td>
+</tr>
+<tr>
+<td>Add candidate group</td>
+<td><code>AddCandidateGroupTaskCmd</code></td>
+</tr>
+<tr>
+<td>Remove candidate group</td>
+<td><code>RemoveCandidateGroupTaskCmd</code></td>
+</tr>
+<tr>
+<td>Set candidate groups</td>
+<td><code>SetCandidateGroupTaskCmd</code></td>
+</tr>
+<tr>
+<td>Clear candidate groups</td>
+<td><code>ClearCandidateGroupTaskCmd</code></td>
+</tr>
+<tr>
+<td>Add candidate user</td>
+<td><code>AddCandidateUserTaskCmd</code></td>
+</tr>
+<tr>
+<td>Remove candidate user</td>
+<td><code>RemoveCandidateUserTaskCmd</code></td>
+</tr>
+<tr>
+<td>Set candidate user</td>
+<td><code>SetCandidateUserTaskCmd</code></td>
+</tr>
+<tr>
+<td>Clear candidate user</td>
+<td><code>ClearCandidateUserTaskCmd</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="composing-multiple-changes-on-one-request">Composing multiple changes on one request<a class="headerlink" href="#composing-multiple-changes-on-one-request" title="Permanent link">#</a></h2>
+<p>If you want to create multiple modifications of the task at the same time, you can use <code>CompositeModifyTaskCmd</code>. Please note
+that multiple modifications on the same task are supported only. To create the command easily, we supplied a 
+fluent builder:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Component</span>
+<span class="nd">@RequiredArgsConstructor</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ModifyUserTaskUseCase</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">UserTaskMdificationApi</span><span class="w"> </span><span class="n">taskModificationApi</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">taskId</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">taskModificationApi</span><span class="p">.</span><span class="na">update</span><span class="p">(</span>
+<span class="w">      </span><span class="n">TaskModification</span><span class="p">(</span><span class="s">&quot;taskId&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">assign</span><span class="p">(</span><span class="s">&quot;kermit&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">unassign</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">clearCandidateUsers</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">clearCandidateGroups</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">addCandidateGroup</span><span class="p">(</span><span class="s">&quot;avengers&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">removeCandidateGroup</span><span class="p">(</span><span class="s">&quot;muppets&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">addCandidateUser</span><span class="p">(</span><span class="s">&quot;kermit&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">removeCandidateUser</span><span class="p">(</span><span class="s">&quot;piggy&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setCandidateUsers</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;fozzy&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setCandidateGroups</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;avengers&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">updatePayload</span><span class="p">(</span><span class="n">Maps</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;task-modified&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">deletePayload</span><span class="p">(</span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;task-modified&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">clearPayload</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">build</span><span class="p">()</span>
+<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>If you are using Kotlin you can use receiver functions instead:</p>
+<div class="highlight"><pre><span></span><code><span class="n">TaskModification</span><span class="p">.</span><span class="na">taskModification</span><span class="p">(</span><span class="s">&quot;taskId&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">unassign</span><span class="p">()</span>
+<span class="w">  </span><span class="n">assign</span><span class="p">(</span><span class="s">&quot;kermit&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">setCandidateUsers</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;piggy&quot;</span><span class="p">))</span>
+<span class="w">  </span><span class="n">addCandidateUser</span><span class="p">(</span><span class="s">&quot;kermit&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">removeCandidateUser</span><span class="p">(</span><span class="s">&quot;piggy&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">setCandidateGroups</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;avengers&quot;</span><span class="p">))</span>
+<span class="w">  </span><span class="n">addCandidateGroup</span><span class="p">(</span><span class="s">&quot;muppets&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">removeCandidateGroup</span><span class="p">(</span><span class="s">&quot;avengers&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">clearCandidateGroups</span><span class="p">()</span>
+<span class="w">  </span><span class="n">clearCandidateUsers</span><span class="p">()</span>
+<span class="w">  </span><span class="n">updatePayload</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">mapOf</span><span class="p">(</span><span class="s">&quot;task-modified&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">clearPayload</span><span class="p">()</span>
+<span class="w">  </span><span class="n">deletePayload</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;some-var-other&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
@@ -1143,7 +1187,7 @@ participation or feedback is highly welcome.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 31, 2025 10:30:19 UTC">March 31, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2025 08:51:03 UTC">August 22, 2025</span>
   </span>
 
     
@@ -1215,10 +1259,10 @@ participation or feedback is highly welcome.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>
