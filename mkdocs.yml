@@ -124,6 +124,9 @@ nav:
     - User Task Completion API: process-engine-api/docs/user-task-completion-api.md
     - User Task Support: process-engine-api/docs/user-task-support.md
     - Process Engine Worker: process-engine-worker/docs/process-engine-worker.md
+  - Adapters:
+    - Camunda 7 Embedded: process-engine-adapters-camunda-7/docs/reference-c7-embedded.md
+    - Camunda 7 Remote: process-engine-adapters-camunda-7/docs/reference-c7-remote.md
   - Developers:
     - Contribution: developer-guide/contribution.md
     - Project Setup: developer-guide/project-setup.md
