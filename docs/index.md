@@ -18,16 +18,18 @@ you can use Process Engine API in your application and configure the adapter to 
 * Camunda Platform 7 Remote (connected via REST)
 * Camunda Platform 8 Self Managed
 * Camunda Platform 8 SaaS / Cloud
+* CIB Seven Embedded (Spring Boot)
 
 In doing so, you might start your application using one engine / mode and easily migrate to the other later on, by changing a dependency and providing some 
 additional configuration.
 
-Sounds interesting for you? Try it out, and provide us some feedback...
+Sounds interesting to you? Try it out and provide us with some feedback...
 
 ## How to start?
 
-We provide documentation for different people and different tasks. A good starting point is the
-[Introduction](./introduction/index.md). You might want to look at [Reference Guide](./reference-guide/index.md).
+We provide documentation for different people and different tasks.
+A good starting point is the [Introduction](./introduction/index.md).
+You might want to look at [Reference Guide](./reference-guide/index.md).
 
 ## Get in touch
 
