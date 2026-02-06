@@ -65,9 +65,6 @@ extra_css: [stylesheets/extra.css]
 
 extra:
   social:
-#    - icon: fontawesome/brands/twitter
-#      name: Holisticon on Twitter
-#      link: https://twitter.com/holisticon
     - icon: fontawesome/brands/github
       name: BPM Crafters
       link: https://github.com/bpm-crafters/
@@ -102,6 +99,9 @@ plugins:
         - name: process-engine-adapters-camunda-8
           import_url: https://github.com/bpm-crafters/process-engine-adapters-camunda-8?edit_uri=/blob/develop/&branch=develop
           imports: [ docs/**/*.md ]
+        - name: process-engine-adapters-cib-seven
+          import_url: https://github.com/bpm-crafters/process-engine-adapters-cib-seven?edit_uri=/blob/develop/&branch=develop
+          imports: [ docs/**/*.md ]
 
 nav:
   - Home: index.md
@@ -113,6 +113,7 @@ nav:
     - Camunda 7 Embedded: process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.md
     - Camunda 7 Remote: process-engine-adapters-camunda-7/docs/quickstart-c7-remote.md
     - Camunda 8 SaaS: process-engine-adapters-camunda-8/docs/quickstart-c8-saas.md
+    - CIB Seven: process-engine-adapters-cib-seven/docs/quickstart-cib-seven-embedded.md
   - Reference:
     - Overview: reference-guide/index.md
     - Deployment API: process-engine-api/docs/deployment-api.md
@@ -127,6 +128,7 @@ nav:
   - Adapters:
     - Camunda 7 Embedded: process-engine-adapters-camunda-7/docs/reference-c7-embedded.md
     - Camunda 7 Remote: process-engine-adapters-camunda-7/docs/reference-c7-remote.md
+    - CIB Seven: process-engine-adapters-cib-seven/docs/reference-cib-seven-embedded.md
   - Developers:
     - Contribution: developer-guide/contribution.md
     - Project Setup: developer-guide/project-setup.md

@@ -14,9 +14,11 @@ git clone https://github.com/bpm-crafters/process-engine-api.git
 cd process-engine-api
 ```
 
-We are using gitflow in our git SCM. That means that you should start from `develop` branch,
+We are using gitflow in our git SCM. 
+That means that you should start from `develop` branch,
 create a `feature/<name>` out of it and once it is completed create a pull request containing
-it. Please squash your commits before submitting and use semantic commit messages, if possible.
+it. 
+Please squash your commits before submitting and use semantic commit messages, if possible.
 
 ## Project Build
 
@@ -28,20 +30,33 @@ Perform the following steps to get a development setup up and running.
 ### Build Documentation
 
 We are using MkDocs for generation of a static site documentation and rely on Markdown as much as possible.
-MkDocs is written in Python 3 and needs to be installed on your machine. For the installation please run the following
+MkDocs is written in Python 3 and needs to be installed on your machine. 
+For the installation please run the following
 command from your command line:
 
 ```bash
+
 python3 -m pip install --upgrade pip
 python3 -m pip install -r ./docs/requirements.txt
 ```
+
+Potentially, you also need to create a virtual environment for the installation:
+
+```bash
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+```
+
 Alternatively, you might want to install `pipx` on your machine and use that instead of Python 3 and virtual environments. Then run:
 
 ```bash
-pipx -r ./docs/requirements.txt
+brew install pipx
+pipx install mkdocs
+pipx inject mkdocs -r requirements.txt
 ```
 
-For creation of documentation, please run:
+For the creation of the documentation, please run:
 
 ```bash
 mkdocs build
@@ -54,8 +69,8 @@ The docs are generated into `site` directory.
 
 ## Continuous Integration
 
-Travis CI is building all branches on commit hook. In addition, a private-hosted Jenkins CI
-is used to build the releases.
+Travis CI is building all branches on commit hook. 
+In addition, a private-hosted Jenkins CI is used to build the releases.
 
 ## Release Management
 
@@ -63,13 +78,15 @@ Release management has been set up for use of Sonatype Nexus (= Maven Central)
 
 ### What modules get deployed to repository
 
-Every module is enabled by default. If you want to change this, please provide the property
+Every module is enabled by default. 
+If you want to change this, please provide the property
 
 ```xml
 <maven.deploy.skip>true</maven.deploy.skip>
 ```
 
-inside the corresponding `pom.xml`. Currently, all examples are _EXCLUDED_ from publication into Maven Central.
+inside the corresponding `pom.xml`. 
+Currently, all examples are _EXCLUDED_ from publication into Maven Central.
 
 ### Trigger new release
 

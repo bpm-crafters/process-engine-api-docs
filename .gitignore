@@ -45,3 +45,5 @@ build/
 _tmp/
 temp_dir/
 .repository/
+.claude
+site
