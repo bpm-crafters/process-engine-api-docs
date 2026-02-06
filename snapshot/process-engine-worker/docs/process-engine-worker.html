@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -699,6 +699,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-cib-seven/docs/quickstart-cib-seven-embedded.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CIB Seven
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1121,6 +1149,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1232,6 +1271,34 @@
     
   
     Camunda 7 Remote
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-cib-seven/docs/reference-cib-seven-embedded.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CIB Seven
   
 
     
@@ -1390,9 +1457,9 @@
   <h1>Process Engine Worker</h1>
 
 <p>Process Engine Worker is an independent component built on top of Process Engine API in order to accelerate the development of agnostic workers
-for any process engine supported by Process Engine API in Spring Boot ecosystem. By doing so, it abstracts from specific worker clients and 
+for any process engine supported by Process Engine API in Spring Boot ecosystem. By doing so, it abstracts from specific worker clients and
 API and allows to build universal workers.</p>
-<p>First of all add the Process Engine Worker dependency to your projects classpath. In Maven add the following to you <code>pom.xml</code>:</p>
+<p>First of all add the Process Engine Worker dependency to your projects classpath. In Maven add the following to your <code>pom.xml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
 <span class="w">  </span><span class="nt">&lt;groupId&gt;</span>dev.bpm-crafters.process-engine-worker<span class="nt">&lt;/groupId&gt;</span>
 <span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>process-engine-worker-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
@@ -1466,8 +1533,17 @@ is a checked exception, in order to comply with Spring behavior of not rolling b
 <h2 id="transactional-support">Transactional support<a class="headerlink" href="#transactional-support" title="Permanent link">#</a></h2>
 <p>The worker method can be marked transactional by adding Spring or Jakarta EE transactional annotations to the method or to the worker class.
 If the annotation <code>@org.springframework.transaction.annotation.Transactional</code> with propagation <code>REQUIRES</code>, <code>REQUIRES_NEW</code>, <code>SUPPORTS</code> and <code>MANDATORY</code>
-is used, the library will execute the worker method and the completion of the external task via API in the same transaction. This will lead to 
+is used, the library will execute the worker method and the completion of the external task via API in the same transaction. This will lead to
 a transaction rollback, if the external task can't be completed (e.g. due to a network error).</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
+<p>You can configure the Process Engine Worker by adding the following properties to your <code>application.properties</code> or <code>application.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">process-api</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">worker</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">registerProcessWorkers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1"># Enable or disable automatic worker registration</span>
+<span class="w">        </span><span class="nt">completeTasksBeforeCommit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># Determines whether tasks are completed before transaction commit</span>
+</code></pre></div>
 
 
 
@@ -1488,7 +1564,7 @@ a transaction rollback, if the external task can't be completed (e.g. due to a n
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 20, 2025 23:23:29 UTC">November 20, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 6, 2026 11:44:41 UTC">February 6, 2026</span>
   </span>
 
     
@@ -1561,10 +1637,10 @@ a transaction rollback, if the external task can't be completed (e.g. due to a n
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
