@@ -6,3 +6,9 @@ updates:
       interval: "daily"
     labels:
       - "Type: dependencies"
+  - package-ecosystem: "pip"
+    directory: "/docs"
+    schedule:
+      interval: "daily"
+    labels:
+      - "Type: dependencies"
