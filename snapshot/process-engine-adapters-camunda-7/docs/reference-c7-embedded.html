@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -1246,6 +1246,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#engine-command-executor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Engine Command Executor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Engine Command Executor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customizing-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1626,6 +1654,25 @@ the real type, you want to access if reading the field. For this purpose, <code>
 </tr>
 </tbody>
 </table>
+<h2 id="engine-command-executor">Engine Command Executor<a class="headerlink" href="#engine-command-executor" title="Permanent link">#</a></h2>
+<p><code>EngineCommandExecutor</code> is an embedded-adapter-specific class that controls how the four core API calls
+(<code>correlateMessage</code>, <code>sendSignal</code>, <code>startProcess</code>, <code>deploy</code>) are dispatched to the embedded Camunda 7 engine.</p>
+<p>By default, all engine calls are submitted asynchronously to <code>ForkJoinPool.commonPool()</code>. This means they run on a
+<strong>different thread</strong> from the caller and do <strong>not</strong> participate in the caller's <code>@Transactional</code> context — a rollback
+on the calling thread will <strong>not</strong> roll back the engine operation.</p>
+<h3 id="customizing-execution">Customizing execution<a class="headerlink" href="#customizing-execution" title="Permanent link">#</a></h3>
+<p>Provide a Spring bean of type <code>EngineCommandExecutor</code> to override the default. The
+auto-configured default is annotated with <code>@ConditionalOnMissingBean</code>, so your bean takes precedence automatically.</p>
+<p><strong>Same-thread (synchronous) execution</strong> — engine calls run on the calling thread and honour <code>@Transactional</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Bean</span>
+<span class="kd">fun</span><span class="w"> </span><span class="nf">engineCommandExecutor</span><span class="p">():</span><span class="w"> </span><span class="n">EngineCommandExecutor</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">EngineCommandExecutor</span><span class="p">(</span><span class="n">Executor</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">run</span><span class="p">()</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+<p><strong>Virtual-thread execution</strong> — lightweight concurrency without pinning platform threads:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Bean</span>
+<span class="kd">fun</span><span class="w"> </span><span class="nf">engineCommandExecutor</span><span class="p">():</span><span class="w"> </span><span class="n">EngineCommandExecutor</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">EngineCommandExecutor</span><span class="p">(</span><span class="n">Executors</span><span class="p">.</span><span class="na">newVirtualThreadPerTaskExecutor</span><span class="p">())</span>
+</code></pre></div>
 
 
 
@@ -1646,7 +1693,7 @@ the real type, you want to access if reading the field. For this purpose, <code>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 6, 2026 11:44:41 UTC">February 6, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 9, 2026 12:28:23 UTC">March 9, 2026</span>
   </span>
 
     

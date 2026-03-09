@@ -2,106 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/index.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/developer-guide/contribution.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/developer-guide/project-setup.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/getting-started/index.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/introduction/index.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/introduction/clean-architecture.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/reference-guide/index.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/correlation-api.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/decision-api.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/deployment-api.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/process-api.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/service-task-completion-api.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/signal-api.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/task-subscription-api.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/user-task-completion-api.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/user-task-modification-api.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/user-task-support.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
+    </url>
+    <url>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-worker/docs/idempotency.html</loc>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-worker/docs/process-deployment.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-worker/docs/process-engine-worker.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-camunda-7/docs/quickstart-c7-remote.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-camunda-7/docs/reference-c7-embedded.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-camunda-7/docs/reference-c7-remote.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-camunda-8/docs/quickstart-c8-saas.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-cib-seven/docs/quickstart-cib-seven-embedded.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
     <url>
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-cib-seven/docs/reference-cib-seven-embedded.html</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-03-09</lastmod>
     </url>
 </urlset>
