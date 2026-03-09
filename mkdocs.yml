@@ -15,7 +15,7 @@ site_description: >-
  following BPM Manifest. It provides an engine-agnostic API to de-couple the business
  and application logic from technology of the process engine implementation.
 
-copyright: Copyright &copy; 2024 - 2025, BPM Crafters
+copyright: Copyright &copy; 2024 - 2026, BPM Crafters
 
 use_directory_urls: false
 
@@ -108,6 +108,7 @@ nav:
   - Introduction:
     - Motivation and Goal: introduction/index.md
     - Clean Architecture: introduction/clean-architecture.md
+    - Library Components: introduction/library-components.md
   - Quick Start:
     - Basic Setup: getting-started/index.md
     - Camunda 7 Embedded: process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.md
@@ -129,6 +130,7 @@ nav:
     - Camunda 7 Embedded: process-engine-adapters-camunda-7/docs/reference-c7-embedded.md
     - Camunda 7 Remote: process-engine-adapters-camunda-7/docs/reference-c7-remote.md
     - CIB Seven: process-engine-adapters-cib-seven/docs/reference-cib-seven-embedded.md
+#    - Camunda 8: process-engine-adapters-camunda-8/docs/reference-c8.md
   - Developers:
     - Contribution: developer-guide/contribution.md
     - Project Setup: developer-guide/project-setup.md

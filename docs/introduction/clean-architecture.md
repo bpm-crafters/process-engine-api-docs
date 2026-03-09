@@ -1,30 +1,43 @@
-Clean Architecture is a set of principles defined by [Uncle Bob's post back in 2012](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html),
-and focuses on several rules applied during system design. This principles are originally published in different architectural approaches
+Clean Architecture is a set of principles defined
+by [Uncle Bob's post back in 2012](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html),
+and focuses on several rules applied during system design. Those principles are originally published in different architectural approaches
 and are used combined to achieve some software quality values like:
 
-- Portability (aka independent of frameworks)
+- Portability (aka independence of frameworks)
 - Good Testability
 - Independence of external systems
 
 Our experience of building Process Applications showed that the application of Clean Architecture delivers those values to process applications as well.
-Considering application of Clean Architecture principle, the architectural blueprint would result in something similar to the following:
+Considering the application of Clean Architecture principle, the architectural blueprint would result in something similar to the following:
 
 ![Clean Architecture](../assets/img/clean-architecture.png)
 
-There are, in general, multiple inbound adapters for the application, responsible for initialization of the control flow. A common one is a REST adapter offering
-some endpoint for HTTP access of some frontend. There might be many other, like message consumers, but the interesting one, in the context of process 
-applications, is the Workflow Adapter. Every time, the process orchestration needs to invoke some business functionality of our application, it would
-use this to access its implementation of a particular use case. Usually, process engines have some measures and API to register callbacks for this.
+### Inbound Adapters
 
-On the outbound adapter side, the application relies on different third-party technologies integrated via outbound ports. Following the dependency rule, 
-the application code is not allowed to reference any adapters directly. A common practice is to use Dependency Inversion, to write the adapter implementing
-the outbound port, so the use case implementation only has a reference to the outbound port, and the IoC container provides the adapter implementation 
-at runtime. Again, the part specific to process applications is the integration of the Workflow Adapter, responsible for forwarding all calls to the 
-process engine. Usually, this adapter translates the process-related operations, like starting of new process instances or completion of user or service
-tasks to a vendor-specific process engine API.
+Inbound adapters are responsible for initiating the control flow of the application. There are typically multiple inbound adapters for different entry points:
 
-The `Process Engine API` provides vendor-agnostic abstract API for the `Workflow Adapter` and uses a set of adapter modules, translating its invocation
-into the vendor-specific API calls. By doing so, your application code remains technology-independent and portable.
+- **REST Adapter**: A common adapter that provides HTTP endpoints for access by a frontend or other services.
+- **Message Consumers**: Adapters that listen for external events or messages to trigger application logic.
+- **Workflow Callback Adapter**: In the context of process applications, this is a crucial component. Whenever the process orchestration needs to invoke
+  specific business functionality, the process engine uses this adapter to access the implementation of a particular use case. Most process engines provide APIs
+  to register such callbacks.
+
+### Outbound Adapters
+
+On the outbound side, the application relies on third-party technologies integrated via outbound ports. Following the dependency rule, the application code
+never references any adapters directly. Instead, it uses **Dependency Inversion**: the use case implementation only has a reference to an outbound port (
+interface), and the IoC container provides the actual adapter implementation at runtime.
+
+The specific part for process applications is the **Workflow Outbound Adapter**, which is responsible for forwarding calls to the process engine. This adapter
+translates process-related operations—such as starting new process instances or completing user and service tasks—into vendor-specific API calls.
+
+### Role of the Process Engine API
+
+The `Process Engine API` provides a vendor-agnostic abstraction for the **Workflow Adapter**. It uses a set of adapter modules that translate these abstract
+calls into vendor-specific API calls (e.g., Camunda 7, Camunda 8, CIB Seven). By using this abstraction, your application code remains technology-independent
+and portable.
+
+
 
 
 

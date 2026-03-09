@@ -9,7 +9,7 @@ assignees:
 
 ### Scenario
 
-* Library version:
+* Docs version:
 * Description of your use case: (detailed description or executable reproducer, e.g. GitHub repo)
 
 ### Current Behaviour

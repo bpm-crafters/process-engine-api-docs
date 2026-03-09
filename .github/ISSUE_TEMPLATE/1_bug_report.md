@@ -8,11 +8,7 @@ labels: 'Type: bug'
 
 ### Steps to reproduce
 
-* Library version:
-* JDK version:  
-* Operating system:
-* Complete executable reproducer: (e.g. GitHub Repo)
-* Steps: (what exactly are you doing with the above reproducer?)
+* Docs version:
 
 ### Expected behaviour
 

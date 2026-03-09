@@ -1,22 +1,37 @@
+## Why we did it?
+
+The motivation for this project arises from recent shifts in the process automation market. With the release of Camunda 8, a new API was introduced that differs
+significantly from Camunda 7. At the same time, the end-of-life (EoL) for Camunda 7 Community and Enterprise versions have been announced, prompting many
+organizations to re-evaluate their long-term strategies.
+
+This situation has led to the emergence of several Camunda 7 forks, such as CIB7 and Operaton, alongside established alternatives like Flowable. Many of our
+customers are now navigating these changes and seeking ways to adapt their solutions without being locked into a single vendor's evolution path. Our goal is to
+provide a stable foundation amidst these developments.
+
+## What is our vision?
+
+We envision a future where process application developers can focus on delivering business value without being burdened by the complexities of vendor-specific
+APIs. By providing a vendor-independent Process Engine API, we address the current uncertainty among customers and allow them to delay final technology
+decisions until they are truly necessary.
+
+Our approach enables organizations to combine several process automation technologies while remaining uniform towards the business application. By
+applying better architectural patterns learned from years of experience, we aim to significantly raise the quality of software.
+
+Ultimately, we aim to simplify the integration of process engines into applications, ensuring that developers can choose the best-suited engine for their
+needs without sacrificing flexibility or portability. Our goal is to empower developers to build robust, scalable, and future-proof process applications
+that are resilient to changes in underlying technology.
+
+## What is our suggestion?
+
 Instead of learning and using of vendor-specific APIs to build your process applications, you should focus on delivering business value. Construction
-of scalable, robust and future-proof applications is easy, if system components are designed to fulfill clear goals and have clear responsibilities.
-This kind of architecture is called [Clean architecture](clean-architecture.md), and we recommend to follow it in general situations. In doing so, technology is hidden inside adapters and the business and domain logic stays technology-agnostic and independent.
+of scalable, robust and future-proof applications is straightforward, if system components are designed to fulfill clear goals and have clear responsibilities.
+This kind of architecture is called [Clean architecture](clean-architecture.md), and we propose to follow it in general situations. In doing so, technology is
+hidden inside adapters, and the business and domain logic stays technology-agnostic and independent.
 
-Our experience with different process engines led us to an idea to create a vendor-independent API, abstracting main capabilities of a process engine.
-In doing so, we followed several ideas:
+## Is there more?
 
-* The API must be asynchronous.
-* The user should not make assumptions about the implementations of the API, to stay portable if those are exchanged.
-* The API offers the minimal set of capabilities instead of support all possible vendor-specific product features, which have nothing to do with process orchestration.
-* Different aspects of process engine integration are solved using different independent APIs.
-* The API is command based (you pass immutable commands indicating your intent).
-* For interaction with your software, the API uses subscriptions.
-* The vendor adapters implementing APIs are drop-ins to your application classpath and your application should not depend on it (rather you can configure those independently).
+Beyond simple abstraction, we offer unique added value designed to address common real-world challenges in process automation. Our solution focuses on:
 
-Having all this in mind, we provide a Process Engine API with several adapters, which are ready to use in your next process application. In particular,
-you can use Process Engine API in your application and configure the adapter to use it with the following process engines / operation modes:
-
-* Camunda Platform 7 Embedded (Spring Boot)
-* Camunda Platform 7 Remote (connected via REST)
-* Camunda Platform 8 Self Managed
-* Camunda Platform 8 SaaS / Cloud
+- **Seamless data handling**: Effortlessly manage complex data access and conversion scenarios, ensuring your business logic remains clean and efficient.
+- **Scalable process landscapes**: Build large-scale, enterprise-ready process architectures with ease, utilizing centralized components like unified user task management.
+- **Resilient distributed environments**: Tackle the inherent complexities of distributed systems, including fault tolerance and transactional consistency, with robust, built-in patterns.

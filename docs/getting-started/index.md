@@ -12,7 +12,7 @@ project's `pom.xml`:
 ```
 
 This dependency provides you with the most important classes required for implementation of your system using
-a process engine. Here is an example how a user task can be completed:
+a process engine. Here is an example of how a user task can be completed:
 
 ```java
 
@@ -40,7 +40,7 @@ public class CompleteUserTaskUseCase implements CompleteUserTaskInPort {
 ```
 
 As you can see, the code above doesn't contain any engine-specific code, but rather uses only code from `process-engine-api`.
-This means, that the resulting code is portable and the decision about the used engine doesn't influence the implementation
+This means that the resulting code is portable and the decision about the used engine doesn't influence the implementation
 of your application logic.
 
 The second step depends on your target architecture and used process engine. Please check the quickstart sections of the available adapters.
