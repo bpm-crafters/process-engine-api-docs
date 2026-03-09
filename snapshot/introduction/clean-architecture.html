@@ -18,7 +18,7 @@
         <link rel="prev" href="index.html">
       
       
-        <link rel="next" href="../getting-started/index.html">
+        <link rel="next" href="library-components.html">
       
       
         
@@ -80,6 +80,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#inbound-adapters" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -514,6 +519,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean Architecture
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="clean-architecture.html" class="md-nav__link md-nav__link--active">
         
   
@@ -531,6 +554,84 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inbound-adapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inbound Adapters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outbound-adapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outbound Adapters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-of-the-process-engine-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role of the Process Engine API
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="library-components.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1361,29 +1462,37 @@
 
   <h1>Clean Architecture</h1>
 
-<p>Clean Architecture is a set of principles defined by <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Uncle Bob's post back in 2012</a>,
-and focuses on several rules applied during system design. This principles are originally published in different architectural approaches
+<p>Clean Architecture is a set of principles defined
+by <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">Uncle Bob's post back in 2012</a>,
+and focuses on several rules applied during system design. Those principles are originally published in different architectural approaches
 and are used combined to achieve some software quality values like:</p>
 <ul>
-<li>Portability (aka independent of frameworks)</li>
+<li>Portability (aka independence of frameworks)</li>
 <li>Good Testability</li>
 <li>Independence of external systems</li>
 </ul>
 <p>Our experience of building Process Applications showed that the application of Clean Architecture delivers those values to process applications as well.
-Considering application of Clean Architecture principle, the architectural blueprint would result in something similar to the following:</p>
+Considering the application of Clean Architecture principle, the architectural blueprint would result in something similar to the following:</p>
 <p><img alt="Clean Architecture" src="../assets/img/clean-architecture.png" /></p>
-<p>There are, in general, multiple inbound adapters for the application, responsible for initialization of the control flow. A common one is a REST adapter offering
-some endpoint for HTTP access of some frontend. There might be many other, like message consumers, but the interesting one, in the context of process 
-applications, is the Workflow Adapter. Every time, the process orchestration needs to invoke some business functionality of our application, it would
-use this to access its implementation of a particular use case. Usually, process engines have some measures and API to register callbacks for this.</p>
-<p>On the outbound adapter side, the application relies on different third-party technologies integrated via outbound ports. Following the dependency rule, 
-the application code is not allowed to reference any adapters directly. A common practice is to use Dependency Inversion, to write the adapter implementing
-the outbound port, so the use case implementation only has a reference to the outbound port, and the IoC container provides the adapter implementation 
-at runtime. Again, the part specific to process applications is the integration of the Workflow Adapter, responsible for forwarding all calls to the 
-process engine. Usually, this adapter translates the process-related operations, like starting of new process instances or completion of user or service
-tasks to a vendor-specific process engine API.</p>
-<p>The <code>Process Engine API</code> provides vendor-agnostic abstract API for the <code>Workflow Adapter</code> and uses a set of adapter modules, translating its invocation
-into the vendor-specific API calls. By doing so, your application code remains technology-independent and portable.</p>
+<h3 id="inbound-adapters">Inbound Adapters<a class="headerlink" href="#inbound-adapters" title="Permanent link">#</a></h3>
+<p>Inbound adapters are responsible for initiating the control flow of the application. There are typically multiple inbound adapters for different entry points:</p>
+<ul>
+<li><strong>REST Adapter</strong>: A common adapter that provides HTTP endpoints for access by a frontend or other services.</li>
+<li><strong>Message Consumers</strong>: Adapters that listen for external events or messages to trigger application logic.</li>
+<li><strong>Workflow Callback Adapter</strong>: In the context of process applications, this is a crucial component. Whenever the process orchestration needs to invoke
+  specific business functionality, the process engine uses this adapter to access the implementation of a particular use case. Most process engines provide APIs
+  to register such callbacks.</li>
+</ul>
+<h3 id="outbound-adapters">Outbound Adapters<a class="headerlink" href="#outbound-adapters" title="Permanent link">#</a></h3>
+<p>On the outbound side, the application relies on third-party technologies integrated via outbound ports. Following the dependency rule, the application code
+never references any adapters directly. Instead, it uses <strong>Dependency Inversion</strong>: the use case implementation only has a reference to an outbound port (
+interface), and the IoC container provides the actual adapter implementation at runtime.</p>
+<p>The specific part for process applications is the <strong>Workflow Outbound Adapter</strong>, which is responsible for forwarding calls to the process engine. This adapter
+translates process-related operations—such as starting new process instances or completing user and service tasks—into vendor-specific API calls.</p>
+<h3 id="role-of-the-process-engine-api">Role of the Process Engine API<a class="headerlink" href="#role-of-the-process-engine-api" title="Permanent link">#</a></h3>
+<p>The <code>Process Engine API</code> provides a vendor-agnostic abstraction for the <strong>Workflow Adapter</strong>. It uses a set of adapter modules that translate these abstract
+calls into vendor-specific API calls (e.g., Camunda 7, Camunda 8, CIB Seven). By using this abstraction, your application code remains technology-independent
+and portable.</p>
 
 
 
@@ -1404,7 +1513,7 @@ into the vendor-specific API calls. By doing so, your application code remains t
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 31, 2025 10:30:19 UTC">March 31, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 9, 2026 17:19:51 UTC">March 9, 2026</span>
   </span>
 
     
@@ -1440,7 +1549,7 @@ into the vendor-specific API calls. By doing so, your application code remains t
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024 - 2025, BPM Crafters
+      Copyright &copy; 2024 - 2026, BPM Crafters
     </div>
   
   
