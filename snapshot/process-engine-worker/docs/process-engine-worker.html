@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -1526,7 +1526,7 @@ API and allows to build universal workers.</p>
 <tr>
 <td><code>topic</code></td>
 <td><code>String</code></td>
-<td><code>""</code></td>
+<td><code>"__unset"</code></td>
 <td>Topic name to subscribe this worker for. Alias for <code>value</code>.</td>
 </tr>
 <tr>
@@ -1546,6 +1546,12 @@ API and allows to build universal workers.</p>
 <td><code>long</code></td>
 <td><code>-1</code></td>
 <td>Optional lock duration in milliseconds for this worker. If set to <code>-1</code> (default), the global configuration of the process engine adapter will be used. (Available since <code>0.8.0</code>)</td>
+</tr>
+<tr>
+<td><code>tenantId</code></td>
+<td><code>String</code></td>
+<td><code>""</code></td>
+<td>Optional tenant id to be used for current worker during the registration. Any non-blank value will be considered. If the value is empty, the value from the property will be used.</td>
 </tr>
 </tbody>
 </table>
@@ -1586,7 +1592,7 @@ registered by the <code>ParameterResolver</code> bean. Currently, the following 
 available in the process payload. If you want to inject the variable only if it exists in the payload you have two options.
 Either you set the parameter <code>@Variable(name = "...", mandatory = false)</code> or you use <code>Optional&lt;T&gt;</code> instead of <code>T</code> as a variable
 type. If you are using Kotlin and don't like <code>Optional</code>, make sure to declare variable type as nullable (<code>T?</code> instead of <code>T</code>) and
-set the mandatory flag to <code>false</code>. </p>
+set the mandatory flag to <code>false</code>.</p>
 <h2 id="method-return-type">Method return type<a class="headerlink" href="#method-return-type" title="Permanent link">#</a></h2>
 <p>If the return type of the method is of type <code>Map&lt;String, Object&gt;</code> or compatible and the <code>autoComplete</code> flag is turned
 on the annotation (defaults to <code>true</code>), the library will try to automatically complete the External Task
@@ -1608,6 +1614,7 @@ a transaction rollback, if the external task can't be completed (e.g. due to a n
 <span class="w">      </span><span class="nt">worker</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">registerProcessWorkers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"> </span><span class="c1"># Enable or disable automatic worker registration</span>
 <span class="w">        </span><span class="nt">completeTasksBeforeCommit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># Determines whether tasks are completed before transaction commit</span>
+<span class="w">        </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-tenant</span><span class="w"> </span><span class="c1"># Specify the tenant ID for all workers, can be overridden by the value in the `@ProcessEngineWorker` annotation</span>
 </code></pre></div>
 
 
@@ -1629,7 +1636,7 @@ a transaction rollback, if the external task can't be completed (e.g. due to a n
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 9, 2026 17:50:11 UTC">March 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 08:35:44 UTC">June 21, 2026</span>
   </span>
 
     

@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -1468,6 +1468,33 @@ we provide a special API to modify existing tasks. </p>
 </tr>
 </tbody>
 </table>
+<h2 id="changing-dates">Changing dates<a class="headerlink" href="#changing-dates" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Intent</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set due date</td>
+<td><code>SetDueDateTaskCmd</code></td>
+</tr>
+<tr>
+<td>Clear due date</td>
+<td><code>ClearDueDateTaskCmd</code></td>
+</tr>
+<tr>
+<td>Set follow-up date</td>
+<td><code>SetFollowUpDateTaskCmd</code></td>
+</tr>
+<tr>
+<td>Clear follow-up date</td>
+<td><code>ClearFollowUpDateTaskCmd</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="composing-multiple-changes-on-one-request">Composing multiple changes on one request<a class="headerlink" href="#composing-multiple-changes-on-one-request" title="Permanent link">#</a></h2>
 <p>If you want to create multiple modifications of the task at the same time, you can use <code>CompositeModifyTaskCmd</code>. Please note
 that multiple modifications on the same task are supported only. To create the command easily, we supplied a 
@@ -1491,6 +1518,10 @@ fluent builder:</p>
 <span class="w">        </span><span class="p">.</span><span class="na">removeCandidateUser</span><span class="p">(</span><span class="s">&quot;piggy&quot;</span><span class="p">)</span>
 <span class="w">        </span><span class="p">.</span><span class="na">setCandidateUsers</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;fozzy&quot;</span><span class="p">))</span>
 <span class="w">        </span><span class="p">.</span><span class="na">setCandidateGroups</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;avengers&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setDueDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">setFollowUpDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">clearDueDate</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="na">clearFollowUpDate</span><span class="p">()</span>
 <span class="w">        </span><span class="p">.</span><span class="na">updatePayload</span><span class="p">(</span><span class="n">Maps</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;task-modified&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">))</span>
 <span class="w">        </span><span class="p">.</span><span class="na">deletePayload</span><span class="p">(</span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;task-modified&quot;</span><span class="p">))</span>
 <span class="w">        </span><span class="p">.</span><span class="na">clearPayload</span><span class="p">()</span>
@@ -1511,6 +1542,10 @@ fluent builder:</p>
 <span class="w">  </span><span class="n">removeCandidateGroup</span><span class="p">(</span><span class="s">&quot;avengers&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">clearCandidateGroups</span><span class="p">()</span>
 <span class="w">  </span><span class="n">clearCandidateUsers</span><span class="p">()</span>
+<span class="w">  </span><span class="n">setDueDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="m">3</span><span class="p">))</span>
+<span class="w">  </span><span class="n">setFollowUpDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+<span class="w">  </span><span class="n">clearDueDate</span><span class="p">()</span>
+<span class="w">  </span><span class="n">clearFollowUpDate</span><span class="p">()</span>
 <span class="w">  </span><span class="n">updatePayload</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">mapOf</span><span class="p">(</span><span class="s">&quot;task-modified&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
 <span class="w">  </span><span class="p">}</span>
@@ -1540,7 +1575,7 @@ fluent builder:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 9, 2026 17:50:11 UTC">March 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 08:35:44 UTC">June 21, 2026</span>
   </span>
 
     
