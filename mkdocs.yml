@@ -130,7 +130,7 @@ nav:
     - Camunda 7 Embedded: process-engine-adapters-camunda-7/docs/reference-c7-embedded.md
     - Camunda 7 Remote: process-engine-adapters-camunda-7/docs/reference-c7-remote.md
     - CIB Seven: process-engine-adapters-cib-seven/docs/reference-cib-seven-embedded.md
-#    - Camunda 8: process-engine-adapters-camunda-8/docs/reference-c8.md
+    - Camunda 8: process-engine-adapters-camunda-8/docs/reference-c8.md
   - Developers:
     - Contribution: developer-guide/contribution.md
     - Project Setup: developer-guide/project-setup.md
