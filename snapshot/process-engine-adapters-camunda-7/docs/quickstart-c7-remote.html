@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#jackson-and-spin-combinations" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -685,6 +690,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Camunda 7 Remote
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="quickstart-c7-remote.html" class="md-nav__link md-nav__link--active">
         
   
@@ -701,6 +724,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jackson-and-spin-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jackson and Spin combinations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1245,6 +1296,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-8/docs/reference-c8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Camunda 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1391,9 +1470,8 @@
 
 <p>If you start with a Camunda Platform 7, operated remotely, the following configuration is applicable for you.</p>
 <p>First of all add the corresponding adapter to your project's classpath. In order to connect to remote engine,
-you will need to use some client. Currently, the Camunda Hub extension <a href="https://github.com/camunda-community-hub/camunda-platform-7-rest-client-spring-boot">camunda-platform-7-rest-client-spring-boot</a>,
-you will also need to add some additional libraries. Here is the result:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependendcies&gt;</span>
+you need a Camunda 7 REST client on the classpath. The current examples use the Holunda Feign starter. Add the official Camunda external task client only if you want subscribed service-task delivery (<code>remote_subscribed</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependencies&gt;</span>
 <span class="w">  </span><span class="cm">&lt;!-- the correct adapter --&gt;</span>
 <span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
 <span class="w">    </span><span class="nt">&lt;groupId&gt;</span>dev.bpm-crafters.process-engine-adapters<span class="nt">&lt;/groupId&gt;</span>
@@ -1402,18 +1480,28 @@ you will also need to add some additional libraries. Here is the result:</p>
 <span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
 <span class="w">  </span><span class="cm">&lt;!-- rest client library --&gt;</span>
 <span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
-<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.camunda.community.rest<span class="nt">&lt;/groupId&gt;</span>
-<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>camunda-platform-7-rest-client-spring-boot-starter-feign<span class="nt">&lt;/artifactId&gt;</span>
-<span class="w">    </span><span class="nt">&lt;version&gt;</span>7.23.4<span class="nt">&lt;/version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>io.holunda.c7<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>c7-rest-client-spring-boot-starter-feign<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>${c7.version}<span class="nt">&lt;/version&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
-<span class="w">  </span><span class="cm">&lt;!-- Optional, if you want to use the official camunda client for service task delivery--&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Optional, only for service-tasks.delivery-strategy=remote_subscribed --&gt;</span>
 <span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
 <span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.camunda.bpm.springboot<span class="nt">&lt;/groupId&gt;</span>
 <span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>camunda-bpm-spring-boot-starter-external-task-client<span class="nt">&lt;/artifactId&gt;</span>
-<span class="w">    </span><span class="nt">&lt;version&gt;</span>7.23.0<span class="nt">&lt;/version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>7.24.0<span class="nt">&lt;/version&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
-<span class="nt">&lt;/dependendcies&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
 </code></pre></div>
+<p>If you build on Spring Boot 4, use <code>io.holunda.c7:c7-rest-client-spring-boot-starter-feign-4</code> instead of <code>...-feign</code>.</p>
+<h2 id="jackson-and-spin-combinations">Jackson and Spin combinations<a class="headerlink" href="#jackson-and-spin-combinations" title="Permanent link">#</a></h2>
+<p>For the remote adapter, Jackson 3 is the straightforward Spring Boot 4 path.</p>
+<ul>
+<li>The remote adapter does not depend on embedded Camunda Spin.</li>
+<li>Jackson 3 can therefore be used without the embedded Spin limitation.</li>
+<li>The main Spin restriction applies to embedded Camunda 7 JSON variable serialization, not to the remote adapter itself.</li>
+</ul>
+<p>If you need Spin-based JSON variable serialization, that restriction remains on the remote engine side. The adapter's
+own serialization can still follow the Spring Boot ecosystem used by the remote application.</p>
 <p>And finally, add the following configuration to your configuration properties. Here is a version for <code>application.yaml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
@@ -1422,24 +1510,29 @@ you will also need to add some additional libraries. Here is the result:</p>
 <span class="w">        </span><span class="nt">c7remote</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_scheduled</span><span class="w"> </span><span class="c1"># or remote_subscribed if you want to use official camunda client</span>
-<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded-worker</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_scheduled</span><span class="w"> </span><span class="c1"># or remote_subscribed with the official external task client</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote-worker</span>
 <span class="w">            </span><span class="nt">lock-time-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-<span class="w">            </span><span class="nt">worker-thread-pool-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-<span class="w">            </span><span class="nt">worker-thread-pool-queue-capacity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">            </span><span class="nt">max-task-count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">            </span><span class="nt">deserialize-on-server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">worker-thread-pool-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">            </span><span class="nt">worker-thread-pool-queue-capacity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_scheduled</span>
-<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">deserialize-on-server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 
-<span class="c1"># to tell the client library where the engine is located provide the correct details below:</span>
+<span class="c1"># Needed for the remote REST client in all remote setups:</span>
 <span class="nt">feign</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">client</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">config</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">default</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:9090/engine-rest/&quot;</span>
 
-<span class="c1"># Just needed if you use remote_subscribed as delivery-strategy for service-tasks</span>
+<span class="c1"># Only needed for service-tasks.delivery-strategy=remote_subscribed</span>
 <span class="nt">camunda</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bpm</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">client</span><span class="p">:</span>
@@ -1465,7 +1558,7 @@ you will also need to add some additional libraries. Here is the result:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 08:35:44 UTC">June 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 6, 2026 08:06:48 UTC">July 6, 2026</span>
   </span>
 
     

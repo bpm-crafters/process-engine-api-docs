@@ -1117,6 +1117,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#restart-and-duplicate-delivery-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restart and duplicate delivery handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#typical-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1294,6 +1305,34 @@
     
   
     CIB Seven
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-8/docs/reference-c8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Camunda 8
   
 
     
@@ -1494,9 +1533,19 @@ task id (task existence is enforced) or information of all tasks:</p>
 directly and acts as a composite handler, invoking both on corresponding task lifecycle events. This is in particular helpful, if you implement any kind
 of forwarding or notification logic for the user tasks:</p>
 <ul>
-<li><code>addTaskHandler(handler: TaskHandler)</code></li>
-<li><code>addTaskTerminationHandler(handler: TaskTerminationHandler)</code></li>
+<li><code>addHandler(handler: TaskHandler)</code></li>
+<li><code>addTerminationHandler(handler: TaskTerminationHandler)</code></li>
 </ul>
+<h2 id="restart-and-duplicate-delivery-handling">Restart and duplicate delivery handling<a class="headerlink" href="#restart-and-duplicate-delivery-handling" title="Permanent link">#</a></h2>
+<p><code>User Task Support</code> keeps received task information and payload in memory for the current application instance. It is
+populated by the Task Subscription API, which delivers all currently available matching tasks when a new subscription is
+created. After an application restart, already active user tasks can therefore be delivered to a new <code>User Task Support</code>
+instance again and look like newly received tasks to in-memory handlers.</p>
+<p>If you register handlers for forwarding, synchronization, or notifications, do not rely on <code>User Task Support</code> alone to
+prevent duplicate side effects across restarts. Make these handlers idempotent and persist the synchronization state in
+your own storage. A typical implementation stores a last synchronization timestamp or a per-task processing marker,
+compares it with the adapter-provided created date or updated date from <code>TaskInformation.meta</code>, then skips notification
+or forwarding if the task was already processed for the same timestamp.</p>
 <h2 id="typical-usage">Typical usage<a class="headerlink" href="#typical-usage" title="Permanent link">#</a></h2>
 <p>Typically, implementation of task-related use cases require access via inbound adapters to your use case based on some reference to the user task. Often, systems for 
 delivery of user tasks or user tasks notification will use the task id as the only reference to the task. The use case implementation needs to resolve the reference, 
@@ -1523,7 +1572,7 @@ See our provided examples for more details.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 08:35:44 UTC">June 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 6, 2026 08:06:48 UTC">July 6, 2026</span>
   </span>
 
     

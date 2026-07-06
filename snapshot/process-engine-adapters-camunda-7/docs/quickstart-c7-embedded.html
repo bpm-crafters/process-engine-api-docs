@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#spring-boot-4" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -657,6 +662,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Camunda 7 Embedded
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="quickstart-c7-embedded.html" class="md-nav__link md-nav__link--active">
         
   
@@ -673,6 +696,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#spring-boot-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spring Boot 4
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spring Boot 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jackson-and-spin-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jackson and Spin combinations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1245,6 +1313,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-8/docs/reference-c8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Camunda 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1391,13 +1487,56 @@
 
 <p>If you start with a Camunda Platform 7, operated in an embedded engine mode, by for example using the Camunda Spring Boot Starter,
 the following configuration is applicable for you.</p>
-<p>First of all, add the corresponding adapter to your project's classpath:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
+<p>First of all, add the corresponding adapter and an embedded Camunda 7 starter to your project's classpath:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependencies&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
 <span class="w">    </span><span class="nt">&lt;groupId&gt;</span>dev.bpm-crafters.process-engine-adapters<span class="nt">&lt;/groupId&gt;</span>
 <span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>process-engine-adapter-camunda-platform-c7-embedded-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
 <span class="w">    </span><span class="nt">&lt;version&gt;</span>${process-engine-api.version}<span class="nt">&lt;/version&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.camunda.bpm.springboot<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>camunda-bpm-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>7.24.0<span class="nt">&lt;/version&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
 </code></pre></div>
+<h2 id="spring-boot-4">Spring Boot 4<a class="headerlink" href="#spring-boot-4" title="Permanent link">#</a></h2>
+<p>The embedded adapter starter is compatible with Spring Boot 3 and Spring Boot 4. A runnable Spring Boot 4 example is
+available in <code>examples/java-c7-embedded-sb4</code>. A second Spring Boot 4 example without Spin and with Jackson 3 is
+available in <code>examples/java-c7-embedded-sb4-jackson3</code>.</p>
+<p>For Spring Boot 4, the adapter starter replaces the failing Camunda 7.24 auto-configuration path that references the
+Spring Boot 3 class <code>org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration</code>. The consuming
+application still needs the normal embedded-engine runtime dependencies, including a JDBC starter or equivalent
+<code>DataSource</code>/transaction-manager setup.</p>
+<p>If process variables contain custom objects and <code>camunda.bpm.default-serialization-format</code> is set to <code>application/json</code>,
+add Camunda Spin with the JSON-Jackson data format, for example:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.camunda.bpm<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>camunda-engine-plugin-spin<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.camunda.spin<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>camunda-spin-dataformat-json-jackson<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+<h3 id="jackson-and-spin-combinations">Jackson and Spin combinations<a class="headerlink" href="#jackson-and-spin-combinations" title="Permanent link">#</a></h3>
+<p>The adapter itself supports Jackson 2 and Jackson 3, but the embedded-engine runtime has an extra constraint:</p>
+<ul>
+<li>Camunda Spin JSON support works with the Jackson 2 ecosystem only.</li>
+<li>If you use Spin for JSON variable serialization in an embedded Camunda 7 setup, keep the adapter on Jackson 2 as well.</li>
+<li>If you want Jackson 3 with the embedded adapter, do not configure Spin JSON serialization.</li>
+<li>In the embedded Jackson-3 path, avoid <code>camunda.bpm.default-serialization-format=application/json</code> unless you replace Spin with a different compatible serialization approach.</li>
+</ul>
+<p>In practice this means:</p>
+<ul>
+<li>Embedded + Spin + JSON object variables: Jackson 2</li>
+<li>Embedded + no Spin: Jackson 3 can work</li>
+<li>Remote adapter: Jackson 3 can work because the adapter does not depend on embedded Spin</li>
+</ul>
+<p>The Spring Boot 4 example uses the public Camunda 7 Community Edition artifacts in version <code>7.24.0</code>. This is the last
+Camunda 7 Community Edition release published on Maven Central. If you use maintained Camunda 7 Enterprise patch
+versions, configure the corresponding Enterprise repository and dependency versions in your application.</p>
 <p>and finally, add the following configuration to your configuration properties. Here is a version for <code>application.yaml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
@@ -1408,13 +1547,16 @@ the following configuration is applicable for you.</p>
 <span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded_scheduled</span>
 <span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded-worker</span>
+<span class="w">            </span><span class="nt">max-task-count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 <span class="w">            </span><span class="nt">lock-time-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">            </span><span class="nt">retry-timeout-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">            </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 <span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 <span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded_scheduled</span>
 <span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
 </code></pre></div>
 
 
@@ -1436,7 +1578,7 @@ the following configuration is applicable for you.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 08:35:44 UTC">June 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 6, 2026 08:06:48 UTC">July 6, 2026</span>
   </span>
 
     

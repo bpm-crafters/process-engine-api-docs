@@ -12,13 +12,13 @@
         <meta name="author" content="BPM Crafters">
       
       
-        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/signal-api.html">
+        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-camunda-8/docs/reference-c8.html">
       
       
-        <link rel="prev" href="correlation-api.html">
+        <link rel="prev" href="../../process-engine-adapters-cib-seven/docs/reference-cib-seven-embedded.html">
       
       
-        <link rel="next" href="task-subscription-api.html">
+        <link rel="next" href="../../developer-guide/contribution.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Signal API - Process Engine API</title>
+        <title>Camunda Platform 8 Reference - Process Engine API</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#delivery-modes-and-their-impact" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -116,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Signal API
+              Camunda Platform 8 Reference
             
           </span>
         </div>
@@ -278,12 +283,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../reference-guide/index.html" class="md-tabs__link">
           
   
@@ -300,10 +303,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../process-engine-adapters-camunda-7/docs/reference-c7-embedded.html" class="md-tabs__link">
           
   
@@ -701,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../process-engine-adapters-camunda-8/docs/quickstart-c8-saas.html" class="md-nav__link">
+      <a href="quickstart-c8-saas.html" class="md-nav__link">
         
   
   
@@ -761,31 +766,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -803,7 +803,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -849,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deployment-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/deployment-api.html" class="md-nav__link">
         
   
   
@@ -877,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/process-api.html" class="md-nav__link">
         
   
   
@@ -905,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="correlation-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/correlation-api.html" class="md-nav__link">
         
   
   
@@ -930,17 +930,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="signal-api.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../process-engine-api/docs/signal-api.html" class="md-nav__link">
         
   
   
@@ -956,7 +949,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -969,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="task-subscription-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/task-subscription-api.html" class="md-nav__link">
         
   
   
@@ -997,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="service-task-completion-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/service-task-completion-api.html" class="md-nav__link">
         
   
   
@@ -1025,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user-task-completion-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/user-task-completion-api.html" class="md-nav__link">
         
   
   
@@ -1053,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user-task-support.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/user-task-support.html" class="md-nav__link">
         
   
   
@@ -1113,26 +1105,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1150,7 +1147,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1249,10 +1246,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../process-engine-adapters-camunda-8/docs/reference-c8.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Camunda 8
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="reference-c8.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1268,6 +1292,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#service-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Tasks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Tasks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1415,32 +1481,619 @@
   
 
 
-  <h1>Signal API</h1>
-
-<p>The Signal API provides functionality to send signals to running process instances.
-It is intended to be used in outbound adapters of the port/adapter architecture, in order
-to control the process engine from your application.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">SignalUseCase</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">SignalApi</span><span class="w"> </span><span class="n">signalApi</span><span class="p">;</span>
-
-<span class="w">  </span><span class="cm">/**</span>
-<span class="cm">   * Send `signal1`signal to the process. </span>
-<span class="cm">   * @param payloadValue value to set as process variable on successful correlation.</span>
-<span class="cm">   */</span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">senSignal1</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">payloadValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">signalApi</span><span class="p">.</span><span class="na">sendSignal</span><span class="p">(</span>
-<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">SendSignalCmd</span><span class="p">(</span>
-<span class="w">        </span><span class="s">&quot;signal1&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
-<span class="w">          </span><span class="s">&quot;signal-delivered-value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">payloadValue</span>
-<span class="w">        </span><span class="p">),</span>
-<span class="w">        </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">()</span><span class="w"> </span><span class="c1">// restrictions, for example tenant</span>
-<span class="w">      </span><span class="p">)</span>
-<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<h1 id="delivery-modes-and-their-impact">Delivery modes and their impact<a class="headerlink" href="#delivery-modes-and-their-impact" title="Permanent link">#</a></h1>
+<p>The adapter delivers service tasks and user tasks through independent strategies. The selected strategy decides which
+Camunda API is used, which completion API is wired, how quickly task changes are visible, and which metadata is
+available in <code>TaskInformation.getMeta()</code>.</p>
+<h2 id="service-tasks">Service Tasks<a class="headerlink" href="#service-tasks" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Implementation</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SUBSCRIPTION</code></td>
+<td>Opens Camunda job workers for <code>TaskType.EXTERNAL</code> subscriptions. The subscription <code>taskDescriptionKey</code> is used as the job type.</td>
+<td>Service tasks are pushed by Camunda jobs. Payload variables are fetched according to the subscription <code>payloadDescription</code>. <code>workerLockDurationInMilliseconds</code> can override the configured worker lock time per subscription.</td>
+</tr>
+<tr>
+<td><code>CUSTOM</code></td>
+<td>No built-in service task delivery bean is created.</td>
+<td>Provide your own delivery implementation. The default service task completion API is still available unless you replace it with your own bean.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="user-tasks">User Tasks<a class="headerlink" href="#user-tasks" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Implementation</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SCHEDULED</code></td>
+<td>Periodically searches Camunda user tasks with state <code>CREATED</code>.</td>
+<td>Uses the Camunda user task search and variable search APIs. Task delivery is delayed by <code>schedule-delivery-fixed-rate-in-seconds</code>. A task is delivered with reason <code>create</code> the first time and <code>update</code> when delivered again to the same subscription. The Camunda client is fetching tasks from the secondary storage, so some delay is expected.</td>
+</tr>
+<tr>
+<td><code>SUBSCRIPTION_REFRESHING</code></td>
+<td>Opens Zeebe job workers for the Legacy Camunda user task job type and refreshes the job timeout periodically.</td>
+<td>User tasks are delivered as jobs and remain locked until completed or the lock refresh detects that the job is gone. Completion uses the job completion API. If timeout refresh returns <code>NOT_FOUND</code>, the subscription termination handler receives reason <code>delete</code>.</td>
+</tr>
+<tr>
+<td><code>LISTENER</code></td>
+<td>Opens a worker for Camunda user task listener jobs.</td>
+<td>User task changes are delivered from task listener events. On startup, the adapter can preload already-created native user tasks once by reusing the pull delivery search. Completion uses the Camunda user task completion API.</td>
+</tr>
+<tr>
+<td><code>CUSTOM</code></td>
+<td>No built-in user task delivery or completion bean is created.</td>
+<td>Provide your own delivery and completion implementation.</td>
+</tr>
+</tbody>
+</table>
+<p>The listener strategy requires user task listener jobs with the configured topic. You can define these listeners in BPMN
+or enable global listener auto-registration. Auto-registration feature is supported and uses Camunda's Orchestration Cluster API and will fail
+startup if the API call fails.</p>
+<p>By default, listener delivery also performs a one-shot preload of existing native user tasks during startup. This catches
+tasks that reached <code>CREATED</code> before the listener worker opened. After that preload, <code>LISTENER</code> remains event-driven; it
+does not create a scheduled polling binding.</p>
+<h1 id="configuration-overview">Configuration Overview<a class="headerlink" href="#configuration-overview" title="Permanent link">#</a></h1>
+<p>Spring Boot configuration is rooted at <code>dev.bpm-crafters.process-api.adapter.c8</code>. The adapter autoconfiguration is only
+active when <code>enabled</code> is explicitly set to <code>true</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">process-api</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">adapter</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">c8</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUBSCRIPTION</span>
+<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">worker</span>
+<span class="w">            </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">            </span><span class="nt">retry-timeout-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">            </span><span class="nt">lock-time-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
+<span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LISTENER</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">            </span><span class="nt">listener</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">topic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">process-engine-user-tasks</span>
+<span class="w">              </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">process-engine-user-tasks-worker</span>
+<span class="w">              </span><span class="nt">max-jobs-active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+<span class="w">              </span><span class="nt">stream-enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">              </span><span class="nt">lock-time-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
+<span class="w">              </span><span class="nt">retry-timeout-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">              </span><span class="nt">auto-register-global-listener</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">              </span><span class="nt">global-listener-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">process-engine-user-tasks</span>
+<span class="w">              </span><span class="nt">global-listener-retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">              </span><span class="nt">global-listener-after-non-global</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">              </span><span class="nt">global-listener-priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">              </span><span class="nt">preload-existing-tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td>Must be set</td>
+<td>Enables the C8 adapter autoconfiguration. Although the properties class defaults to <code>true</code>, the condition requires this property to be explicitly bound.</td>
+</tr>
+<tr>
+<td><code>service-tasks.delivery-strategy</code></td>
+<td>Required</td>
+<td><code>SUBSCRIPTION</code> or <code>CUSTOM</code>.</td>
+</tr>
+<tr>
+<td><code>service-tasks.worker-id</code></td>
+<td>Required</td>
+<td>Worker name used for service task job workers and for <code>SUBSCRIPTION_REFRESHING</code> user task workers.</td>
+</tr>
+<tr>
+<td><code>service-tasks.retries</code></td>
+<td><code>3</code></td>
+<td>Default retries used by the failure retry supplier.</td>
+</tr>
+<tr>
+<td><code>service-tasks.retry-timeout-in-seconds</code></td>
+<td><code>5</code></td>
+<td>Backoff used when failing service task jobs after handler errors.</td>
+</tr>
+<tr>
+<td><code>service-tasks.lock-time-in-seconds</code></td>
+<td><code>300</code></td>
+<td>Default service task worker lock time. Can be overridden by <code>workerLockDurationInMilliseconds</code> on a service task subscription.</td>
+</tr>
+<tr>
+<td><code>user-tasks.delivery-strategy</code></td>
+<td>Required</td>
+<td><code>SCHEDULED</code>, <code>SUBSCRIPTION_REFRESHING</code>, <code>LISTENER</code>, or <code>CUSTOM</code>.</td>
+</tr>
+<tr>
+<td><code>user-tasks.schedule-delivery-fixed-rate-in-seconds</code></td>
+<td><code>5</code></td>
+<td>Polling interval for <code>SCHEDULED</code> delivery and timeout refresh interval for <code>SUBSCRIPTION_REFRESHING</code>.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.topic</code></td>
+<td><code>process-engine-user-tasks</code></td>
+<td>Camunda user task listener job type consumed by the <code>LISTENER</code> strategy.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.worker-id</code></td>
+<td><code>process-engine-user-tasks-worker</code></td>
+<td>Worker name used by the listener job worker.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.max-jobs-active</code></td>
+<td><code>32</code></td>
+<td>Maximum active listener jobs.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.stream-enabled</code></td>
+<td><code>true</code></td>
+<td>Enables Camunda job streaming for listener jobs.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.lock-time-in-seconds</code></td>
+<td><code>300</code></td>
+<td>Listener job lock time.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.retry-timeout-in-seconds</code></td>
+<td><code>5</code></td>
+<td>Backoff used when failing listener jobs after handler errors.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.auto-register-global-listener</code></td>
+<td><code>false</code></td>
+<td>If <code>true</code>, the adapter registers a global user task listener on startup.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.global-listener-id</code></td>
+<td><code>process-engine-user-tasks</code></td>
+<td>Id used for global listener auto-registration.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.global-listener-retries</code></td>
+<td><code>3</code></td>
+<td>Retry count configured for the global listener.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.global-listener-after-non-global</code></td>
+<td><code>true</code></td>
+<td>Configures the global listener to run after BPMN-level listeners.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.global-listener-priority</code></td>
+<td><code>0</code></td>
+<td>Priority configured for the global listener.</td>
+</tr>
+<tr>
+<td><code>user-tasks.listener.preload-existing-tasks</code></td>
+<td><code>true</code></td>
+<td>If <code>true</code>, <code>LISTENER</code> runs one startup search for already-created native user tasks before opening the listener worker.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="message-correlation">Message Correlation<a class="headerlink" href="#message-correlation" title="Permanent link">#</a></h1>
+<p>Correlation API implementation supports the following restrictions:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tenantId</code></td>
+<td>Camunda tenant id</td>
+<td>Passed to the Camunda publish-message command with <code>tenantId(value)</code>. Empty values are ignored.</td>
+</tr>
+</tbody>
+</table>
+<p>All other restriction keys are rejected before the message command is sent. Message correlation uses the command's
+<code>messageName</code>, the <code>correlationKey</code> from <code>cmd.correlation.get().correlationKey</code>, and the variables from
+<code>cmd.payloadSupplier.get()</code>.</p>
+<h1 id="task-subscription-restrictions">Task Subscription Restrictions<a class="headerlink" href="#task-subscription-restrictions" title="Permanent link">#</a></h1>
+<p>Task subscription restrictions are evaluated by the delivery strategy when a task is considered for delivery. Unknown
+restriction keys are not ignored; they make the task fail matching for that subscription. The
+<code>workerLockDurationInMilliseconds</code> restriction is special: it is applied as a lock-duration override for service task
+workers and ignored during task matching.</p>
+<p>The subscription <code>taskDescriptionKey</code> is matched outside the restriction map. For service tasks it matches the Camunda
+job type. For user tasks it matches the BPMN user task element id (<code>elementId</code>). A <code>null</code> <code>taskDescriptionKey</code> matches
+any task of the requested task type. Payload delivery follows the API contract: <code>payloadDescription == null</code> delivers all
+available variables, an empty set delivers no variables, and a non-empty set delivers only the named variables.</p>
+<table>
+<thead>
+<tr>
+<th>Task type and strategy</th>
+<th>Supported matching keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service tasks, <code>SUBSCRIPTION</code></td>
+<td><code>activityId</code>, <code>executionId</code>, <code>tenantId</code>, <code>processInstanceId</code>, <code>processDefinitionId</code></td>
+</tr>
+<tr>
+<td>User tasks, <code>SCHEDULED</code></td>
+<td><code>tenantId</code>, <code>processInstanceId</code>, <code>processDefinitionId</code>, <code>processDefinitionKey</code></td>
+</tr>
+<tr>
+<td>User tasks, <code>SUBSCRIPTION_REFRESHING</code></td>
+<td><code>activityId</code>, <code>executionId</code>, <code>tenantId</code>, <code>processInstanceId</code>, <code>processDefinitionId</code>, <code>processDefinitionKey</code></td>
+</tr>
+<tr>
+<td>User tasks, <code>LISTENER</code></td>
+<td><code>activityId</code>, <code>executionId</code>, <code>tenantId</code>, <code>processInstanceId</code>, <code>processDefinitionId</code>, <code>processDefinitionKey</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="task-information">Task Information<a class="headerlink" href="#task-information" title="Permanent link">#</a></h1>
+<p>The <code>TaskInformation.getMeta()</code> provides meta information about the task as <code>Map&lt;String, String&gt;</code> for maximum
+compatibility. The Original Type column denotes the source value type before the adapter serializes it into the meta map.
+For typed access, <code>TaskInformation</code> provides <code>getMetaValueAsOffsetDate</code>, <code>getMetaValueAsStringSet</code>, and
+<code>getMetaValueAsInt</code>.</p>
+<p>Meta entries with <code>null</code> values are usually omitted. One current exception is scheduled user task <code>formId</code>, which is
+created with <code>toString()</code> and can therefore contain the literal string <code>null</code> if no form key is available.</p>
+<p>Every delivery can add <code>reason</code> to the meta map by calling <code>TaskInformation.withReason(...)</code>. Known reason values are
+<code>create</code>, <code>assign</code>, <code>update</code>, <code>complete</code>, and <code>delete</code>.</p>
+<h2 id="user-tasks_1">User Tasks<a class="headerlink" href="#user-tasks_1" title="Permanent link">#</a></h2>
+<p>The following table combines the user task metadata from all built-in user task delivery strategies. Legend:
+❎ = supported by the strategy, 0️⃣ = not provided by the strategy.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th><code>SCHEDULED</code></th>
+<th><code>SUBSCRIPTION_REFRESHING</code></th>
+<th><code>LISTENER</code></th>
+<th>Original Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>activityId</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>String</code></td>
+<td>BPMN user task element id.</td>
+<td><code>approve-request</code></td>
+</tr>
+<tr>
+<td><code>executionId</code></td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td>❎</td>
+<td><code>Long</code></td>
+<td>Camunda element instance key.</td>
+<td><code>2251799813685311</code></td>
+</tr>
+<tr>
+<td><code>processDefinitionKey</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>String</code></td>
+<td>BPMN process id.</td>
+<td><code>invoice-process</code></td>
+</tr>
+<tr>
+<td><code>processDefinitionId</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>Long</code></td>
+<td>Camunda process definition key.</td>
+<td><code>2251799813685250</code></td>
+</tr>
+<tr>
+<td><code>processInstanceId</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>Long</code></td>
+<td>Camunda process instance key.</td>
+<td><code>2251799813685301</code></td>
+</tr>
+<tr>
+<td><code>tenantId</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>String</code></td>
+<td>Camunda tenant id.</td>
+<td><code>tenant-a</code></td>
+</tr>
+<tr>
+<td><code>assignee</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>String</code></td>
+<td>Current assignee. For <code>SUBSCRIPTION_REFRESHING</code>, this comes from Camunda custom headers.</td>
+<td><code>alice</code></td>
+</tr>
+<tr>
+<td><code>candidateUsers</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>Collection&lt;String&gt;</code> or <code>String</code></td>
+<td>Candidate users, serialized as comma-separated values. For <code>SUBSCRIPTION_REFRESHING</code>, this is the raw custom header value.</td>
+<td><code>alice,bob</code></td>
+</tr>
+<tr>
+<td><code>candidateGroups</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>Collection&lt;String&gt;</code> or <code>String</code></td>
+<td>Candidate groups, serialized as comma-separated values. For <code>SUBSCRIPTION_REFRESHING</code>, this is the raw custom header value.</td>
+<td><code>accounting,ops</code></td>
+</tr>
+<tr>
+<td><code>followUpDate</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>OffsetDateTime</code> or <code>String</code></td>
+<td>Follow-up date. For <code>SUBSCRIPTION_REFRESHING</code>, this comes from Camunda custom headers.</td>
+<td><code>2026-06-23T10:15:30Z</code></td>
+</tr>
+<tr>
+<td><code>dueDate</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>OffsetDateTime</code> or <code>String</code></td>
+<td>Due date. For <code>SUBSCRIPTION_REFRESHING</code>, this comes from Camunda custom headers.</td>
+<td><code>2026-06-24T10:15:30Z</code></td>
+</tr>
+<tr>
+<td><code>creationDate</code></td>
+<td>❎</td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td><code>OffsetDateTime</code></td>
+<td>User task creation date.</td>
+<td><code>2026-06-23T09:00:00Z</code></td>
+</tr>
+<tr>
+<td><code>processName</code></td>
+<td>❎</td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td><code>String</code></td>
+<td>Process display name returned by Camunda.</td>
+<td><code>Invoice Process</code></td>
+</tr>
+<tr>
+<td><code>taskName</code></td>
+<td>❎</td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td><code>String</code></td>
+<td>User task display name returned by Camunda.</td>
+<td><code>Approve request</code></td>
+</tr>
+<tr>
+<td><code>formId</code></td>
+<td>❎</td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td><code>String</code></td>
+<td>Value returned by <code>Form.formKey</code>. Can be the literal string <code>null</code>.</td>
+<td><code>camunda-forms:bpmn:approve</code></td>
+</tr>
+<tr>
+<td><code>formKey</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>String</code></td>
+<td>Form reference. <code>SCHEDULED</code> maps <code>Form.formId</code>; <code>SUBSCRIPTION_REFRESHING</code> maps the form key custom header; <code>LISTENER</code> maps the listener user task form key.</td>
+<td><code>approve-form</code></td>
+</tr>
+<tr>
+<td><code>formVersion</code></td>
+<td>❎</td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td><code>Long</code></td>
+<td>Form version returned by Camunda.</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>taskState</code></td>
+<td>❎</td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td><code>UserTaskState</code></td>
+<td>Camunda user task state.</td>
+<td><code>CREATED</code></td>
+</tr>
+<tr>
+<td><code>topicName</code></td>
+<td>0️⃣</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>String</code></td>
+<td>Activated job type or listener job type.</td>
+<td><code>process-engine-user-tasks</code></td>
+</tr>
+<tr>
+<td><code>retries</code></td>
+<td>0️⃣</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>Int</code></td>
+<td>Activated job retry count.</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>eventType</code></td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td>❎</td>
+<td><code>ListenerEventType</code></td>
+<td>Camunda listener event type.</td>
+<td><code>CREATING</code></td>
+</tr>
+<tr>
+<td><code>action</code></td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td>❎</td>
+<td><code>String</code></td>
+<td>User task action from the listener job.</td>
+<td><code>assign</code></td>
+</tr>
+<tr>
+<td><code>changedAttributes</code></td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td>❎</td>
+<td><code>Collection&lt;String&gt;</code></td>
+<td>Changed user task attributes, serialized as comma-separated values.</td>
+<td><code>assignee,priority</code></td>
+</tr>
+<tr>
+<td><code>priority</code></td>
+<td>0️⃣</td>
+<td>0️⃣</td>
+<td>❎</td>
+<td><code>Int</code></td>
+<td>User task priority.</td>
+<td><code>80</code></td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td>❎</td>
+<td>❎</td>
+<td>❎</td>
+<td><code>String</code></td>
+<td>Delivery or termination reason added by the adapter.</td>
+<td><code>create</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="service-tasks_1">Service Tasks<a class="headerlink" href="#service-tasks_1" title="Permanent link">#</a></h2>
+<p>These values are mapped from Camunda activated jobs in the <code>SUBSCRIPTION</code> strategy.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Original Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>activityId</code></td>
+<td><code>String</code></td>
+<td>BPMN service task element id.</td>
+<td><code>charge-card</code></td>
+</tr>
+<tr>
+<td><code>processDefinitionKey</code></td>
+<td><code>String</code></td>
+<td>BPMN process id.</td>
+<td><code>payment-process</code></td>
+</tr>
+<tr>
+<td><code>processDefinitionId</code></td>
+<td><code>Long</code></td>
+<td>Camunda process definition key.</td>
+<td><code>2251799813685250</code></td>
+</tr>
+<tr>
+<td><code>processInstanceId</code></td>
+<td><code>Long</code></td>
+<td>Camunda process instance key.</td>
+<td><code>2251799813685301</code></td>
+</tr>
+<tr>
+<td><code>tenantId</code></td>
+<td><code>String</code></td>
+<td>Camunda tenant id.</td>
+<td><code>tenant-a</code></td>
+</tr>
+<tr>
+<td><code>formKey</code></td>
+<td><code>String</code></td>
+<td>Custom header using Camunda's user task form key header name, if present.</td>
+<td><code>camunda-forms:bpmn:approve</code></td>
+</tr>
+<tr>
+<td><code>assignee</code></td>
+<td><code>String</code></td>
+<td>Custom header using Camunda's user task assignee header name, if present.</td>
+<td><code>alice</code></td>
+</tr>
+<tr>
+<td><code>dueDate</code></td>
+<td><code>String</code></td>
+<td>Custom header using Camunda's user task due date header name, if present.</td>
+<td><code>2026-06-24T10:15:30Z</code></td>
+</tr>
+<tr>
+<td><code>candidateUsers</code></td>
+<td><code>String</code></td>
+<td>Custom header using Camunda's user task candidate users header name, if present. Use <code>getMetaValueAsStringSet</code> when the value is comma-separated.</td>
+<td><code>alice,bob</code></td>
+</tr>
+<tr>
+<td><code>candidateGroups</code></td>
+<td><code>String</code></td>
+<td>Custom header using Camunda's user task candidate groups header name, if present. Use <code>getMetaValueAsStringSet</code> when the value is comma-separated.</td>
+<td><code>accounting,ops</code></td>
+</tr>
+<tr>
+<td><code>followUpDate</code></td>
+<td><code>String</code></td>
+<td>Custom header using Camunda's user task follow-up date header name, if present.</td>
+<td><code>2026-06-23T10:15:30Z</code></td>
+</tr>
+<tr>
+<td><code>topicName</code></td>
+<td><code>String</code></td>
+<td>Activated job type.</td>
+<td><code>charge-card</code></td>
+</tr>
+<tr>
+<td><code>retries</code></td>
+<td><code>Int</code></td>
+<td>Activated job retry count.</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td><code>String</code></td>
+<td>Delivery or termination reason added by the adapter.</td>
+<td><code>create</code></td>
+</tr>
+</tbody>
+</table>
 
 
 

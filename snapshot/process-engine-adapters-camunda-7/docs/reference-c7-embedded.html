@@ -1225,6 +1225,167 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#spring-boot-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spring Boot compatibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jackson-and-spin-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jackson and Spin compatibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimal-classpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimal classpath
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimal-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimal YAML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery strategies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Delivery strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        enabled
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-tasks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        service-tasks.*
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-tasks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        user-tasks.*
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-with-explicit-scheduling-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example with explicit scheduling settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#message-correlation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1248,7 +1409,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#user-tasks" class="md-nav__link">
+  <a href="#user-tasks_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         User Tasks
@@ -1259,7 +1420,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#service-tasks" class="md-nav__link">
+  <a href="#service-tasks_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Service Tasks
@@ -1354,6 +1515,34 @@
     
   
     CIB Seven
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-8/docs/reference-c8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Camunda 8
   
 
     
@@ -1510,6 +1699,224 @@
 
 
 <h1 id="decisions-and-supported-features">Decisions and supported features<a class="headerlink" href="#decisions-and-supported-features" title="Permanent link">#</a></h1>
+<h2 id="spring-boot-compatibility">Spring Boot compatibility<a class="headerlink" href="#spring-boot-compatibility" title="Permanent link">#</a></h2>
+<p>The embedded Spring Boot starter supports Spring Boot 3 and Spring Boot 4. For Spring Boot 4, the scheduler
+auto-configuration uses adapter-owned threading conditions instead of Spring Boot's removed <code>Threading.VIRTUAL</code> and
+<code>Threading.PLATFORM</code> enum values.</p>
+<p>If <code>spring.threads.virtual.enabled=true</code> and the application runs on Java 21 or newer, the starter contributes a
+<code>SimpleAsyncTaskScheduler</code> for Spring's default <code>taskScheduler</code> bean. Otherwise, it falls back to a
+<code>ThreadPoolTaskScheduler</code>.</p>
+<p>The public Spring Boot 4 example uses Camunda 7 Community Edition <code>7.24.0</code>, the last CE release published on Maven
+Central. Enterprise patch versions require the consuming application to configure Camunda Enterprise repositories and
+versions explicitly.</p>
+<p>Camunda 7.24's Spring Boot starter still references the Spring Boot 3 Hibernate JPA auto-configuration class
+<code>org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration</code>. Under Spring Boot 4, the embedded adapter
+starter filters that Camunda auto-configuration and contributes an equivalent compatibility auto-configuration ordered
+after Spring Boot 4's <code>org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration</code>.</p>
+<p>The compatibility layer does not replace Camunda runtime dependencies. Embedded Spring Boot 4 applications still need a
+working <code>DataSource</code> and transaction manager, for example via <code>spring-boot-starter-jdbc</code>. Applications that persist
+custom object variables as JSON should add <code>camunda-engine-plugin-spin</code> and
+<code>camunda-spin-dataformat-json-jackson</code>; the Spring Boot 4 example uses those dependencies to serialize the sample
+<code>LocalDateTime</code> payload.</p>
+<h2 id="jackson-and-spin-compatibility">Jackson and Spin compatibility<a class="headerlink" href="#jackson-and-spin-compatibility" title="Permanent link">#</a></h2>
+<p>The adapter starter can serialize adapter payloads with either Jackson 2 or Jackson 3, depending on what the
+application provides on the classpath. For embedded Camunda 7, that adapter-level flexibility is narrower once Spin is
+involved.</p>
+<p>Camunda Spin's JSON integration is tied to the Jackson 2 ecosystem. Because of that:</p>
+<ul>
+<li>Embedded Camunda 7 with Spin JSON serialization must stay on Jackson 2 for the adapter-facing serialization path.</li>
+<li>Embedded Camunda 7 with Jackson 3 should not use Spin JSON serialization.</li>
+<li>Embedded Jackson 3 setups should avoid forcing <code>camunda.bpm.default-serialization-format=application/json</code> unless they provide a different compatible JSON variable serialization strategy.</li>
+<li>Embedded Jackson 3 can still work when object variables use Java serialization instead of Spin JSON serialization.</li>
+</ul>
+<p>The provided examples reflect these supported combinations:</p>
+<ul>
+<li><code>examples/java-c7-embedded-sb4</code>: Spring Boot 4 embedded example with Spin and Jackson 2</li>
+<li><code>examples/java-c7-embedded-sb4-jackson3</code>: Spring Boot 4 embedded example without Spin and with Jackson 3</li>
+</ul>
+<p>If an embedded Boot 4 application accidentally ends up with both Jackson ecosystems on the classpath, the starter
+prefers Jackson 3 by default. When Spin is present, provide an explicit <code>AdapterDataConverter</code> bean backed by Jackson 2
+so the adapter matches Spin instead of relying on the default selection.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
+<p>All embedded adapter properties use the prefix <code>dev.bpm-crafters.process-api.adapter.c7embedded</code>.</p>
+<p>The adapter starter does not bring an embedded Camunda engine on its own. Add it together with a Camunda 7 embedded setup such as <code>camunda-bpm-spring-boot-starter</code> or <code>camunda-bpm-spring-boot-starter-webapp</code>.</p>
+<h3 id="minimal-classpath">Minimal classpath<a class="headerlink" href="#minimal-classpath" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependencies&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>dev.bpm-crafters.process-engine-adapters<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>process-engine-adapter-camunda-platform-c7-embedded-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>${process-engine-api.version}<span class="nt">&lt;/version&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.camunda.bpm.springboot<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>camunda-bpm-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>7.24.0<span class="nt">&lt;/version&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div>
+<h3 id="minimal-yaml">Minimal YAML<a class="headerlink" href="#minimal-yaml" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">process-api</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">adapter</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">c7embedded</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded_scheduled</span>
+<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded-worker</span>
+<span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded_scheduled</span>
+</code></pre></div>
+<h3 id="delivery-strategies">Delivery strategies<a class="headerlink" href="#delivery-strategies" title="Permanent link">#</a></h3>
+<h4 id="user-tasks">User tasks<a class="headerlink" href="#user-tasks" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>embedded_scheduled</code></td>
+<td>Polls user tasks on the configured schedule and delivers them to subscriptions.</td>
+</tr>
+<tr>
+<td><code>custom</code></td>
+<td>Disables the built-in recurring delivery so you can provide your own delivery mechanism.</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Disables automatic user-task delivery. The embedded completion/modification APIs are still available because the engine is local.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="service-tasks">Service tasks<a class="headerlink" href="#service-tasks" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>embedded_scheduled</code></td>
+<td>Uses the built-in scheduler and the local <code>ExternalTaskService</code> to fetch-and-lock external tasks.</td>
+</tr>
+<tr>
+<td><code>custom</code></td>
+<td>Disables the built-in recurring fetch loop so you can provide your own delivery mechanism.</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Disables automatic service-task delivery. The embedded completion API is still available for tasks delivered by custom code.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="important-properties">Important properties<a class="headerlink" href="#important-properties" title="Permanent link">#</a></h3>
+<h4 id="enabled"><code>enabled</code><a class="headerlink" href="#enabled" title="Permanent link">#</a></h4>
+<p>Turns the embedded adapter on or off. Default: <code>true</code>.</p>
+<h4 id="service-tasks_1"><code>service-tasks.*</code><a class="headerlink" href="#service-tasks_1" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>worker-id</code></td>
+<td>required</td>
+<td>Worker id used for fetch-and-lock and completion calls.</td>
+</tr>
+<tr>
+<td><code>max-task-count</code></td>
+<td><code>100</code></td>
+<td>Maximum number of external tasks fetched per pull cycle.</td>
+</tr>
+<tr>
+<td><code>lock-time-in-seconds</code></td>
+<td><code>10</code></td>
+<td>Lock duration for fetched external tasks.</td>
+</tr>
+<tr>
+<td><code>retry-timeout-in-seconds</code></td>
+<td><code>10</code></td>
+<td>Timeout used by the default failure retry supplier.</td>
+</tr>
+<tr>
+<td><code>retries</code></td>
+<td><code>3</code></td>
+<td>Initial retry count used by the default failure retry supplier.</td>
+</tr>
+<tr>
+<td><code>delivery-strategy</code></td>
+<td>required</td>
+<td>One of <code>embedded_scheduled</code>, <code>custom</code>, <code>disabled</code>.</td>
+</tr>
+<tr>
+<td><code>schedule-delivery-fixed-rate-in-seconds</code></td>
+<td><code>13</code></td>
+<td>Polling interval for <code>embedded_scheduled</code>.</td>
+</tr>
+<tr>
+<td><code>execute-initial-pull-on-startup</code></td>
+<td><code>true</code></td>
+<td>Triggers one startup pull before the recurring scheduler takes over.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="user-tasks_1"><code>user-tasks.*</code><a class="headerlink" href="#user-tasks_1" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>delivery-strategy</code></td>
+<td>required</td>
+<td>One of <code>embedded_scheduled</code>, <code>custom</code>, <code>disabled</code>.</td>
+</tr>
+<tr>
+<td><code>schedule-delivery-fixed-rate-in-seconds</code></td>
+<td><code>5</code></td>
+<td>Polling interval for <code>embedded_scheduled</code>.</td>
+</tr>
+<tr>
+<td><code>execute-initial-pull-on-startup</code></td>
+<td><code>true</code></td>
+<td>Triggers one startup pull before the recurring scheduler takes over.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-with-explicit-scheduling-settings">Example with explicit scheduling settings<a class="headerlink" href="#example-with-explicit-scheduling-settings" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">process-api</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">adapter</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">c7embedded</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded_scheduled</span>
+<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded-worker</span>
+<span class="w">            </span><span class="nt">max-task-count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">            </span><span class="nt">lock-time-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">            </span><span class="nt">retry-timeout-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">            </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded_scheduled</span>
+<span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</code></pre></div>
 <h2 id="message-correlation">Message Correlation<a class="headerlink" href="#message-correlation" title="Permanent link">#</a></h2>
 <p>Correlation API implementation support the following restrictions:</p>
 <table>
@@ -1539,10 +1946,10 @@
 </tbody>
 </table>
 <h2 id="task-information">Task Information<a class="headerlink" href="#task-information" title="Permanent link">#</a></h2>
-<p>Currently, the Process Engine Adapter C7 Remote supports the following values in task information meta block, mapped from the Camunda C7 engine:</p>
+<p>Currently, the Process Engine Adapter C7 Embedded supports the following values in task information meta block, mapped from the Camunda C7 engine:</p>
 <p>The <code>TaskInformation.getMeta()</code> provides meta information about the task in form of a <code>Map&lt;String, String&gt;</code> for maximum compatibility. The Original Type column denotes
 the real type, you want to access if reading the field. For this purpose, <code>TaskInformation</code> offers special access methods <code>getMetaValueAsOffsetDate</code> and <code>getMetaValueAsStringSet</code>.</p>
-<h3 id="user-tasks">User Tasks<a class="headerlink" href="#user-tasks" title="Permanent link">#</a></h3>
+<h3 id="user-tasks_2">User Tasks<a class="headerlink" href="#user-tasks_2" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1633,7 +2040,7 @@ the real type, you want to access if reading the field. For this purpose, <code>
 </tr>
 </tbody>
 </table>
-<h3 id="service-tasks">Service Tasks<a class="headerlink" href="#service-tasks" title="Permanent link">#</a></h3>
+<h3 id="service-tasks_2">Service Tasks<a class="headerlink" href="#service-tasks_2" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1721,7 +2128,7 @@ auto-configured default is annotated with <code>@ConditionalOnMissingBean</code>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 08:35:44 UTC">June 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 6, 2026 08:06:48 UTC">July 6, 2026</span>
   </span>
 
     

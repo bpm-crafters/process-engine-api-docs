@@ -1253,6 +1253,195 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classpath-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classpath options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jackson-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jackson compatibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feign-client-vs-official-external-client-for-service-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feign client vs official external client for service tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimal-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimal YAML
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Minimal YAML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scheduled-delivery-with-feign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scheduled delivery with Feign
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribed-delivery-with-the-official-external-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscribed delivery with the official external client
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery strategies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Delivery strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        enabled
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-tasks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        service-tasks.*
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-tasks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        user-tasks.*
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-with-explicit-scheduling-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example with explicit scheduling settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#message-correlation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1276,7 +1465,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#user-tasks" class="md-nav__link">
+  <a href="#user-tasks_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         User Tasks
@@ -1287,7 +1476,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#service-tasks" class="md-nav__link">
+  <a href="#service-tasks_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Service Tasks
@@ -1326,6 +1515,34 @@
     
   
     CIB Seven
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-engine-adapters-camunda-8/docs/reference-c8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Camunda 8
   
 
     
@@ -1482,6 +1699,324 @@
 
 
 <h1 id="decisions-and-supported-features">Decisions and supported features<a class="headerlink" href="#decisions-and-supported-features" title="Permanent link">#</a></h1>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
+<p>All remote adapter properties use the prefix <code>dev.bpm-crafters.process-api.adapter.c7remote</code>.</p>
+<p>The remote starter expects a Camunda 7 REST client library on the classpath. The official Camunda external task client is optional and only needed when service tasks use subscribed delivery.</p>
+<h3 id="classpath-options">Classpath options<a class="headerlink" href="#classpath-options" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Use case</th>
+<th>Required dependencies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remote adapter in general</td>
+<td><code>process-engine-adapter-camunda-platform-c7-remote-spring-boot-starter</code> plus a Feign-based Camunda 7 REST client starter</td>
+</tr>
+<tr>
+<td>Service tasks with <code>remote_scheduled</code></td>
+<td>Same as above</td>
+</tr>
+<tr>
+<td>Service tasks with <code>remote_subscribed</code></td>
+<td>Same as above, plus <code>org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-external-task-client:7.24.0</code></td>
+</tr>
+</tbody>
+</table>
+<p>For Spring Boot 3.x the examples use:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;groupId&gt;</span>io.holunda.c7<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>c7-rest-client-spring-boot-starter-feign<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;version&gt;</span>${c7.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+<p>For Spring Boot 4 use the Boot-4 specific variant:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;groupId&gt;</span>io.holunda.c7<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>c7-rest-client-spring-boot-starter-feign-4<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;version&gt;</span>${c7.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+<h3 id="jackson-compatibility">Jackson compatibility<a class="headerlink" href="#jackson-compatibility" title="Permanent link">#</a></h3>
+<p>The remote adapter starter supports both Jackson 2 and Jackson 3 for adapter-side serialization.</p>
+<ul>
+<li>Spring Boot 3 applications typically resolve to Jackson 2.</li>
+<li>Spring Boot 4 applications typically resolve to Jackson 3.</li>
+<li>The remote adapter does not require embedded Camunda Spin, so the embedded Spin limitation does not apply to the adapter runtime here.</li>
+</ul>
+<p>That means Jackson 3 is a supported and expected choice for remote Spring Boot 4 applications. If the remote Camunda 7
+engine itself uses Spin for JSON variables, that remains a concern of the remote engine runtime, not of the adapter
+starter.</p>
+<h3 id="feign-client-vs-official-external-client-for-service-tasks">Feign client vs official external client for service tasks<a class="headerlink" href="#feign-client-vs-official-external-client-for-service-tasks" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Feign client</th>
+<th>Official external client</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delivery strategy</td>
+<td><code>remote_scheduled</code></td>
+<td><code>remote_subscribed</code></td>
+</tr>
+<tr>
+<td>Classpath</td>
+<td>Requires the Feign REST client starter</td>
+<td>Requires the Feign REST client starter and the official external task client starter</td>
+</tr>
+<tr>
+<td>Service-task delivery</td>
+<td>Adapter polls <code>/external-task/fetchAndLock</code> on its own schedule</td>
+<td>Camunda client keeps topic subscriptions open and receives tasks through its own worker runtime</td>
+</tr>
+<tr>
+<td>Service-task completion</td>
+<td>Uses <code>ExternalTaskApiClient</code> through the REST client</td>
+<td>Uses <code>ExternalTaskClient</code> / <code>ExternalTaskService</code> from Camunda</td>
+</tr>
+<tr>
+<td>YAML for engine URL</td>
+<td><code>feign.client.config.default.url</code></td>
+<td><code>camunda.bpm.client.base-url</code> in addition to <code>feign.client.config.default.url</code></td>
+</tr>
+<tr>
+<td>Scope in this adapter</td>
+<td>Used by the remote adapter's REST-based APIs, including scheduled service-task and user-task delivery</td>
+<td>Used only by subscribed service-task delivery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="minimal-yaml">Minimal YAML<a class="headerlink" href="#minimal-yaml" title="Permanent link">#</a></h3>
+<h4 id="scheduled-delivery-with-feign">Scheduled delivery with Feign<a class="headerlink" href="#scheduled-delivery-with-feign" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">process-api</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">adapter</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">c7remote</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_scheduled</span>
+<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote-worker</span>
+<span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_scheduled</span>
+
+<span class="nt">feign</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">client</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:9090/engine-rest/&quot;</span>
+</code></pre></div>
+<h4 id="subscribed-delivery-with-the-official-external-client">Subscribed delivery with the official external client<a class="headerlink" href="#subscribed-delivery-with-the-official-external-client" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">process-api</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">adapter</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">c7remote</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_subscribed</span>
+<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote-worker</span>
+<span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_scheduled</span>
+
+<span class="nt">feign</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">client</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:9090/engine-rest/&quot;</span>
+
+<span class="nt">camunda</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">client</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">base-url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:9090/engine-rest/&quot;</span>
+</code></pre></div>
+<h3 id="delivery-strategies">Delivery strategies<a class="headerlink" href="#delivery-strategies" title="Permanent link">#</a></h3>
+<h4 id="user-tasks">User tasks<a class="headerlink" href="#user-tasks" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>remote_scheduled</code></td>
+<td>Polls user tasks over REST and enables user-task completion/modification beans.</td>
+</tr>
+<tr>
+<td><code>custom</code></td>
+<td>Disables the built-in recurring delivery. Provide your own delivery and matching user-task beans if needed.</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Disables user-task delivery and configures a no-op user-task completion API.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="service-tasks">Service tasks<a class="headerlink" href="#service-tasks" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>remote_scheduled</code></td>
+<td>Polls external tasks over REST with the Feign-based client.</td>
+</tr>
+<tr>
+<td><code>remote_subscribed</code></td>
+<td>Uses the official Camunda external task client and topic subscriptions.</td>
+</tr>
+<tr>
+<td><code>custom</code></td>
+<td>Disables the built-in recurring delivery. Provide your own delivery and matching service-task completion bean if needed.</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Disables service-task delivery and configures a no-op service-task completion API.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="important-properties">Important properties<a class="headerlink" href="#important-properties" title="Permanent link">#</a></h3>
+<h4 id="enabled"><code>enabled</code><a class="headerlink" href="#enabled" title="Permanent link">#</a></h4>
+<p>Turns the remote adapter on or off. Default: <code>false</code>.</p>
+<h4 id="service-tasks_1"><code>service-tasks.*</code><a class="headerlink" href="#service-tasks_1" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>worker-id</code></td>
+<td>required</td>
+<td>Worker id used for external task fetching and completion.</td>
+</tr>
+<tr>
+<td><code>max-task-count</code></td>
+<td><code>100</code></td>
+<td>Maximum number of external tasks fetched per pull cycle.</td>
+</tr>
+<tr>
+<td><code>lock-time-in-seconds</code></td>
+<td><code>10</code></td>
+<td>Lock duration for fetched external tasks.</td>
+</tr>
+<tr>
+<td><code>retry-timeout-in-seconds</code></td>
+<td><code>10</code></td>
+<td>Timeout used by the default failure retry supplier.</td>
+</tr>
+<tr>
+<td><code>retries</code></td>
+<td><code>3</code></td>
+<td>Initial retry count used by the default failure retry supplier.</td>
+</tr>
+<tr>
+<td><code>delivery-strategy</code></td>
+<td>required</td>
+<td>One of <code>remote_scheduled</code>, <code>remote_subscribed</code>, <code>custom</code>, <code>disabled</code>.</td>
+</tr>
+<tr>
+<td><code>schedule-delivery-fixed-rate-in-seconds</code></td>
+<td><code>13</code></td>
+<td>Polling interval for <code>remote_scheduled</code>.</td>
+</tr>
+<tr>
+<td><code>execute-initial-pull-on-startup</code></td>
+<td><code>true</code> in property binding</td>
+<td>Enable one startup pull before the recurring scheduler or subscriber takes over. Set it explicitly when you want startup delivery.</td>
+</tr>
+<tr>
+<td><code>deserialize-on-server</code></td>
+<td><code>false</code></td>
+<td>Requests Camunda REST variable deserialization on the server side for scheduled pulls.</td>
+</tr>
+<tr>
+<td><code>worker-thread-pool-size</code></td>
+<td><code>10</code></td>
+<td>Thread pool size for scheduled service-task worker execution.</td>
+</tr>
+<tr>
+<td><code>worker-thread-pool-queue-capacity</code></td>
+<td><code>50</code></td>
+<td>Queue capacity for scheduled service-task worker execution.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="user-tasks_1"><code>user-tasks.*</code><a class="headerlink" href="#user-tasks_1" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>delivery-strategy</code></td>
+<td>required</td>
+<td>One of <code>remote_scheduled</code>, <code>custom</code>, <code>disabled</code>.</td>
+</tr>
+<tr>
+<td><code>schedule-delivery-fixed-rate-in-seconds</code></td>
+<td><code>5</code></td>
+<td>Polling interval for <code>remote_scheduled</code>.</td>
+</tr>
+<tr>
+<td><code>execute-initial-pull-on-startup</code></td>
+<td><code>true</code> in property binding</td>
+<td>Enable one startup pull before the recurring scheduler takes over. Set it explicitly when you want startup delivery.</td>
+</tr>
+<tr>
+<td><code>deserialize-on-server</code></td>
+<td><code>false</code></td>
+<td>Requests Camunda REST variable deserialization on the server side for user-task polling.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-with-explicit-scheduling-settings">Example with explicit scheduling settings<a class="headerlink" href="#example-with-explicit-scheduling-settings" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">process-api</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">adapter</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">c7remote</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_scheduled</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote-worker</span>
+<span class="w">            </span><span class="nt">lock-time-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">            </span><span class="nt">deserialize-on-server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">worker-thread-pool-queue-capacity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">            </span><span class="nt">worker-thread-pool-size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">            </span><span class="nt">max-task-count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_scheduled</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">            </span><span class="nt">deserialize-on-server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="nt">feign</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">client</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:9090/engine-rest/&quot;</span>
+</code></pre></div>
 <h2 id="message-correlation">Message Correlation<a class="headerlink" href="#message-correlation" title="Permanent link">#</a></h2>
 <p>Correlation API implementation support the following restrictions:</p>
 <table>
@@ -1514,7 +2049,7 @@
 <p>Currently, the Process Engine Adapter C7 Remote supports the following values in task information meta block, mapped from the Camunda C7 engine:</p>
 <p>The <code>TaskInformation.getMeta()</code> provides meta information about the task in form of a <code>Map&lt;String, String&gt;</code> for maximum compatibility. The Original Type column denotes
 the real type, you want to access if reading the field. For this purpose, <code>TaskInformation</code> offers special access methods <code>getMetaValueAsOffsetDate</code> and <code>getMetaValueAsStringSet</code>.</p>
-<h3 id="user-tasks">User Tasks<a class="headerlink" href="#user-tasks" title="Permanent link">#</a></h3>
+<h3 id="user-tasks_2">User Tasks<a class="headerlink" href="#user-tasks_2" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1605,7 +2140,7 @@ the real type, you want to access if reading the field. For this purpose, <code>
 </tr>
 </tbody>
 </table>
-<h3 id="service-tasks">Service Tasks<a class="headerlink" href="#service-tasks" title="Permanent link">#</a></h3>
+<h3 id="service-tasks_2">Service Tasks<a class="headerlink" href="#service-tasks_2" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1674,7 +2209,7 @@ the real type, you want to access if reading the field. For this purpose, <code>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 08:35:44 UTC">June 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 6, 2026 08:06:48 UTC">July 6, 2026</span>
   </span>
 
     
