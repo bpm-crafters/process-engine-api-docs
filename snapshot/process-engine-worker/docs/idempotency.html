@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1466,38 +1466,38 @@
 <h4 id="2-configure-jpa">2. Configure JPA<a class="headerlink" href="#2-configure-jpa" title="Permanent link">#</a></h4>
 <p>Add the <code>dev.bpmcrafters.processengine.worker.idempotency.TaskLogEntryRepository</code> with the following annotation
 <div class="highlight"><pre><span></span><code><span class="nd">@EnableJpaRepositories</span><span class="p">(</span><span class="n">basePackages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s">&quot;your.package(s)&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s">&quot;dev.bpmcrafters.processengine.worker.idempotency&quot;</span>
+<span class="w">    </span><span class="s">"your.package(s)"</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"dev.bpmcrafters.processengine.worker.idempotency"</span>
 <span class="p">})</span>
 </code></pre></div></p>
 <p>You can add the entity <code>dev.bpmcrafters.processengine.worker.idempotency.TaskLogEntry</code> either via annotation
 <div class="highlight"><pre><span></span><code><span class="nd">@EntityScan</span><span class="p">(</span><span class="n">basePackages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s">&quot;your.package(s)&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s">&quot;dev.bpmcrafters.processengine.worker.idempotency&quot;</span>
+<span class="w">    </span><span class="s">"your.package(s)"</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"dev.bpmcrafters.processengine.worker.idempotency"</span>
 <span class="p">})</span>
 </code></pre></div>
 or via <code>META-INF/orm.xml</code>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;entity-mappings</span>
-<span class="w">  </span><span class="na">xmlns=</span><span class="s">&quot;https://jakarta.ee/xml/ns/persistence/orm&quot;</span>
-<span class="w">  </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<span class="w">  </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;https://jakarta.ee/xml/ns/persistence/orm https://jakarta.ee/xml/ns/persistence/orm/orm_3_2.xsd&quot;</span>
-<span class="w">  </span><span class="na">version=</span><span class="s">&quot;3.2&quot;</span>
+<span class="w">  </span><span class="na">xmlns=</span><span class="s">"https://jakarta.ee/xml/ns/persistence/orm"</span>
+<span class="w">  </span><span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+<span class="w">  </span><span class="na">xsi:schemaLocation=</span><span class="s">"https://jakarta.ee/xml/ns/persistence/orm https://jakarta.ee/xml/ns/persistence/orm/orm_3_2.xsd"</span>
+<span class="w">  </span><span class="na">version=</span><span class="s">"3.2"</span>
 <span class="nt">&gt;</span>
-<span class="w">  </span><span class="nt">&lt;entity</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;dev.bpmcrafters.processengine.worker.idempotency.TaskLogEntry&quot;</span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">schema=</span><span class="s">&quot;your_schema&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;task_log_entry&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;entity</span><span class="w"> </span><span class="na">class=</span><span class="s">"dev.bpmcrafters.processengine.worker.idempotency.TaskLogEntry"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">schema=</span><span class="s">"your_schema"</span><span class="w"> </span><span class="na">name=</span><span class="s">"task_log_entry"</span><span class="nt">/&gt;</span>
 <span class="w">    </span><span class="nt">&lt;attributes&gt;</span>
-<span class="w">      </span><span class="nt">&lt;basic</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;taskId&quot;</span><span class="nt">&gt;</span>
-<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;task_id&quot;</span><span class="w"> </span><span class="na">column-definition=</span><span class="s">&quot;varchar2(100)&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;basic</span><span class="w"> </span><span class="na">name=</span><span class="s">"taskId"</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">"task_id"</span><span class="w"> </span><span class="na">column-definition=</span><span class="s">"varchar2(100)"</span><span class="nt">/&gt;</span>
 <span class="w">      </span><span class="nt">&lt;/basic&gt;</span>
-<span class="w">      </span><span class="nt">&lt;basic</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;processInstanceId&quot;</span><span class="nt">&gt;</span>
-<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;process_instance_id&quot;</span><span class="w"> </span><span class="na">column-definition=</span><span class="s">&quot;varchar2(100)&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;basic</span><span class="w"> </span><span class="na">name=</span><span class="s">"processInstanceId"</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">"process_instance_id"</span><span class="w"> </span><span class="na">column-definition=</span><span class="s">"varchar2(100)"</span><span class="nt">/&gt;</span>
 <span class="w">      </span><span class="nt">&lt;/basic&gt;</span>
-<span class="w">      </span><span class="nt">&lt;basic</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;createdAt&quot;</span><span class="nt">&gt;</span>
-<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;created_at&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;basic</span><span class="w"> </span><span class="na">name=</span><span class="s">"createdAt"</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">"created_at"</span><span class="nt">/&gt;</span>
 <span class="w">      </span><span class="nt">&lt;/basic&gt;</span>
-<span class="w">      </span><span class="nt">&lt;basic</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;result&quot;</span><span class="nt">&gt;</span>
-<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;result&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;basic</span><span class="w"> </span><span class="na">name=</span><span class="s">"result"</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">"result"</span><span class="nt">/&gt;</span>
 <span class="w">      </span><span class="nt">&lt;/basic&gt;</span>
 <span class="w">    </span><span class="nt">&lt;/attributes&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/entity&gt;</span>
@@ -1568,7 +1568,7 @@ Using the <code>orm.xml</code> could be useful. E.g., when you
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 6, 2026 08:06:48 UTC">July 6, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 21, 2026 18:05:07 UTC">August 21, 2026</span>
   </span>
 
     
@@ -1644,7 +1644,7 @@ Using the <code>orm.xml</code> could be useful. E.g., when you
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

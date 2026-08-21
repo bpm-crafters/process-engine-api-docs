@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1418,12 +1418,12 @@
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="nf">evaluateDiscount</span><span class="p">(</span><span class="n">CustomerStatus</span><span class="w"> </span><span class="n">customerStatus</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">year</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">Double</span><span class="p">)</span><span class="w"> </span><span class="n">evaluateDecisionApi</span><span class="p">.</span><span class="na">evaluateDecision</span><span class="p">(</span>
 <span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">DecisionByRefEvaluationCommand</span><span class="p">(</span>
-<span class="w">        </span><span class="s">&quot;customerDiscount&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">"customerDiscount"</span><span class="p">,</span>
 <span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
-<span class="w">          </span><span class="s">&quot;customerStatus&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">customerStatus</span><span class="p">,</span>
-<span class="w">          </span><span class="s">&quot;registrationYear&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="w"> </span>
+<span class="w">          </span><span class="s">"customerStatus"</span><span class="p">,</span><span class="w"> </span><span class="n">customerStatus</span><span class="p">,</span>
+<span class="w">          </span><span class="s">"registrationYear"</span><span class="p">,</span><span class="w"> </span><span class="n">year</span><span class="w"> </span>
 <span class="w">        </span><span class="p">),</span>
-<span class="w">        </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">CommonRestrictions</span><span class="p">.</span><span class="na">TENANT_ID</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;myTenant&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">CommonRestrictions</span><span class="p">.</span><span class="na">TENANT_ID</span><span class="p">,</span><span class="w"> </span><span class="s">"myTenant"</span><span class="p">)</span>
 <span class="w">      </span><span class="p">)</span>
 <span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">()</span><span class="w">                 </span><span class="c1">// DecisionEvaluationResult</span>
 <span class="w">     </span><span class="p">.</span><span class="na">asSingle</span><span class="p">()</span><span class="w">            </span><span class="c1">// DecisionEvaluationOutput</span>
@@ -1437,18 +1437,18 @@
 <span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">outputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evaluateDecisionApi</span><span class="p">.</span><span class="na">evaluateDecision</span><span class="p">(</span>
 <span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">DecisionByRefEvaluationCommand</span><span class="p">(</span>
 
-<span class="w">        </span><span class="s">&quot;customerOffer&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">"customerOffer"</span><span class="p">,</span>
 <span class="w">        </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
-<span class="w">          </span><span class="s">&quot;customerStatus&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">customerStatus</span><span class="p">,</span>
-<span class="w">          </span><span class="s">&quot;registrationYear&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">year</span>
+<span class="w">          </span><span class="s">"customerStatus"</span><span class="p">,</span><span class="w"> </span><span class="n">customerStatus</span><span class="p">,</span>
+<span class="w">          </span><span class="s">"registrationYear"</span><span class="p">,</span><span class="w"> </span><span class="n">year</span>
 <span class="w">        </span><span class="p">),</span>
-<span class="w">        </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">CommonRestrictions</span><span class="p">.</span><span class="na">TENANT_ID</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;myTenant&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">CommonRestrictions</span><span class="p">.</span><span class="na">TENANT_ID</span><span class="p">,</span><span class="w"> </span><span class="s">"myTenant"</span><span class="p">)</span>
 <span class="w">      </span><span class="p">)</span>
 <span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">()</span><span class="w">                 </span><span class="c1">// DecisionEvaluationResult</span>
 <span class="w">     </span><span class="p">.</span><span class="na">asSingle</span><span class="p">()</span><span class="w">            </span><span class="c1">// DecisionEvaluationOutput</span>
 <span class="w">     </span><span class="p">.</span><span class="na">asMap</span><span class="p">();</span><span class="w">              </span><span class="c1">// Map&lt;String, Object&gt;</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Offer</span><span class="p">((</span><span class="n">Integer</span><span class="p">)</span><span class="w"> </span><span class="n">outputs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">outputs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Offer</span><span class="p">((</span><span class="n">Integer</span><span class="p">)</span><span class="w"> </span><span class="n">outputs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">"id"</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">outputs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">"name"</span><span class="p">));</span>
 <span class="w">  </span><span class="p">}</span>
 
 <span class="w">  </span><span class="cm">/**</span>
@@ -1457,19 +1457,19 @@
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Offer</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">evaluateOffers</span><span class="p">(</span><span class="n">CustomerStatus</span><span class="w"> </span><span class="n">customerStatus</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">year</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">evaluateDecisionApi</span><span class="p">.</span><span class="na">evaluateDecision</span><span class="p">(</span>
 <span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">DecisionByRefEvaluationCommand</span><span class="p">(</span>
-<span class="w">        </span><span class="s">&quot;customerOffers&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">"customerOffers"</span><span class="p">,</span>
 <span class="w">        </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
-<span class="w">          </span><span class="s">&quot;customerStatus&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">customerStatus</span><span class="p">,</span>
-<span class="w">          </span><span class="s">&quot;registrationYear&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">year</span>
+<span class="w">          </span><span class="s">"customerStatus"</span><span class="p">,</span><span class="w"> </span><span class="n">customerStatus</span><span class="p">,</span>
+<span class="w">          </span><span class="s">"registrationYear"</span><span class="p">,</span><span class="w"> </span><span class="n">year</span>
 <span class="w">        </span><span class="p">),</span>
-<span class="w">        </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">CommonRestrictions</span><span class="p">.</span><span class="na">TENANT_ID</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;myTenant&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">CommonRestrictions</span><span class="p">.</span><span class="na">TENANT_ID</span><span class="p">,</span><span class="w"> </span><span class="s">"myTenant"</span><span class="p">)</span>
 <span class="w">      </span><span class="p">)</span>
 <span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">()</span><span class="w">                 </span><span class="c1">// DecisionEvaluationResult</span>
 <span class="w">     </span><span class="p">.</span><span class="na">asList</span><span class="p">()</span><span class="w">              </span><span class="c1">// List&lt;DecisionEvaluationOutput&gt;</span>
 <span class="w">     </span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
 <span class="w">     </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">       </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">outputs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="na">asMap</span><span class="p">();</span>
-<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Offer</span><span class="p">((</span><span class="n">Integer</span><span class="p">)</span><span class="w"> </span><span class="n">outputs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">outputs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">));</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Offer</span><span class="p">((</span><span class="n">Integer</span><span class="p">)</span><span class="w"> </span><span class="n">outputs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">"id"</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">outputs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">"name"</span><span class="p">));</span>
 <span class="w">     </span><span class="p">})</span>
 <span class="w">     </span><span class="p">.</span><span class="na">toList</span><span class="p">();</span>
 <span class="w">  </span><span class="p">}</span>
@@ -1495,7 +1495,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 6, 2026 08:06:48 UTC">July 6, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 21, 2026 18:05:07 UTC">August 21, 2026</span>
   </span>
 
     
@@ -1571,7 +1571,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

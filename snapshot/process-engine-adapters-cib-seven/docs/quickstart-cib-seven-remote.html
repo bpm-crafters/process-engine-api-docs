@@ -12,7 +12,7 @@
         <meta name="author" content="BPM Crafters">
       
       
-        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/user-task-modification-api.html">
+        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-cib-seven/docs/quickstart-cib-seven-remote.html">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>User Task Completion API - Process Engine API</title>
+        <title>CIB Seven as remote engine - Process Engine API</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#changing-payload" class="md-skip">
+        <a href="#connection" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              User Task Completion API
+              CIB Seven as remote engine
             
           </span>
         </div>
@@ -728,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../process-engine-adapters-cib-seven/docs/quickstart-cib-seven-embedded.html" class="md-nav__link">
+      <a href="quickstart-cib-seven-embedded.html" class="md-nav__link">
         
   
   
@@ -843,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deployment-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/deployment-api.html" class="md-nav__link">
         
   
   
@@ -871,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/process-api.html" class="md-nav__link">
         
   
   
@@ -899,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="correlation-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/correlation-api.html" class="md-nav__link">
         
   
   
@@ -927,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="signal-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/signal-api.html" class="md-nav__link">
         
   
   
@@ -955,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="task-subscription-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/task-subscription-api.html" class="md-nav__link">
         
   
   
@@ -983,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="service-task-completion-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/service-task-completion-api.html" class="md-nav__link">
         
   
   
@@ -1011,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user-task-completion-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/user-task-completion-api.html" class="md-nav__link">
         
   
   
@@ -1039,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user-task-support.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/user-task-support.html" class="md-nav__link">
         
   
   
@@ -1210,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../process-engine-adapters-cib-seven/docs/reference-cib-seven-embedded.html" class="md-nav__link">
+      <a href="reference-cib-seven-embedded.html" class="md-nav__link">
         
   
   
@@ -1401,188 +1401,120 @@
   
 
 
-  <h1>User Task Completion API</h1>
+  <h1>CIB Seven as remote engine</h1>
 
-<p>The User Task Completion API provides functionality to modify existing user tasks. Since the Task Subscription API allows asynchronous processing,
-we provide a special API to modify existing tasks. </p>
-<div class="highlight"><pre><span></span><code><span class="nd">@Component</span>
-<span class="nd">@RequiredArgsConstructor</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ModifyUserTaskUseCase</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">UserTaskMdificationApi</span><span class="w"> </span><span class="n">taskModificationApi</span><span class="p">;</span>
-
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">taskId</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">taskModificationApi</span><span class="p">.</span><span class="na">update</span><span class="p">(</span>
-<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">AssignTaskCmd</span><span class="p">(</span>
-<span class="w">        </span><span class="n">taskId</span><span class="p">,</span>
-<span class="w">        </span><span class="n">value</span>
-<span class="w">      </span><span class="p">)</span>
-<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<p>If you run CIB Seven as a <strong>standalone (remote) engine</strong> — for example the CIB Seven Run
+distribution or a central engine deployment — and talk to it over the REST API (<code>/engine-rest</code>),
+the following configuration is applicable for you.</p>
+<p>First of all, add the corresponding adapter to your project's classpath:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;groupId&gt;</span>dev.bpm-crafters.process-engine-adapters<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>process-engine-adapter-cib-seven-remote-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">  </span><span class="nt">&lt;version&gt;</span>${process-engine-api.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
 </code></pre></div>
-<p>The following modifications are available:</p>
-<h2 id="changing-payload">Changing payload<a class="headerlink" href="#changing-payload" title="Permanent link">#</a></h2>
+<p>The REST client is generated at build time from CIB Seven's official OpenAPI document
+(<code>org.cibseven.bpm:cibseven-engine-rest-openapi</code>), so client and engine never drift.</p>
+<p>And finally, add the following configuration to your configuration properties. Here is a version for <code>application.yaml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">process-api</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">adapter</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">cib-seven-remote</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">client</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">base-url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8080/engine-rest</span>
+<span class="w">            </span><span class="c1"># username: demo          # optional, for HTTP basic authentication</span>
+<span class="w">            </span><span class="c1"># password: demo</span>
+<span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_scheduled</span><span class="w">   </span><span class="c1"># remote_scheduled | remote_subscribed | custom | disabled</span>
+<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote-worker</span>
+<span class="w">            </span><span class="nt">max-task-count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">            </span><span class="nt">lock-time-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote_scheduled</span><span class="w">   </span><span class="c1"># remote_scheduled | custom | disabled</span>
+<span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+</code></pre></div>
+<h2 id="connection">Connection<a class="headerlink" href="#connection" title="Permanent link">#</a></h2>
 <table>
 <thead>
 <tr>
-<th>Intent</th>
-<th>Command</th>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Update payload</td>
-<td><code>UpdatePayloadTaskCmd</code></td>
+<td><code>client.base-url</code></td>
+<td>URL</td>
+<td>Base URL of the CIB Seven engine REST API, e.g. <code>http://localhost:8080/engine-rest</code>.</td>
 </tr>
 <tr>
-<td>Clear payload</td>
-<td><code>ClearPayloadTaskCmd</code></td>
+<td><code>client.username</code></td>
+<td>String (optional)</td>
+<td>User name for HTTP basic authentication. Leave unset for an unauthenticated engine.</td>
 </tr>
 <tr>
-<td>Delete part of the payload</td>
-<td><code>DeletePayloadTaskCmd</code></td>
+<td><code>client.password</code></td>
+<td>String (optional)</td>
+<td>Password for HTTP basic authentication.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="changing-assignment">Changing assignment<a class="headerlink" href="#changing-assignment" title="Permanent link">#</a></h2>
+<h2 id="service-task-delivery-strategies">Service task delivery strategies<a class="headerlink" href="#service-task-delivery-strategies" title="Permanent link">#</a></h2>
 <table>
 <thead>
 <tr>
-<th>Intent</th>
-<th>Command</th>
+<th>Strategy</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Set assignee</td>
-<td><code>AssignTaskCmd</code></td>
+<td><code>remote_scheduled</code></td>
+<td>The adapter periodically fetches-and-locks external tasks over REST (pull), using its own scheduler.</td>
 </tr>
 <tr>
-<td>Clear assignee</td>
-<td><code>UnassignTaskCmd</code></td>
+<td><code>remote_subscribed</code></td>
+<td>The official CIB Seven <strong>external task client</strong> long-polls external tasks (subscribe). Requires the external task client on the classpath.</td>
 </tr>
 <tr>
-<td>Add candidate group</td>
-<td><code>AddCandidateGroupTaskCmd</code></td>
+<td><code>custom</code></td>
+<td>You provide your own delivery beans.</td>
 </tr>
 <tr>
-<td>Remove candidate group</td>
-<td><code>RemoveCandidateGroupTaskCmd</code></td>
-</tr>
-<tr>
-<td>Set candidate groups</td>
-<td><code>SetCandidateGroupTaskCmd</code></td>
-</tr>
-<tr>
-<td>Clear candidate groups</td>
-<td><code>ClearCandidateGroupTaskCmd</code></td>
-</tr>
-<tr>
-<td>Add candidate user</td>
-<td><code>AddCandidateUserTaskCmd</code></td>
-</tr>
-<tr>
-<td>Remove candidate user</td>
-<td><code>RemoveCandidateUserTaskCmd</code></td>
-</tr>
-<tr>
-<td>Set candidate user</td>
-<td><code>SetCandidateUserTaskCmd</code></td>
-</tr>
-<tr>
-<td>Clear candidate user</td>
-<td><code>ClearCandidateUserTaskCmd</code></td>
+<td><code>disabled</code></td>
+<td>No service task delivery.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="changing-dates">Changing dates<a class="headerlink" href="#changing-dates" title="Permanent link">#</a></h2>
+<h2 id="user-task-delivery-strategies">User task delivery strategies<a class="headerlink" href="#user-task-delivery-strategies" title="Permanent link">#</a></h2>
 <table>
 <thead>
 <tr>
-<th>Intent</th>
-<th>Command</th>
+<th>Strategy</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Set due date</td>
-<td><code>SetDueDateTaskCmd</code></td>
+<td><code>remote_scheduled</code></td>
+<td>The adapter periodically queries user tasks over REST (pull), using its own scheduler.</td>
 </tr>
 <tr>
-<td>Clear due date</td>
-<td><code>ClearDueDateTaskCmd</code></td>
+<td><code>custom</code></td>
+<td>You provide your own delivery beans.</td>
 </tr>
 <tr>
-<td>Set follow-up date</td>
-<td><code>SetFollowUpDateTaskCmd</code></td>
-</tr>
-<tr>
-<td>Clear follow-up date</td>
-<td><code>ClearFollowUpDateTaskCmd</code></td>
+<td><code>disabled</code></td>
+<td>No user task delivery.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="composing-multiple-changes-on-one-request">Composing multiple changes on one request<a class="headerlink" href="#composing-multiple-changes-on-one-request" title="Permanent link">#</a></h2>
-<p>If you want to create multiple modifications of the task at the same time, you can use <code>CompositeModifyTaskCmd</code>. Please note
-that multiple modifications on the same task are supported only. To create the command easily, we supplied a 
-fluent builder:</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@Component</span>
-<span class="nd">@RequiredArgsConstructor</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ModifyUserTaskUseCase</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">UserTaskMdificationApi</span><span class="w"> </span><span class="n">taskModificationApi</span><span class="p">;</span>
-
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">taskId</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">taskModificationApi</span><span class="p">.</span><span class="na">update</span><span class="p">(</span>
-<span class="w">      </span><span class="n">TaskModification</span><span class="p">(</span><span class="s">"taskId"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">assign</span><span class="p">(</span><span class="s">"kermit"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">unassign</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">clearCandidateUsers</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">clearCandidateGroups</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">addCandidateGroup</span><span class="p">(</span><span class="s">"avengers"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">removeCandidateGroup</span><span class="p">(</span><span class="s">"muppets"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">addCandidateUser</span><span class="p">(</span><span class="s">"kermit"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">removeCandidateUser</span><span class="p">(</span><span class="s">"piggy"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">setCandidateUsers</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">"fozzy"</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">setCandidateGroups</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">"avengers"</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">setDueDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">setFollowUpDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">clearDueDate</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">clearFollowUpDate</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">updatePayload</span><span class="p">(</span><span class="n">Maps</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">"task-modified"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">deletePayload</span><span class="p">(</span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">"task-modified"</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">clearPayload</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">build</span><span class="p">()</span>
-<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>If you are using Kotlin you can use receiver functions instead:</p>
-<div class="highlight"><pre><span></span><code><span class="n">TaskModification</span><span class="p">.</span><span class="na">taskModification</span><span class="p">(</span><span class="s">"taskId"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">unassign</span><span class="p">()</span>
-<span class="w">  </span><span class="n">assign</span><span class="p">(</span><span class="s">"kermit"</span><span class="p">)</span>
-<span class="w">  </span><span class="n">setCandidateUsers</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">"piggy"</span><span class="p">))</span>
-<span class="w">  </span><span class="n">addCandidateUser</span><span class="p">(</span><span class="s">"kermit"</span><span class="p">)</span>
-<span class="w">  </span><span class="n">removeCandidateUser</span><span class="p">(</span><span class="s">"piggy"</span><span class="p">)</span>
-<span class="w">  </span><span class="n">setCandidateGroups</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">"avengers"</span><span class="p">))</span>
-<span class="w">  </span><span class="n">addCandidateGroup</span><span class="p">(</span><span class="s">"muppets"</span><span class="p">)</span>
-<span class="w">  </span><span class="n">removeCandidateGroup</span><span class="p">(</span><span class="s">"avengers"</span><span class="p">)</span>
-<span class="w">  </span><span class="n">clearCandidateGroups</span><span class="p">()</span>
-<span class="w">  </span><span class="n">clearCandidateUsers</span><span class="p">()</span>
-<span class="w">  </span><span class="n">setDueDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="m">3</span><span class="p">))</span>
-<span class="w">  </span><span class="n">setFollowUpDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-<span class="w">  </span><span class="n">clearDueDate</span><span class="p">()</span>
-<span class="w">  </span><span class="n">clearFollowUpDate</span><span class="p">()</span>
-<span class="w">  </span><span class="n">updatePayload</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">mapOf</span><span class="p">(</span><span class="s">"task-modified"</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">clearPayload</span><span class="p">()</span>
-<span class="w">  </span><span class="n">deletePayload</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">listOf</span><span class="p">(</span><span class="s">"some-var-other"</span><span class="p">)</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
 
 
 
@@ -1603,7 +1535,7 @@ fluent builder:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 21, 2026 18:05:07 UTC">August 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 21, 2026 18:05:08 UTC">August 21, 2026</span>
   </span>
 
     
