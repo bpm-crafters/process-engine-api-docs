@@ -23,6 +23,7 @@ API interfaces for a specific vendor and communication style:
 - **Camunda 7 Adapter**: Supports both **Embedded** (via Java API) and **Remote** (via REST API) configurations.
 - **Camunda 8 Adapter**: Integrates with Camunda 8 (SaaS or Self-Managed) using the gRPC-based Zeebe client.
 - **CIB Seven Adapter**: Provides integration for the CIB Seven process engine.
+- **Operaton Adapter**: Supports both **Embedded** (via Java API) and **Remote** (via REST API) configurations for the Operaton process engine.
 
 At runtime, the application uses **Dependency Inversion**: your use cases depend on the `Process Engine API` interfaces, and the chosen adapter provides the
 implementation.
