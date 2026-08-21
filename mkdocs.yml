@@ -102,6 +102,9 @@ plugins:
         - name: process-engine-adapters-cib-seven
           import_url: https://github.com/bpm-crafters/process-engine-adapters-cib-seven?edit_uri=/blob/develop/&branch=develop
           imports: [ docs/**/*.md ]
+        - name: process-engine-adapters-operaton
+          import_url: https://github.com/bpm-crafters/process-engine-adapters-operaton?edit_uri=/blob/develop/&branch=develop
+          imports: [ docs/**/*.md ]
 
 nav:
   - Home: index.md
@@ -115,6 +118,8 @@ nav:
     - Camunda 7 Remote: process-engine-adapters-camunda-7/docs/quickstart-c7-remote.md
     - Camunda 8 SaaS: process-engine-adapters-camunda-8/docs/quickstart-c8-saas.md
     - CIB Seven: process-engine-adapters-cib-seven/docs/quickstart-cib-seven-embedded.md
+    - Operaton Embedded: process-engine-adapters-operaton/docs/quickstart-operaton-embedded.md
+    - Operaton Remote: process-engine-adapters-operaton/docs/quickstart-operaton-remote.md
   - Reference:
     - Overview: reference-guide/index.md
     - Deployment API: process-engine-api/docs/deployment-api.md
@@ -131,6 +136,8 @@ nav:
     - Camunda 7 Remote: process-engine-adapters-camunda-7/docs/reference-c7-remote.md
     - CIB Seven: process-engine-adapters-cib-seven/docs/reference-cib-seven-embedded.md
     - Camunda 8: process-engine-adapters-camunda-8/docs/reference-c8.md
+    - Operaton Embedded: process-engine-adapters-operaton/docs/reference-operaton-embedded.md
+    - Operaton Remote: process-engine-adapters-operaton/docs/reference-operaton-remote.md
   - Developers:
     - Contribution: developer-guide/contribution.md
     - Project Setup: developer-guide/project-setup.md

@@ -11,7 +11,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QJJDSfq_JiwtMY7JYXgB-1" value="Process&lt;br&gt;Engine&lt;br&gt;API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-510" y="40" width="80" height="380" as="geometry" />
+          <mxGeometry x="-510" y="40" width="80" height="580" as="geometry" />
         </mxCell>
         <mxCell id="QJJDSfq_JiwtMY7JYXgB-2" value="Use Case" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-790" y="40" width="100" height="80" as="geometry" />
@@ -113,6 +113,41 @@
         </mxCell>
         <mxCell id="QJJDSfq_JiwtMY7JYXgB-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.025;entryY=0.51;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QJJDSfq_JiwtMY7JYXgB-5" target="QJJDSfq_JiwtMY7JYXgB-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="operaton-edge-embedded-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=0;" parent="1" source="operaton-adapter-embedded" target="QJJDSfq_JiwtMY7JYXgB-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="operaton-edge-embedded-impl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="operaton-adapter-embedded" target="operaton-java-api" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="operaton-adapter-embedded" value="Operaton Adapter Embedded" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="-350" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="operaton-java-api" value="Operaton Java API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-30" y="440" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="operaton-edge-remote-api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=0;" parent="1" source="operaton-adapter-remote" target="QJJDSfq_JiwtMY7JYXgB-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="operaton-edge-remote-client" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="operaton-adapter-remote" target="operaton-rest-client" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="operaton-adapter-remote" value="Operaton Adapter Remote" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="-350" y="540" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="operaton-edge-client-rest" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="operaton-rest-client" target="operaton-rest-api" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="operaton-edge-client-rest-label" value="REST" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="operaton-edge-client-rest" vertex="1" connectable="0">
+          <mxGeometry x="-0.25" y="1" relative="1" as="geometry">
+            <mxPoint x="1" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="operaton-rest-client" value="Operaton&lt;br&gt;REST&lt;br&gt;Client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="-160" y="540" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="operaton-rest-api" value="Operaton REST API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-30" y="540" width="150" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
