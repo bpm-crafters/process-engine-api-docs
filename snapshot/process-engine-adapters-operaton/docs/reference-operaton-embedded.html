@@ -12,9 +12,13 @@
         <meta name="author" content="BPM Crafters">
       
       
-        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-api/docs/user-task-modification-api.html">
+        <link rel="canonical" href="https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-operaton/docs/reference-operaton-embedded.html">
       
       
+        <link rel="prev" href="../../process-engine-adapters-camunda-8/docs/reference-c8.html">
+      
+      
+        <link rel="next" href="reference-operaton-remote.html">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>User Task Completion API - Process Engine API</title>
+        <title>Process Engine Adapter Operaton Embedded - Process Engine API</title>
       
     
     
@@ -78,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#changing-payload" class="md-skip">
+        <a href="#decisions-and-supported-features" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              User Task Completion API
+              Process Engine Adapter Operaton Embedded
             
           </span>
         </div>
@@ -299,10 +303,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../process-engine-adapters-camunda-7/docs/reference-c7-embedded.html" class="md-tabs__link">
           
   
@@ -756,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../process-engine-adapters-operaton/docs/quickstart-operaton-embedded.html" class="md-nav__link">
+      <a href="quickstart-operaton-embedded.html" class="md-nav__link">
         
   
   
@@ -784,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../process-engine-adapters-operaton/docs/quickstart-operaton-remote.html" class="md-nav__link">
+      <a href="quickstart-operaton-remote.html" class="md-nav__link">
         
   
   
@@ -899,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="deployment-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/deployment-api.html" class="md-nav__link">
         
   
   
@@ -927,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="process-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/process-api.html" class="md-nav__link">
         
   
   
@@ -955,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="correlation-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/correlation-api.html" class="md-nav__link">
         
   
   
@@ -983,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="signal-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/signal-api.html" class="md-nav__link">
         
   
   
@@ -1011,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="task-subscription-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/task-subscription-api.html" class="md-nav__link">
         
   
   
@@ -1039,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="service-task-completion-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/service-task-completion-api.html" class="md-nav__link">
         
   
   
@@ -1067,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user-task-completion-api.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/user-task-completion-api.html" class="md-nav__link">
         
   
   
@@ -1095,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user-task-support.html" class="md-nav__link">
+      <a href="../../process-engine-api/docs/user-task-support.html" class="md-nav__link">
         
   
   
@@ -1155,26 +1161,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1192,7 +1203,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1319,10 +1330,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../process-engine-adapters-operaton/docs/reference-operaton-embedded.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operaton Embedded
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="reference-operaton-embedded.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1338,6 +1376,265 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#spring-boot-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spring Boot compatibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jackson-and-spin-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jackson and Spin compatibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimal-classpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimal classpath
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimal-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimal YAML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery strategies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Delivery strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        enabled
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-tasks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        service-tasks.*
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-tasks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        user-tasks.*
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-with-explicit-scheduling-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example with explicit scheduling settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-correlation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Correlation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Information
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-tasks_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-tasks_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#engine-command-executor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Engine Command Executor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Engine Command Executor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customizing-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1350,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../process-engine-adapters-operaton/docs/reference-operaton-remote.html" class="md-nav__link">
+      <a href="reference-operaton-remote.html" class="md-nav__link">
         
   
   
@@ -1513,187 +1810,409 @@
   
 
 
-  <h1>User Task Completion API</h1>
-
-<p>The User Task Completion API provides functionality to modify existing user tasks. Since the Task Subscription API allows asynchronous processing,
-we provide a special API to modify existing tasks. </p>
-<div class="highlight"><pre><span></span><code><span class="nd">@Component</span>
-<span class="nd">@RequiredArgsConstructor</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ModifyUserTaskUseCase</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">UserTaskMdificationApi</span><span class="w"> </span><span class="n">taskModificationApi</span><span class="p">;</span>
-
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">taskId</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">taskModificationApi</span><span class="p">.</span><span class="na">update</span><span class="p">(</span>
-<span class="w">      </span><span class="k">new</span><span class="w"> </span><span class="n">AssignTaskCmd</span><span class="p">(</span>
-<span class="w">        </span><span class="n">taskId</span><span class="p">,</span>
-<span class="w">        </span><span class="n">value</span>
-<span class="w">      </span><span class="p">)</span>
-<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<h1 id="decisions-and-supported-features">Decisions and supported features<a class="headerlink" href="#decisions-and-supported-features" title="Permanent link">#</a></h1>
+<h2 id="spring-boot-compatibility">Spring Boot compatibility<a class="headerlink" href="#spring-boot-compatibility" title="Permanent link">#</a></h2>
+<p>The embedded Spring Boot starter requires Spring Boot 4, matching the Operaton 2.x Spring Boot starters. The scheduler
+auto-configuration uses adapter-owned threading conditions instead of Spring Boot's removed <code>Threading.VIRTUAL</code> and
+<code>Threading.PLATFORM</code> enum values.</p>
+<p>If <code>spring.threads.virtual.enabled=true</code> and the application runs on Java 21 or newer, the starter contributes a
+<code>SimpleAsyncTaskScheduler</code> for Spring's default <code>taskScheduler</code> bean. Otherwise, it falls back to a
+<code>ThreadPoolTaskScheduler</code>.</p>
+<p>The examples use Operaton <code>2.1.3</code>, published on Maven Central.</p>
+<p>Embedded Spring Boot 4 applications need a working <code>DataSource</code> and transaction manager, for example via
+<code>spring-boot-starter-jdbc</code> — since the Spring Boot 4 module split, the JDBC auto-configurations are not brought in
+transitively by the engine starter. Applications that persist custom object variables as JSON should add
+<code>operaton-engine-plugin-spin</code> and <code>operaton-spin-dataformat-json-jackson</code>; the Jackson-2 example uses those
+dependencies to serialize the sample <code>LocalDateTime</code> payload.</p>
+<h2 id="jackson-and-spin-compatibility">Jackson and Spin compatibility<a class="headerlink" href="#jackson-and-spin-compatibility" title="Permanent link">#</a></h2>
+<p>The adapter starter can serialize adapter payloads with either Jackson 2 or Jackson 3, depending on what the
+application provides on the classpath. For embedded Operaton, that adapter-level flexibility is narrower once Spin is
+involved.</p>
+<p>Operaton Spin's JSON integration is tied to the Jackson 2 ecosystem. Because of that:</p>
+<ul>
+<li>Embedded Operaton with Spin JSON serialization must stay on Jackson 2 for the adapter-facing serialization path.</li>
+<li>Embedded Operaton with Jackson 3 should not use Spin JSON serialization.</li>
+<li>Embedded Jackson 3 setups should avoid forcing <code>operaton.bpm.default-serialization-format=application/json</code> unless they provide a different compatible JSON variable serialization strategy.</li>
+<li>Embedded Jackson 3 can still work when object variables use Java serialization instead of Spin JSON serialization.</li>
+</ul>
+<p>The provided examples reflect these supported combinations:</p>
+<ul>
+<li><code>examples/java-operaton-embedded</code>: embedded example with Spin and Jackson 2</li>
+<li><code>examples/java-operaton-embedded-jackson3</code>: embedded example without Spin and with Jackson 3</li>
+</ul>
+<p>If an embedded application ends up with both Jackson ecosystems on the classpath, the starter prefers Jackson 3 by
+default. When Spin is present, provide an explicit <code>AdapterDataConverter</code> bean backed by Jackson 2 so the adapter
+matches Spin instead of relying on the default selection.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
+<p>All embedded adapter properties use the prefix <code>dev.bpm-crafters.process-api.adapter.operaton-embedded</code>.</p>
+<p>The adapter starter does not bring an embedded Operaton engine on its own. Add it together with an Operaton embedded setup such as <code>operaton-bpm-spring-boot-starter</code> or <code>operaton-bpm-spring-boot-starter-webapp</code>. With the webapp starter, log in with the admin user configured under <code>operaton.bpm.admin-user</code> (the examples use <code>demo</code> / <code>demo</code>).</p>
+<h3 id="minimal-classpath">Minimal classpath<a class="headerlink" href="#minimal-classpath" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependencies&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>dev.bpm-crafters.process-engine-adapters<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>process-engine-adapter-operaton-embedded-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>${process-engine-adapter-operaton.version}<span class="nt">&lt;/version&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.operaton.bpm.springboot<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>operaton-bpm-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>2.1.3<span class="nt">&lt;/version&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
 </code></pre></div>
-<p>The following modifications are available:</p>
-<h2 id="changing-payload">Changing payload<a class="headerlink" href="#changing-payload" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Intent</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Update payload</td>
-<td><code>UpdatePayloadTaskCmd</code></td>
-</tr>
-<tr>
-<td>Clear payload</td>
-<td><code>ClearPayloadTaskCmd</code></td>
-</tr>
-<tr>
-<td>Delete part of the payload</td>
-<td><code>DeletePayloadTaskCmd</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="changing-assignment">Changing assignment<a class="headerlink" href="#changing-assignment" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Intent</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Set assignee</td>
-<td><code>AssignTaskCmd</code></td>
-</tr>
-<tr>
-<td>Clear assignee</td>
-<td><code>UnassignTaskCmd</code></td>
-</tr>
-<tr>
-<td>Add candidate group</td>
-<td><code>AddCandidateGroupTaskCmd</code></td>
-</tr>
-<tr>
-<td>Remove candidate group</td>
-<td><code>RemoveCandidateGroupTaskCmd</code></td>
-</tr>
-<tr>
-<td>Set candidate groups</td>
-<td><code>SetCandidateGroupTaskCmd</code></td>
-</tr>
-<tr>
-<td>Clear candidate groups</td>
-<td><code>ClearCandidateGroupTaskCmd</code></td>
-</tr>
-<tr>
-<td>Add candidate user</td>
-<td><code>AddCandidateUserTaskCmd</code></td>
-</tr>
-<tr>
-<td>Remove candidate user</td>
-<td><code>RemoveCandidateUserTaskCmd</code></td>
-</tr>
-<tr>
-<td>Set candidate user</td>
-<td><code>SetCandidateUserTaskCmd</code></td>
-</tr>
-<tr>
-<td>Clear candidate user</td>
-<td><code>ClearCandidateUserTaskCmd</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="changing-dates">Changing dates<a class="headerlink" href="#changing-dates" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Intent</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Set due date</td>
-<td><code>SetDueDateTaskCmd</code></td>
-</tr>
-<tr>
-<td>Clear due date</td>
-<td><code>ClearDueDateTaskCmd</code></td>
-</tr>
-<tr>
-<td>Set follow-up date</td>
-<td><code>SetFollowUpDateTaskCmd</code></td>
-</tr>
-<tr>
-<td>Clear follow-up date</td>
-<td><code>ClearFollowUpDateTaskCmd</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="composing-multiple-changes-on-one-request">Composing multiple changes on one request<a class="headerlink" href="#composing-multiple-changes-on-one-request" title="Permanent link">#</a></h2>
-<p>If you want to create multiple modifications of the task at the same time, you can use <code>CompositeModifyTaskCmd</code>. Please note
-that multiple modifications on the same task are supported only. To create the command easily, we supplied a 
-fluent builder:</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@Component</span>
-<span class="nd">@RequiredArgsConstructor</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ModifyUserTaskUseCase</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">UserTaskMdificationApi</span><span class="w"> </span><span class="n">taskModificationApi</span><span class="p">;</span>
-
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">taskId</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">taskModificationApi</span><span class="p">.</span><span class="na">update</span><span class="p">(</span>
-<span class="w">      </span><span class="n">TaskModification</span><span class="p">(</span><span class="s">"taskId"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">assign</span><span class="p">(</span><span class="s">"kermit"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">unassign</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">clearCandidateUsers</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">clearCandidateGroups</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">addCandidateGroup</span><span class="p">(</span><span class="s">"avengers"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">removeCandidateGroup</span><span class="p">(</span><span class="s">"muppets"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">addCandidateUser</span><span class="p">(</span><span class="s">"kermit"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">removeCandidateUser</span><span class="p">(</span><span class="s">"piggy"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="na">setCandidateUsers</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">"fozzy"</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">setCandidateGroups</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">"avengers"</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">setDueDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">setFollowUpDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">clearDueDate</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">clearFollowUpDate</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">updatePayload</span><span class="p">(</span><span class="n">Maps</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">"task-modified"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">deletePayload</span><span class="p">(</span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">"task-modified"</span><span class="p">))</span>
-<span class="w">        </span><span class="p">.</span><span class="na">clearPayload</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="na">build</span><span class="p">()</span>
-<span class="w">    </span><span class="p">).</span><span class="na">get</span><span class="p">();</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<h3 id="minimal-yaml">Minimal YAML<a class="headerlink" href="#minimal-yaml" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">process-api</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">adapter</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">operaton-embedded</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded_scheduled</span>
+<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded-worker</span>
+<span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded_scheduled</span>
 </code></pre></div>
-<p>If you are using Kotlin you can use receiver functions instead:</p>
-<div class="highlight"><pre><span></span><code><span class="n">TaskModification</span><span class="p">.</span><span class="na">taskModification</span><span class="p">(</span><span class="s">"taskId"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">unassign</span><span class="p">()</span>
-<span class="w">  </span><span class="n">assign</span><span class="p">(</span><span class="s">"kermit"</span><span class="p">)</span>
-<span class="w">  </span><span class="n">setCandidateUsers</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">"piggy"</span><span class="p">))</span>
-<span class="w">  </span><span class="n">addCandidateUser</span><span class="p">(</span><span class="s">"kermit"</span><span class="p">)</span>
-<span class="w">  </span><span class="n">removeCandidateUser</span><span class="p">(</span><span class="s">"piggy"</span><span class="p">)</span>
-<span class="w">  </span><span class="n">setCandidateGroups</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">"avengers"</span><span class="p">))</span>
-<span class="w">  </span><span class="n">addCandidateGroup</span><span class="p">(</span><span class="s">"muppets"</span><span class="p">)</span>
-<span class="w">  </span><span class="n">removeCandidateGroup</span><span class="p">(</span><span class="s">"avengers"</span><span class="p">)</span>
-<span class="w">  </span><span class="n">clearCandidateGroups</span><span class="p">()</span>
-<span class="w">  </span><span class="n">clearCandidateUsers</span><span class="p">()</span>
-<span class="w">  </span><span class="n">setDueDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="m">3</span><span class="p">))</span>
-<span class="w">  </span><span class="n">setFollowUpDate</span><span class="p">(</span><span class="n">OffsetDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">plusDays</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-<span class="w">  </span><span class="n">clearDueDate</span><span class="p">()</span>
-<span class="w">  </span><span class="n">clearFollowUpDate</span><span class="p">()</span>
-<span class="w">  </span><span class="n">updatePayload</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">mapOf</span><span class="p">(</span><span class="s">"task-modified"</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">clearPayload</span><span class="p">()</span>
-<span class="w">  </span><span class="n">deletePayload</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">listOf</span><span class="p">(</span><span class="s">"some-var-other"</span><span class="p">)</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<h3 id="delivery-strategies">Delivery strategies<a class="headerlink" href="#delivery-strategies" title="Permanent link">#</a></h3>
+<h4 id="user-tasks">User tasks<a class="headerlink" href="#user-tasks" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>embedded_scheduled</code></td>
+<td>Polls user tasks on the configured schedule and delivers them to subscriptions.</td>
+</tr>
+<tr>
+<td><code>custom</code></td>
+<td>Disables the built-in recurring delivery so you can provide your own delivery mechanism.</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Disables automatic user-task delivery. The embedded completion/modification APIs are still available because the engine is local.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="service-tasks">Service tasks<a class="headerlink" href="#service-tasks" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>embedded_scheduled</code></td>
+<td>Uses the built-in scheduler and the local <code>ExternalTaskService</code> to fetch-and-lock external tasks.</td>
+</tr>
+<tr>
+<td><code>custom</code></td>
+<td>Disables the built-in recurring fetch loop so you can provide your own delivery mechanism.</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>Disables automatic service-task delivery. The embedded completion API is still available for tasks delivered by custom code.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="important-properties">Important properties<a class="headerlink" href="#important-properties" title="Permanent link">#</a></h3>
+<h4 id="enabled"><code>enabled</code><a class="headerlink" href="#enabled" title="Permanent link">#</a></h4>
+<p>Turns the embedded adapter on or off. Default: <code>true</code>.</p>
+<h4 id="service-tasks_1"><code>service-tasks.*</code><a class="headerlink" href="#service-tasks_1" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>worker-id</code></td>
+<td>required</td>
+<td>Worker id used for fetch-and-lock and completion calls.</td>
+</tr>
+<tr>
+<td><code>max-task-count</code></td>
+<td><code>100</code></td>
+<td>Maximum number of external tasks fetched per pull cycle.</td>
+</tr>
+<tr>
+<td><code>lock-time-in-seconds</code></td>
+<td><code>10</code></td>
+<td>Lock duration for fetched external tasks.</td>
+</tr>
+<tr>
+<td><code>retry-timeout-in-seconds</code></td>
+<td><code>10</code></td>
+<td>Timeout used by the default failure retry supplier.</td>
+</tr>
+<tr>
+<td><code>retries</code></td>
+<td><code>3</code></td>
+<td>Initial retry count used by the default failure retry supplier.</td>
+</tr>
+<tr>
+<td><code>delivery-strategy</code></td>
+<td>required</td>
+<td>One of <code>embedded_scheduled</code>, <code>custom</code>, <code>disabled</code>.</td>
+</tr>
+<tr>
+<td><code>schedule-delivery-fixed-rate-in-seconds</code></td>
+<td><code>13</code></td>
+<td>Polling interval for <code>embedded_scheduled</code>.</td>
+</tr>
+<tr>
+<td><code>execute-initial-pull-on-startup</code></td>
+<td><code>true</code></td>
+<td>Triggers one startup pull before the recurring scheduler takes over.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="user-tasks_1"><code>user-tasks.*</code><a class="headerlink" href="#user-tasks_1" title="Permanent link">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>delivery-strategy</code></td>
+<td>required</td>
+<td>One of <code>embedded_scheduled</code>, <code>custom</code>, <code>disabled</code>.</td>
+</tr>
+<tr>
+<td><code>schedule-delivery-fixed-rate-in-seconds</code></td>
+<td><code>5</code></td>
+<td>Polling interval for <code>embedded_scheduled</code>.</td>
+</tr>
+<tr>
+<td><code>execute-initial-pull-on-startup</code></td>
+<td><code>true</code></td>
+<td>Triggers one startup pull before the recurring scheduler takes over.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-with-explicit-scheduling-settings">Example with explicit scheduling settings<a class="headerlink" href="#example-with-explicit-scheduling-settings" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">bpm-crafters</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">process-api</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">adapter</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">operaton-embedded</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">service-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded_scheduled</span>
+<span class="w">            </span><span class="nt">worker-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded-worker</span>
+<span class="w">            </span><span class="nt">max-task-count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">            </span><span class="nt">lock-time-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">            </span><span class="nt">retry-timeout-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">            </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">          </span><span class="nt">user-tasks</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">delivery-strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embedded_scheduled</span>
+<span class="w">            </span><span class="nt">execute-initial-pull-on-startup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">            </span><span class="nt">schedule-delivery-fixed-rate-in-seconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</code></pre></div>
+<h2 id="message-correlation">Message Correlation<a class="headerlink" href="#message-correlation" title="Permanent link">#</a></h2>
+<p>Correlation API implementation support the following restrictions:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tenantId</code></td>
+<td>The id of the tenant</td>
+<td>Correlates messages for process instances with given tenant id.</td>
+</tr>
+<tr>
+<td><code>withoutTenantId</code></td>
+<td>none</td>
+<td>If restriction is present, correlate only with process instances without tenant id.</td>
+</tr>
+<tr>
+<td><code>useGlobalCorrelationKey</code></td>
+<td><code>true</code> or <code>false</code></td>
+<td>If set to false (default if not set), correlate using local variables, use global process variable otherwise.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="task-information">Task Information<a class="headerlink" href="#task-information" title="Permanent link">#</a></h2>
+<p>Currently, the Process Engine Adapter Operaton Embedded supports the following values in task information meta block, mapped from the Operaton engine:</p>
+<p>The <code>TaskInformation.getMeta()</code> provides meta information about the task in form of a <code>Map&lt;String, String&gt;</code> for maximum compatibility. The Original Type column denotes
+the real type, you want to access if reading the field. For this purpose, <code>TaskInformation</code> offers special access methods <code>getMetaValueAsOffsetDate</code> and <code>getMetaValueAsStringSet</code>.</p>
+<h3 id="user-tasks_2">User Tasks<a class="headerlink" href="#user-tasks_2" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Original Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityId</td>
+<td>String</td>
+<td>Id of the element in BPMN (Task definition key)</td>
+<td>approve_user_task</td>
+</tr>
+<tr>
+<td>processDefinitionId</td>
+<td>String</td>
+<td>Id of process definition (given at deployment time)</td>
+<td>approval_process:912834729348</td>
+</tr>
+<tr>
+<td>processDefinitionKey</td>
+<td>String</td>
+<td>Id of the process element in BPMN (Process Definition key)</td>
+<td>approval_process</td>
+</tr>
+<tr>
+<td>tenantId</td>
+<td>String</td>
+<td>Tenant Id</td>
+<td>my_tenant</td>
+</tr>
+<tr>
+<td>taskName</td>
+<td>String</td>
+<td>Name of the user task (from BPMN or modified by the create listener)</td>
+<td>Approve Order</td>
+</tr>
+<tr>
+<td>taskDescription</td>
+<td>String</td>
+<td>Description of the user task (from BPMN or modified by the create listener)</td>
+<td>Approve provided order.</td>
+</tr>
+<tr>
+<td>assignee</td>
+<td>String</td>
+<td>Assignee of the user task</td>
+<td>USER12345</td>
+</tr>
+<tr>
+<td>candidateUsers</td>
+<td>Set<String></td>
+<td>Set of candidate users, separated by a <code>,</code></td>
+<td>USER12345,USER12346,USER12347</td>
+</tr>
+<tr>
+<td>candidateGroups</td>
+<td>Set<String></td>
+<td>Set of candidate groups, separated by a <code>,</code></td>
+<td>marketing,sales</td>
+</tr>
+<tr>
+<td>creationDate</td>
+<td>OffsetDateTime</td>
+<td>Time stamp of task creation formatted as ISO-8601 in UTC</td>
+<td>2025-05-01T10:00:00.000Z</td>
+</tr>
+<tr>
+<td>followUpDate</td>
+<td>OffsetDateTime</td>
+<td>Time stamp of task follow-up formatted as ISO-8601 in UTC</td>
+<td>2025-05-02T10:00:00.000Z</td>
+</tr>
+<tr>
+<td>dueDate</td>
+<td>OffsetDateTime</td>
+<td>Time stamp of task due formatted as ISO-8601 in UTC</td>
+<td>2025-05-05T10:00:00.000Z</td>
+</tr>
+<tr>
+<td>lastUpdatedDate</td>
+<td>OffsetDateTime</td>
+<td>Time stamp of task last update formatted as ISO-8601 in UTC</td>
+<td>2025-05-05T10:00:00.000Z</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service-tasks_2">Service Tasks<a class="headerlink" href="#service-tasks_2" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Original Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityId</td>
+<td>String</td>
+<td>Id of the element in BPMN (Task definition key)</td>
+<td>approve_user_task</td>
+</tr>
+<tr>
+<td>processDefinitionId</td>
+<td>String</td>
+<td>Id of process definition (given at deployment time)</td>
+<td>approval_process:912834729348</td>
+</tr>
+<tr>
+<td>processDefinitionKey</td>
+<td>String</td>
+<td>Id of the process element in BPMN (Process Definition key)</td>
+<td>approval_process</td>
+</tr>
+<tr>
+<td>tenantId</td>
+<td>String</td>
+<td>Tenant Id</td>
+<td>my_tenant</td>
+</tr>
+<tr>
+<td>topicName</td>
+<td>String</td>
+<td>Topic name (from BPMN) for external task</td>
+<td>topic_approve</td>
+</tr>
+<tr>
+<td>creationDate</td>
+<td>OffsetDateTime</td>
+<td>Time stamp of task creation formatted as ISO-8601 in UTC</td>
+<td>2025-05-01T10:00:00.000Z</td>
+</tr>
+</tbody>
+</table>
+<h2 id="engine-command-executor">Engine Command Executor<a class="headerlink" href="#engine-command-executor" title="Permanent link">#</a></h2>
+<p><code>EngineCommandExecutor</code> is an embedded-adapter-specific class that controls how the four core API calls
+(<code>correlateMessage</code>, <code>sendSignal</code>, <code>startProcess</code>, <code>deploy</code>) are dispatched to the embedded Operaton engine.</p>
+<p>By default, all engine calls are submitted asynchronously to <code>ForkJoinPool.commonPool()</code>. This means they run on a
+<strong>different thread</strong> from the caller and do <strong>not</strong> participate in the caller's <code>@Transactional</code> context — a rollback
+on the calling thread will <strong>not</strong> roll back the engine operation.</p>
+<h3 id="customizing-execution">Customizing execution<a class="headerlink" href="#customizing-execution" title="Permanent link">#</a></h3>
+<p>Provide a Spring bean of type <code>EngineCommandExecutor</code> to override the default. The
+auto-configured default is annotated with <code>@ConditionalOnMissingBean</code>, so your bean takes precedence automatically.</p>
+<p><strong>Same-thread (synchronous) execution</strong> — engine calls run on the calling thread and honour <code>@Transactional</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Bean</span>
+<span class="kd">fun</span><span class="w"> </span><span class="nf">engineCommandExecutor</span><span class="p">():</span><span class="w"> </span><span class="n">EngineCommandExecutor</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">EngineCommandExecutor</span><span class="p">(</span><span class="n">Executor</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">run</span><span class="p">()</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+<p><strong>Virtual-thread execution</strong> — lightweight concurrency without pinning platform threads:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Bean</span>
+<span class="kd">fun</span><span class="w"> </span><span class="nf">engineCommandExecutor</span><span class="p">():</span><span class="w"> </span><span class="n">EngineCommandExecutor</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">EngineCommandExecutor</span><span class="p">(</span><span class="n">Executors</span><span class="p">.</span><span class="na">newVirtualThreadPerTaskExecutor</span><span class="p">())</span>
 </code></pre></div>
 
 
@@ -1715,7 +2234,7 @@ fluent builder:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 21, 2026 18:06:04 UTC">August 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 21, 2026 18:06:05 UTC">August 21, 2026</span>
   </span>
 
     

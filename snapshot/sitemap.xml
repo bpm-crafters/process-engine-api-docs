@@ -124,4 +124,20 @@
          <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-cib-seven/docs/reference-cib-seven-remote.html</loc>
          <lastmod>2026-08-21</lastmod>
     </url>
+    <url>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-operaton/docs/quickstart-operaton-embedded.html</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-operaton/docs/quickstart-operaton-remote.html</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-operaton/docs/reference-operaton-embedded.html</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://bpm-crafters.dev/process-engine-api-docs/snapshot/process-engine-adapters-operaton/docs/reference-operaton-remote.html</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
 </urlset>
