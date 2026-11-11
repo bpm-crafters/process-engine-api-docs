@@ -12,6 +12,12 @@ on:
         description: Documentation tag to publish
         required: true
         type: string
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: Documentation tag to publish
+        required: true
+        type: string
 
 jobs:
   build:
@@ -26,7 +32,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
-          python-version: 3.9
+          python-version: '3.11'
           cache: pip
 
       - name: Upgrade pip
