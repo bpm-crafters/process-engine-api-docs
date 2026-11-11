@@ -1,0 +1,85 @@
+name: Create documentation release
+
+on:
+  workflow_dispatch:
+    inputs:
+      api_version:
+        description: Process Engine API version. Leave empty to use its latest release.
+        required: false
+        type: string
+      publication_date:
+        description: Publication date in YYYY.MM. Leave empty to use the current UTC month.
+        required: false
+        type: string
+      revision:
+        description: Revision within the API version and publication month.
+        default: '1'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+    outputs:
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: '0'
+
+      - name: Resolve documentation tag
+        id: release
+        env:
+          API_VERSION_INPUT: ${{ inputs.api_version }}
+          PUBLICATION_DATE_INPUT: ${{ inputs.publication_date }}
+          REVISION: ${{ inputs.revision }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          api_version="$API_VERSION_INPUT"
+          if [ -z "$api_version" ]; then
+            api_version=$(gh api repos/bpm-crafters/process-engine-api/releases/latest --jq .tag_name)
+          fi
+
+          publication_date="$PUBLICATION_DATE_INPUT"
+          if [ -z "$publication_date" ]; then
+            publication_date=$(date --utc +%Y.%m)
+          fi
+
+          case "$api_version" in
+            [0-9]*.[0-9]*) ;;
+            *) echo "API version must use the release-tag format, for example 1.7." >&2; exit 1 ;;
+          esac
+          case "$publication_date" in
+            [0-9][0-9][0-9][0-9].[0-9][0-9]) ;;
+            *) echo "Publication date must use YYYY.MM." >&2; exit 1 ;;
+          esac
+          case "$REVISION" in
+            ''|*[!0-9]*) echo "Revision must be a positive integer." >&2; exit 1 ;;
+          esac
+
+          tag_name="$api_version-$publication_date.$REVISION"
+          if git rev-parse -q --verify "refs/tags/$tag_name" >/dev/null; then
+            echo "Tag $tag_name already exists." >&2
+            exit 1
+          fi
+
+          echo "tag_name=$tag_name" >> "$GITHUB_OUTPUT"
+
+      - name: Create and push tag
+        env:
+          TAG_NAME: ${{ steps.release.outputs.tag_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag --annotate "$TAG_NAME" --message "Publish documentation for Process Engine API ${TAG_NAME%%-*}"
+          git push origin "$TAG_NAME"
+
+  publish-documentation:
+    needs: create-tag
+    uses: ./.github/workflows/docs.yml
+    with:
+      tag_name: ${{ needs.create-tag.outputs.tag_name }}

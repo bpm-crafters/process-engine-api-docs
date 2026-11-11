@@ -6,6 +6,12 @@ on:
       - develop
     tags:
       - '*'
+  workflow_call:
+    inputs:
+      tag_name:
+        description: Documentation tag to publish
+        required: true
+        type: string
 
 jobs:
   build:
@@ -15,6 +21,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           fetch-depth: '0'
+          ref: ${{ inputs.tag_name || github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -45,8 +52,8 @@ jobs:
 
       - name: Read the tag name
         id: get_tag_name
-        if: startsWith(github.ref, 'refs/tags/')
-        run: echo "TAG_NAME=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
+        if: inputs.tag_name != '' || startsWith(github.ref, 'refs/tags/')
+        run: echo "TAG_NAME=${{ inputs.tag_name || github.ref_name }}" >> $GITHUB_OUTPUT
 
       # Prefetch gh-pages for mike to get correct versions
       - name: Pre-fetch the gh-pages branch
@@ -54,11 +61,11 @@ jobs:
 
       # This is for a tagged version
       - name: Create a new version of documentation and push to GH pages.
-        if: startsWith(github.ref, 'refs/tags/')
+        if: steps.get_tag_name.outputs.TAG_NAME != ''
         run: mike deploy ${{ steps.get_tag_name.outputs.TAG_NAME }} stable --push --update-aliases
 
       - name: Make stable to default.
-        if: startsWith(github.ref, 'refs/tags/')
+        if: steps.get_tag_name.outputs.TAG_NAME != ''
         run: mike set-default stable --push --allow-empty
 
       # This is for develop
