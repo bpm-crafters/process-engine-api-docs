@@ -5,4 +5,4 @@
 
 This repository contains the documentation for the Process Engine API and all components created by BPM Crafters. The Process Engine API is a vendor-independent API that lets you build process applications with BPMN-based engines and switch between them without code changes.
 
-**📚 Full documentation:** **[bpm-crafters.github.io/process-engine-api-docs/stable](https://bpm-crafters.github.io/process-engine-api-docs/stable/)**
+**📚 Full documentation:** **[bpm-crafters.github.io/process-engine-api-docs/stable/](https://bpm-crafters.github.io/process-engine-api-docs/stable/)**
