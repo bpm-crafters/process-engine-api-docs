@@ -30,6 +30,8 @@ markdown_extensions:
         permalink: "#"
     - pymdownx.highlight
     - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true
     - pymdownx.details
     - admonition
 
@@ -43,6 +45,7 @@ theme:
     - navigation.sections
     - navigation.top # add "navigate to top" page icon on bottom left
     - toc.integrate # integrate site TOC into the menu on the left
+    - content.tabs.link
   logo: assets/img/logo.png
   icon:
     repo: fontawesome/brands/github
@@ -93,6 +96,9 @@ plugins:
         - name: process-engine-worker
           import_url: https://github.com/bpm-crafters/process-engine-worker?edit_uri=/blob/develop/&branch=develop
           imports: [ docs/**/*.md ]
+        - name: process-engine-api-testing
+          import_url: https://github.com/bpm-crafters/process-engine-api-testing?edit_uri=/blob/develop/&branch=develop
+          imports: [ docs/**/*.md ]
         - name: process-engine-adapters-camunda-7
           import_url: https://github.com/bpm-crafters/process-engine-adapters-camunda-7?edit_uri=/blob/develop/&branch=develop
           imports: [ docs/**/*.md ]
@@ -112,6 +118,8 @@ nav:
     - Motivation and Goal: introduction/index.md
     - Clean Architecture: introduction/clean-architecture.md
     - Library Components: introduction/library-components.md
+    - Engine-independent Testing: process-engine-api-testing/docs/engine-independent-testing.md
+    - Scenario-driven Process Tests: process-engine-api-testing/docs/scenario-driven-process-tests.md
   - Quick Start:
     - Basic Setup: getting-started/index.md
     - Camunda 7 Embedded: process-engine-adapters-camunda-7/docs/quickstart-c7-embedded.md
@@ -120,6 +128,7 @@ nav:
     - CIB Seven: process-engine-adapters-cib-seven/docs/quickstart-cib-seven-embedded.md
     - Operaton Embedded: process-engine-adapters-operaton/docs/quickstart-operaton-embedded.md
     - Operaton Remote: process-engine-adapters-operaton/docs/quickstart-operaton-remote.md
+    - Process Testing: process-engine-api-testing/docs/testing-quickstart.md
   - Reference:
     - Overview: reference-guide/index.md
     - Deployment API: process-engine-api/docs/deployment-api.md
@@ -130,6 +139,7 @@ nav:
     - Service Task Completion API: process-engine-api/docs/service-task-completion-api.md
     - User Task Completion API: process-engine-api/docs/user-task-completion-api.md
     - User Task Support: process-engine-api/docs/user-task-support.md
+    - Process Testing API: process-engine-api-testing/docs/testing-api.md
     - Process Engine Worker: process-engine-worker/docs/process-engine-worker.md
   - Adapters:
     - Camunda 7 Embedded: process-engine-adapters-camunda-7/docs/reference-c7-embedded.md
@@ -138,6 +148,12 @@ nav:
     - Camunda 8: process-engine-adapters-camunda-8/docs/reference-c8.md
     - Operaton Embedded: process-engine-adapters-operaton/docs/reference-operaton-embedded.md
     - Operaton Remote: process-engine-adapters-operaton/docs/reference-operaton-remote.md
+    - Camunda 7 Embedded Testing: process-engine-adapters-camunda-7/docs/testing-c7-embedded.md
+    - Camunda 7 Remote Testing: process-engine-adapters-camunda-7/docs/testing-c7-remote.md
+    - Camunda 8 Testing: process-engine-adapters-camunda-8/docs/testing-c8.md
+    - CIB Seven Embedded Testing: process-engine-adapters-cib-seven/docs/testing-cib-seven-embedded.md
+    - Operaton Embedded Testing: process-engine-adapters-operaton/docs/testing-operaton-embedded.md
+    - Operaton Remote Testing: process-engine-adapters-operaton/docs/testing-operaton-remote.md
   - Developers:
     - Contribution: developer-guide/contribution.md
     - Project Setup: developer-guide/project-setup.md

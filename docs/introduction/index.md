@@ -35,3 +35,4 @@ Beyond simple abstraction, we offer unique added value designed to address commo
 - **Seamless data handling**: Effortlessly manage complex data access and conversion scenarios, ensuring your business logic remains clean and efficient.
 - **Scalable process landscapes**: Build large-scale, enterprise-ready process architectures with ease, utilizing centralized components like unified user task management.
 - **Resilient distributed environments**: Tackle the inherent complexities of distributed systems, including fault tolerance and transactional consistency, with robust, built-in patterns.
+- **Engine-independent process testing**: Describe and preserve process behaviour across an engine migration, even when the application itself does not use Process Engine API. Learn how it provides migration and regression confidence in the [engine-independent testing introduction](../../process-engine-api-testing/docs/engine-independent-testing.md).
